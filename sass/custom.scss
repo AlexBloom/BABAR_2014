@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+@import "variables";
+@import "typography";
+@import "modules";
+
+/**
+ * Images
+ */
+img {
+	display:block;
+    width: 100%;
+	max-width:em(1200);
+	margin:0 auto;
+    vertical-align: middle;
+}
+
+
+$phone: (em(400));
+$phablet: (em(600));
+$tablet: (em(800));
+$desktop: (em(1000));
+$jumbotron: (em(2000));
+
+#intro{
+	background-image:url(../img/content/01intro/2014_cover.jpg);
+	background-color:blue;
+	text-align:center;
+	@include full-bleed-background;
+	
+	h1{
+		color:$white;
+		text-transform:uppercase;
+		font-weight:500;
+		font-size:$base-font-size * 2;
+		letter-spacing:.1em;
+		.number {
+			font-size:$base-font-size * 4;
+			font-weight:800;
+		}
+	}
+	
+	img{
+		width:$spacing-unit * 20;
+		height:$spacing-unit * 20;
+	}
+}
+
+#fundraisers{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	@extend %clearfix;
+	li{
+		float:left;
+		width:15rem;
+		padding:0;
+		margin:0;
+	}
+}
+
+#routelist{
+list-style-type:none;
+@extend %clearfix;
+	li{
+		text-align:center;
+		
+		width:50%;
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		float:left;
+	}
+	.label{
+	display:inline-block;
+	border:2px solid black;
+	@extend %round-corner;
+	padding:.25rem .75rem;
+	margin:$spacing-unit auto;
+	color:$white;
+	font-weight:bold;
+	letter-spacing:.05rem;
+	}
+	#CUS{background-color:#B21E44;}
+	#ME2SB{background-color:$white;color:$black;}
+	#NC2SD{background-color:#77C473;}
+	#SC2SC{background-color:$black;}
+	#NUS{background-color:#F17AAB;}
+	#SUS{background-color:#EE4923;}
+	#P2C{background-color:#F38122;}
+	#P2S{background-color:#FCCE0D;color:$black;}
+}
+
+#accomplishments-numbers{
+	list-style-type:none;
+	text-align:center;
+	li{
+		border-bottom:1px solid $grey-light;
+		h6{
+		text-transform:uppercase;
+		//letter-spacing:.1em;
+		}
+		.number{
+		font-size:$base-font-size * 4;
+		}
+	}
+}
+#accomplishments-grantee{
+	list-style-type:none;
+	text-align:center;
+	li{
+		//width:33%;
+		//float:left;
+		.number{
+		font-size:$base-font-size * 4;
+		}
+	}
+}
+
+
+.partner-logo{
+	//display:block;
+	//width:25%;
+	//float:left;
+}

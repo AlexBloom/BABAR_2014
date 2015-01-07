@@ -1,0 +1,104 @@
+
+
+// Variables
+$base-font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+$base-font-size:   1em; /*16px*/
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 2; /*24px*/
+$spacing-unit:     .5rem;
+
+$text-color: #444;
+$text-color: rgba(0,0,0,.85);
+$background-color: #fff;
+$brand-color:rgb(226,035,026);
+
+$grey:#828282;
+$grey-light: lighten($grey, 40%);
+$grey-dark:  darken($grey, 25%);
+
+$black: #000000;
+$white: #FFFFFF;
+
+$blue-dark:rgb(003,029,064);
+$blue-light:rgb(103,178,231);
+$red:rgb(226,035,026);
+
+@function em($target, $context: 16) {
+    @return ($target / $context) * 1em;
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+%round-corner{
+	border-radius:.5rem;
+	-webkit-border-radius:.5rem;
+	-moz-border-radius:.5rem;
+	-ms-border-radius:.5rem;
+}
+
+@mixin full-bleed-background{
+background-position:50% 0;
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+@mixin transition-tenth-sec {
+-webkit-transition-duration: .15s;
+-moz-transition-duration: .15s;
+-ms-transition-duration: .15s;
+-o-transition-duration: .15s;
+transition-duration: .15s;
+}
+
+@mixin transition-quarter-sec {
+-webkit-transition-duration: .25s;
+-moz-transition-duration: .25s;
+-ms-transition-duration: .25s;
+-o-transition-duration: .25s;
+transition-duration: .25s;
+}
+
+@mixin transition-half-sec{
+-webkit-transition-duration: .5s;
+-moz-transition-duration: .5s;
+-ms-transition-duration: .5s;
+-o-transition-duration: .5s;
+transition-duration: .5s;
+}
+
+@mixin transition-ease-out {
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+@mixin transition-ease-in {
+	-webkit-transition-timing-function: ease-in;
+	transition-timing-function: ease-in;
+}
+
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+	vertical-align:-.25em;
+    font-weight: 400;
+    color: $text-color;
+    background-color: $background-color;
+    -webkit-text-size-adjust: 100%;
+
+
+//	BACKGROUND ALIGNMENT GUIDE
+	background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+	background-repeat: repeat-y;
+	background-size: 100% 1rem;
+}
+

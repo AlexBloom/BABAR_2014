@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Bike &amp; Build | 2014</title>
+		<meta name="description" content="A look back at our accomplishments in 2014">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width = device-width, initial-scale=1, maximum-scale=1, user-scalable = no">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/custom.css">
+	   
+	    <script type="text/javascript" src="//use.typekit.net/fkv4vwx.js"></script>
+	    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+			
+			
+			
+	<header id="header">			
+		<div class="" id="toggle-btn">
+	        <button type="button" id="toggle" role="button" aria-label="Toggle Navigation" class="lines-button x2">
+	          <span class="lines"> = </span>
+	        </button>
+		</div>
+		<nav id="toc">		
+			<h3>Contents</h3>
+			<ol>
+				<li> <a class="scrollnav-link" id="link-1" href="#intro"> 		
+						<span class="toc-name"> Introduction				</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-2" href="#letter"> 	
+						<span class="toc-name"> Board and Staff Message		</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-3" href="#housing"> 	
+						<span class="toc-name"> What is Affordable Housing?	</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-4" href="#about"> 		
+						<span class="toc-name"> What is Bike &amp; Build?	</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-5" href="#accomplishments">
+						<span class="toc-name"> 2013 Accomplishments		</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-6" href="#scholarship"> 
+						<span class="toc-name"> Bike &amp; Build Scholarship</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-7" href="#grantees"> 	
+						<span class="toc-name"> Grantee Profiles			</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-8" href="#hosts"> 		
+						<span class="toc-name"> Thanks to Our Hosts			</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-9" href="#riders"> 	
+						<span class="toc-name"> 2013 Rider Profiles			</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-10" href="#alumni"> 	
+						<span class="toc-name"> Alumni Spotlight			</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-11" href="#financials"> 
+						<span class="toc-name"> Statement of Financials		</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-12" href="#support"> 	
+						<span class="toc-name"> Supporting Bike &amp; Build	</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link-13" href="#contact"> 	
+						<span class="toc-name"> Contact						</span>	
+					</a> 
+				</li>
+				<li>
+					<a id="logo" href="http://bikeandbuild.org"target=_blank> Bike and Build Home &rarr;</a>
+				</li>
+			</ol>
+		</nav>
+
+	</header>
