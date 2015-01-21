@@ -9,13 +9,15 @@
 					<span class="number">2014</span><br> 
 					Annual Report
 				</h1>
-				<a class="action" href="#Letter"> View </a>
+				
+				<h6><button id="open-letter-window"> Foreword </button></h6>
+				<a class="action" href="#Accomplishments"> <span class="icon-arrow-down"></span> </a>
 			</section>
 		</section>
-		<article id="Letter">
-			<header class="sticky">Message from Board and Staff</header>
-			<div class="bg"></div>
+		<article class="window" id="Letter">
+			<span class="icon-cross close-window"> </span>
 			<section>
+				<h6>From the Board and Staff</h6>
 				<h1>Horizons</h1>
 
 				<p>When Bike & Build riders dip their back tires in the Atlantic Ocean, they face a line that divides earth and sky.  The horizon is a picturesque visualization of possibility, as riders stand on the cusp of an unforgettable summer. What lies ahead, in the open road, is an adventure that will test their limits. Ultimately, when our riders crest the horizon that holds the Pacific in view, one summer and 4,000 miles later, they’ve broadened their own vantage points, many ready to serve their communities long after Bike & Build. </p>
@@ -35,196 +37,255 @@
 					Natalie Serle’
 				</p>			
 			</section>
-		</article>	
-		<article id="BB101">
-			<header class="sticky">Bike & Build 101</header>
-			
-				<h2>The Affordable Housing Cause</h2>
-				<iframe width="560" height="315" src="//www.youtube.com/embed/_lGmXUt4yEM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-
-				<h2>What Is Bike &amp; Build?</h2>
-				<iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>	
-			
-				<h6>For more clips, check out our <a href="https://www.youtube.com/channel/UCVmvOTU5tIhKTZYRdIoTFzA"target=_blank>YouTube channel</a></h6>
-			
-			<section>	
-					
-					<h3> Our Vision </h3>
-					<p>We envision future generations that are committed to a lifetime of civic engagement and inspire individuals and communities to create fair, decent housing for all Americans.
-					</p>
-					
-					<h3> Our Mission </h3>
-					<p>Through service-oriented cycling trips, Bike &amp; Build benefits affordable housing and empowers young adults for a lifetime of service and civic engagement.
-					</p>
-			</section>
-			
-			<section>
-					<h3>Cross-Country Routes</h3>
-					<div id="routemap"><img src="img/content/04about/routemap.gif" alt="Cross-Country Route Map"></div>
-					<ul id="routelist">
-						<li> <span class="label" id="CUS"> Central US </span><br>
-						 	Virginia Beach, VA &rarr; Cannon Beach, OR 
-						</li>
-						<li> <span class="label" id="ME2SB"> Maine to Santa Barbara </span> <br>
-							Portland, ME &rarr; Santa Barbara, CA           
-						</li>
-						<li> <span class="label" id="NC2SD"> North Carolina to San Diego</span> <br>
-							Nags Head, NC &rarr; San Diego, CA              
-						</li>
-						<li> <span class="label" id="NUS"> Northern US </span> <br>
-							Portsmouth, NH &rarr; Vancouver, BC      
-						</li>
-						<li> <span class="label" id="P2C"> Providence to California </span> <br>
-							Providence, RI &rarr; Half Moon Bay, CA           
-						</li>
-						<li> <span class="label" id="P2S"> Providence to Seattle </span> <br>
-							Providence, RI &rarr; Seattle, WA                 
-						</li>
-						<li> <span class="label" id="SC2SC"> South Carolina to Santa Cruz</span> <br>
-							Charleston, SC &rarr; Santa Cruz, CA            
-						</li>
-						<li> <span class="label" id="SUS"> Southern US </span> <br>
-							Jacksonville, FL &rarr; Monterey, CA     
-						</li>
-					</ul>
-		
-			</section>
 		</article>		
 		<article id="Accomplishments">	
-			<header class="sticky">2014 Accomplishments</header>
-				<ul id="accomplishments-numbers">				
-					<li>	
+			<header class="sticky">
+				<h6>Accomplishments</h6>
+			    <!-- <nav class="nav-tabs" id="Accomplishments-Tabs"> 
+			        <a href="#accomplishments-numbers"> Numbers </a> 
+					<a href="#accomplishments-grantee"> Grantee </a>
+					<a href="#coastal-drift"> New Programs </a>
+					<a href="#fundraisers"> Top Fundraisers </a>
+					<a href="#scholarship"> Scholarships </a>
+			    </nav> -->
+			</header>
+			<div class=" " id="accomplishments-numbers">				
+				<h1> By The Numbers </h1>
+				<ul id="countdown">
+					<li class="full-screen" id="build-days">	
+						
+						<section>
 							<strong class="number"> 113 </strong>
 							<h6> Build Days </h6>
 					</li>
-					<li>	
+					<li class="full-screen" id="total-riders">	
+						</section>
+						<section>
 							<strong class="number"> 328 </strong>
 							<h6> Total Riders</h6> 
 					</li>
-					<li>	
+					<li class="full-screen" id="grants-recieved">	
+						</section>
+						<section>
 							<strong class="number"> 387 </strong>
 							<h6> Organizations Receiving a B&B Grant</h6> 
 					</li>
-					<li>	
+					<li class="full-screen" id="average-dollars">	
+						</section>
+						<section>
 							<strong class="number"> $4,986 </strong>
 							<h6> Average dollars raised per rider</h6> 
 					</li>
-					<li>	 
+					<li class="full-screen" id="build-hours">	 
+						</section>
+						<section>
 							<strong class="number"> 24,500 </strong>
 							<h6> Build Hours</h6>
 					</li>
-					<li>	
+					<li class="full-screen" id="dollars-granted">	
+						</section>
+						<section>
 							<strong class="number"> $622,563 </strong>
 							<h6> Dollars Granted </h6>
 					</li>
-					<li>	
+					<li class="full-screen" id="miles-pedaled">	
+						</section>
+						<section>
 							<strong class="number"> 1,049,000 </strong>
 							<h6> Miles Pedaled </h6>
+						</section>
 					</li>
 				</ul>
-			
-				<h2> 2013 Grantee Accomplishments </h2>
-				<ul id="accomplishments-grantee">	
-					<li>	
+			</div>
+			<div class=" " id="accomplishments-grantee">	
+				<h1> 2013 Grantee Accomplishments </h1>
+				<ul>
+					<li class="full-screen" id="youth-engaged">	
+						<section>
 						<strong class="number"> 6,670 </strong> <br>
 						<strong> youth or young adults engaged </strong>
 						in a Bike & Build funded project
+						</section>
 					</li>
-					<li>	
+					<li class="full-screen" id="dwellings-impacted">	
+						<section>
 						<strong class="number"> 455 </strong> <br>
 						<strong> houses, apartments and dwellings impacted </strong>
 						by Bike & Build grants
+						</section>
 					</li>
-					<li>	
+					<li class="full-screen" id="communities-impacted">	
+						<section>
 						<strong class="number"> 10,860 </strong> <br>
 						<strong> community members impacted </strong>
 						by homes or projects funded by Bike & Build
+						</section>
 					</li>
 				</ul>
-			<section>
+			</div>
+			<div class="" id="open-accomplishments-window">
+				<h2>Explore More Accomplishments</h2>
+				<nav>
+					<a> 
+						<h3>Coastal Drift</h3> 
+					</a>
+					<a>
+						<h3>Top Fundraisers</h3>
+					</a>
+					<a> 
+						<h3>Scholarships </h3>
+					</a>
+				</nav>
+			</div>
+			<div class="window" id="More-Accomplishments">	
+				<span class="icon-cross close-window"> </span>					
+				<div class=" " id="coastal-drift">
 				<h2>Coastal Drift</h2>
 				<p>This year, Bike & Build unveiled Coastal Drift, a new regional route from Maine’s Acadia National Park to New York City. Over the course of 3 weeks and 830 miles, riders weaved in and out of island towns and major metropolises, traversing both urban and rural landscapes and experiencing the mutable affordable housing issue that parallels the varied terrain. Riders experienced the best of Bike & Build in a compact time frame: scenic roads, multiple build days, and the ability to observe and create change in the world around them. The trip was shorter, but the soul was the same- spurred by young adults with adventurous spirits and involved citizens with tremendous hearts.</p>
 
 				Cool infographics?
 					•	See attached data sheet
-			</section>
-			
-			<h2>Top 2014 Fundraisers</h2>
-			<ul id="fundraisers">
-				<li><img src="img/content/fundraisers/gaurang.jpg" alt="Gaurang Garg"/>	
-					<h5> Gaurang Garg, SUS </h5> 
-					<strong class="number"> $9,637 </strong><br>
-					<a href="mailto:gaurangkgarg@gmail.com"target=_blank> gaurangkgarg@gmail.com  </a>     
-				</li>
-				<li><img src="img/content/fundraisers/molly.jpg" alt="Molly Junck"/>	
-					<h5> Molly Junck, SC </h5> 
-					<strong class="number">$9,558 </strong><br>
-					<a href="mailto:mjunck@gmail.com"target=_blank> mjunck@gmail.com        </a>       
-				</li>
-				<li><img src="img/content/fundraisers/sara.jpg" alt="Sara Rosenband"/>	
-					<h5> Sara Rosenband, SC </h5> 
-					<strong class="number">$7,881</strong><br> 
-					<a href="mailto:srosenband@middlebury.edu"target=_blank> srosenband@middlebury.edu </a>  
-				</li>
-				<li><img src="img/content/fundraisers/mayrose.jpg" alt="May Huntley"/>	
-					<h5> May Huntley, P2C </h5> 
-					<strong class="number"> $7,090 </strong><br>
-					<a href="mailto:mayrose14@hotmail.com "target=_blank> mayrose14@hotmail.com  </a>       
-				</li>
-				<li><img src="img/content/fundraisers/juan.jpg" alt="Juan Espinosa"/>	
-					<h5> Juan Espinosa, P2S </h5> 
-					<strong class="number"> $7,080 </strong><br>
-					<a href="mailto:jf_esp@hotmail.com"target=_blank> jf_esp@hotmail.com      </a>    
-				</li>
-			</ul>
-			
-			<section>
-				<h2>The Bike & Build Alumni Council</h2>
-			
-				<p>The Alumni Council represents the nearly 2,300-member constituency of former B&Bers who remain committed to service in communities around the United States.</p> 
+			</div>			
+				<div class=" " id="fundraisers">
+					<h2>Top 2014 Fundraisers</h2>
+					<ul>
+						<li><img src="img/content/fundraisers/gaurang.jpg" alt="Gaurang Garg"/>	
+							<h5> Gaurang Garg, SUS </h5> 
+							<strong class="number"> $9,637 </strong><br>
+							<a href="mailto:gaurangkgarg@gmail.com"target=_blank> gaurangkgarg@gmail.com  </a>     
+						</li>
+						<li><img src="img/content/fundraisers/molly.jpg" alt="Molly Junck"/>	
+							<h5> Molly Junck, SC </h5> 
+							<strong class="number">$9,558 </strong><br>
+							<a href="mailto:mjunck@gmail.com"target=_blank> mjunck@gmail.com        </a>       
+						</li>
+						<li><img src="img/content/fundraisers/sara.jpg" alt="Sara Rosenband"/>	
+							<h5> Sara Rosenband, SC </h5> 
+							<strong class="number">$7,881</strong><br> 
+							<a href="mailto:srosenband@middlebury.edu"target=_blank> srosenband@middlebury.edu </a>  
+						</li>
+						<li><img src="img/content/fundraisers/mayrose.jpg" alt="May Huntley"/>	
+							<h5> May Huntley, P2C </h5> 
+							<strong class="number"> $7,090 </strong><br>
+							<a href="mailto:mayrose14@hotmail.com "target=_blank> mayrose14@hotmail.com  </a>       
+						</li>
+						<li><img src="img/content/fundraisers/juan.jpg" alt="Juan Espinosa"/>	
+							<h5> Juan Espinosa, P2S </h5> 
+							<strong class="number"> $7,080 </strong><br>
+							<a href="mailto:jf_esp@hotmail.com"target=_blank> jf_esp@hotmail.com      </a>    
+						</li>
+					</ul>
+				</div>
+				<div class=" " id="scholarship">
+					<h2>Bike & Build Scholarship</h2>
+					<p>The Bike & Build Scholarship program engages young adults from at-risk backgrounds, ages 18-25, in a life-changing opportunity to be engaged in their community. Riders develop skills in teamwork, leadership, and perseverance. This accomplishment furthers empower scholarship recipients to serve others for many years beyond the completion of the trip. </p>
 
-				<p>Some former riders spoke about the impact Bike & Build had on them, and how they are staying involved in their community. </p>
-
-				<p>The 2014 Council, led by Kyle Magida (SUS06, B2SB08) and David Neirenberg (SUS05), led numerous projects in support of Bike & Build’s mission. Alums, learn how to be involved in the Council here.</p>
-
-				<p>In 2014, The Alumni Council accomplished the following:</p>
-				<ul>
-					<li>	Granted $4,000 in emergency funds to organizations responding to disasters, including a fire in Connecticut and the mudslides in western Washington.</li>
-					<li>	Raised nearly $8,000 to support the Bike & Build Scholarship. </li>
-					<li>	Operated a mentoring program, matching 150 riders to alumni.</li>
-					<li>	Coordinated numerous recruitment activities to spread the word about Bike & Build to future riders.</li>
-				</ul>
-
-				<h2>Bike & Build Scholarship</h2>
-				<p>The Bike & Build Scholarship program engages young adults from at-risk backgrounds, ages 18-25, in a life-changing opportunity to be engaged in their community. Riders develop skills in teamwork, leadership, and perseverance. This accomplishment furthers empower scholarship recipients to serve others for many years beyond the completion of the trip. </p>
-
-				<p>In 2014, the second year B&B offered this scholarship, Bike & Build fully funded two young adults in our regional ride. Kamal Gatewood and Mindy Zhong, both from Philadelphia, had an incredible experience on Coastal Drift. </p>
+					<p>In 2014, the second year B&B offered this scholarship, Bike & Build fully funded two young adults in our regional ride. Kamal Gatewood and Mindy Zhong, both from Philadelphia, had an incredible experience on Coastal Drift. </p>
 									
-				<figure class="scholarship-grantee">
-					<img src="img/content/scholarship/kamal.jpg" alt="Kamal Gatewood"/>
-					<blockquote>
-						I wish I could meet all of the people that donated to the scholarship and hug them. Bike & Build was the greatest thing that ever could have happened to me. 
-					</blockquote>
-					<figcaption>
-						<span class="author">Kamal Gatewood</span>
-					</figcaption>
-				</figure>
+					<figure class="scholarship-grantee">
+						<img src="img/content/scholarship/kamal.jpg" alt="Kamal Gatewood"/>
+						<blockquote>
+							I wish I could meet all of the people that donated to the scholarship and hug them. Bike & Build was the greatest thing that ever could have happened to me. 
+						</blockquote>
+						<figcaption>
+							<span class="author">Kamal Gatewood</span>
+						</figcaption>
+					</figure>
 					
-				<figure class="scholarship-grantee">
-					<img src="img/content/scholarship/mindy.jpg" alt="Mindy Zhong"/>
-					<blockquote>
-						The B&B scholarship gave me a wider perspective of the cause and an opportunity to make a difference in ways I would not have been able to do alone. For a person who has never been able to travel out of Philadelphia alone, it was an incredible eye-opener. 
-					</blockquote>
-					<figcaption><span class="author">Mindy Zhong</span> </figcaption>
-				</figure>
+					<figure class="scholarship-grantee">
+						<img src="img/content/scholarship/mindy.jpg" alt="Mindy Zhong"/>
+						<blockquote>
+							The B&B scholarship gave me a wider perspective of the cause and an opportunity to make a difference in ways I would not have been able to do alone. For a person who has never been able to travel out of Philadelphia alone, it was an incredible eye-opener. 
+						</blockquote>
+						<figcaption><span class="author">Mindy Zhong</span> </figcaption>
+					</figure>
 				
 
-				<p>In 2015, Bike & Build will provide three scholarships, including our first ever cross-country support. If you’d like to donate, <a href="http://bikeandbuild.org/"target=_blank>visit our website</a>.</p>
+					<p>In 2015, Bike & Build will provide three scholarships, including our first ever cross-country support. If you’d like to donate, <a href="http://bikeandbuild.org/"target=_blank>visit our website</a>.</p>
 			
-			</section>
+				</div>
+			</div>
 		</article>
-		<article id="Impact">
-			<header class="sticky">Bike & Build Granting Impact</header>
+		<article id="BB101">
+			<header class="sticky">
+				<h6> Bike & Build 101 </h6>
+				<nav>
+					<a href="#"> Learn More <span class="icon-youtube"> </span> </a>
+				</nav>
+			</header>
+			
+				<h1>What Is Bike &amp; Build?</h1>
+				<h6> Watch </h6>
+				<iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				
+				<h6>For more clips, check out our <a href="https://www.youtube.com/channel/UCVmvOTU5tIhKTZYRdIoTFzA"target=_blank>YouTube channel</a>
+				</h6>
+				
+				<section>
+					<h2> Our Vision </h2>
+					<p>We envision future generations that are committed to a lifetime of civic engagement and inspire individuals and communities to create fair, decent housing for all Americans.
+					</p>
+				
+					<h2> Our Mission </h2>
+					<p>Through service-oriented cycling trips, Bike &amp; Build benefits affordable housing and empowers young adults for a lifetime of service and civic engagement.
+					</p>
+				</section>
+				
+				
+				
+				<h6> <button id="open-cause-window"> About The Cause </button> <button id="open-routes-window"> Where We Ride </button></h6>
+				
+				<div class="window" id="Routes">
+					<span class="icon-cross close-window"> </span>	
+					<section>
+						<h2>Cross-Country Routes</h2>
+						<div id="routemap"><img src="img/content/04about/routemap.gif" alt="Cross-Country Route Map"></div>
+						<ul id="routelist">
+							<li> <span class="label" id="CUS"> Central US </span><br>
+							 	Virginia Beach, VA &rarr; Cannon Beach, OR 
+							</li>
+							<li> <span class="label" id="ME2SB"> Maine to Santa Barbara </span> <br>
+								Portland, ME &rarr; Santa Barbara, CA           
+							</li>
+							<li> <span class="label" id="NC2SD"> North Carolina to San Diego</span> <br>
+								Nags Head, NC &rarr; San Diego, CA              
+							</li>
+							<li> <span class="label" id="NUS"> Northern US </span> <br>
+								Portsmouth, NH &rarr; Vancouver, BC      
+							</li>
+							<li> <span class="label" id="P2C"> Providence to California </span> <br>
+								Providence, RI &rarr; Half Moon Bay, CA           
+							</li>
+							<li> <span class="label" id="P2S"> Providence to Seattle </span> <br>
+								Providence, RI &rarr; Seattle, WA                 
+							</li>
+							<li> <span class="label" id="SC2SC"> South Carolina to Santa Cruz</span> <br>
+								Charleston, SC &rarr; Santa Cruz, CA            
+							</li>
+							<li> <span class="label" id="SUS"> Southern US </span> <br>
+								Jacksonville, FL &rarr; Monterey, CA     
+							</li>
+						</ul>
+					</section>
+				</div>
+				
+				<div class="window" id="Cause">
+					<span class="icon-cross close-window"> </span>
+					<h2>The Affordable Housing Cause</h2>
+					<iframe width="560" height="315" src="//www.youtube.com/embed/_lGmXUt4yEM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+					
+			
+		</article>
+		<article id="Impact">			
+			<header class="sticky">
+				<h6>Bike & Build Granting Impact</h6>
+				<nav>
+					<a href="#">Programs</a>
+					<a href="#">Grantees</a>
+				</nav>
+			</header>
+			
 			<section>
 				<dl id="GrantPrograms">
 					<dt>
@@ -241,10 +302,11 @@
 					</dd>
 				</dl>
 			
-				<h6><button> Explore 2014 Grantees </button></h6>
-				
-				<h1>Grantee Profiles</h1>
-				<article class="grantee" id="Idaho">
+				<h6><button id="open-grantee-window"> Explore 2014 Grantees </button></h6>
+				<div class="window" id="Grantee"> 
+					<span class="icon-cross close-window"> </span>
+					<h1>Grantee Profiles</h1>
+					<article class="grantee" id="Idaho">
 					<h2> Habitat for Humanity of North Idaho</h2>
 					<h3> Hayden, ID | Providence to Seattle<h3> 
 					<h6> $8,120</h6>
@@ -255,7 +317,7 @@
 			
 					<p>Bike & Build has also built with Habitat for Humanity of North Idaho since 2009, and we look forward to continuing that relationship!</p>
 				</article>
-			    <article class="grantee" id="YouthBuild">
+			    	<article class="grantee" id="YouthBuild">
 					<h2>YouthBuild Philadelphia</h2>
 					<h3> Philadelphia, PA | Providence to California</h3> 
 					<h6>$8,000</h6> 
@@ -266,7 +328,7 @@
 	
 					<p>Zahfir Slaughter, one of the students working on this project, commented on how much he’s not only learning on the construction site, but also about himself. “I’m really learning how to push myself and build my character. This program is very exciting. We’re not only giving opportunities to a new homeowner, but it also opens up bright futures for students like me.” Zahfir is taking these lessons to heart; after college, he wants to start a career in real estate. “It’ll be fun to one day go past the house we’re building and say ‘I did this.’”</p>
 				</article>
-				<article class="grantee" id="Stafford">  
+					<article class="grantee" id="Stafford">  
 					<h2>Stafford County Economic Development</h2>
 					<h3>St. John, KS | North Carolina to San Diego</h3>
 					<h6>$7,000</h6>
@@ -276,7 +338,7 @@
 	
 					<p>“It’s all about broad community development,” Carolyn commented. “Economic prosperity, housing, healthy living… it all goes hand-in-hand.” </p>
 				</article>
-				<article class="grantee" id="Grid">
+					<article class="grantee" id="Grid">
 					<h2>GRID Alternatives Colorado</h2>
 					<h3>Denver, CO | Central U.S.</h3>
 					<h6>$5,000</h6>
@@ -288,7 +350,7 @@
 						</p>
 					<p>The program’s impact is also felt by their homeowners. “We have a very tight income and it has been a blessing to shave down our bills each month,” said Amy Sue Pinto, a recent GRID client. “We’d looked into solar and knew it was always something we wanted, but it was just not financially feasible until GRID Alternatives helped us out. Everyone on their team was amazing to work with!”</p>
 				</article>
-				<article class="grantee" id="Purdue">
+					<article class="grantee" id="Purdue">
 					<h2>Purdue University Habitat for Humanity</h2>
 					<h3>West Lafayette, IN | Providence to Seattle</h3>
 					<h6>$1,400</h6>
@@ -297,7 +359,7 @@
 					<p>“These bikes will last us for awhile,” said Michell Obergfell, the chapter’s Vice President of Development. “We work closely with Lafayette Habitat for Humanity, and each year we aim to raise enough money to sponsor a house. This will help us do that.”</p>
 			
 				</article>
-
+				</div>
 				<h2>* Interested in applying for a Bike & Build Grant?</h2>
 				<p>We fund projects that engage young adults in addressing a demonstrated need in affordable housing. 2015 applications will be available in April and due Friday, June 5. We accept requests from 501(c)(3) organizations between $500 and $10,000. Visit bikeandbuild.org/grants for application materials.</p>
 
@@ -305,7 +367,11 @@
 		</article>
 		<article id="Riders">
 			<header class="sticky">
-				2014 Rider Profiles
+				<h6>2014 Riders </h6>
+				<nav>
+					<a href="">2014 Rider Spotlight</a>
+					<a href="">2014 Alumni </a>
+				</nav>
 			</header>
 			<section>
 				<h2>Claire Collins</h2>
@@ -337,8 +403,26 @@
 		</article>		
 		<article id="Alumni">
 			<header class="sticky">
-				Alumni: Bike & Build’s Greatest Resource
+				<h6>Alumni: Bike & Build’s Greatest Resource</h6>
 			</header>
+
+			<h2>The Bike & Build Alumni Council</h2>
+		
+			<p>The Alumni Council represents the nearly 2,300-member constituency of former B&Bers who remain committed to service in communities around the United States.</p> 
+
+			<p>Some former riders spoke about the impact Bike & Build had on them, and how they are staying involved in their community. </p>
+
+			<p>The 2014 Council, led by Kyle Magida (SUS06, B2SB08) and David Neirenberg (SUS05), led numerous projects in support of Bike & Build’s mission. Alums, learn how to be involved in the Council here.</p>
+
+			<p>In 2014, The Alumni Council accomplished the following:</p>
+			<ul>
+				<li>	Granted $4,000 in emergency funds to organizations responding to disasters, including a fire in Connecticut and the mudslides in western Washington.</li>
+				<li>	Raised nearly $8,000 to support the Bike & Build Scholarship. </li>
+				<li>	Operated a mentoring program, matching 150 riders to alumni.</li>
+				<li>	Coordinated numerous recruitment activities to spread the word about Bike & Build to future riders.</li>
+			</ul>
+			
+			
 			<section>
 				<p>In addition to supporting our affordable housing partners each year, our mission is to engage young adults in service long after they’ve completed their trips.</p> 
 
@@ -353,10 +437,16 @@
 					<li>Recruiting City Captains for 15 U.S. cities to engage other alumni in local service days, rides, and social activities</li>
 					<li>Operating the Bike & Build Mentoring Program, connecting alumni with current riders</li>
 				</ul>
+				
 				<h2>Alumni Spotlights</h2>
 				<p>In 2014, the Bike & Build Board of Directors and Alumni Council teamed up to present “Alumni Still Serving,” a project that focused on the impact Bike & Build’s riders have in their communities long after their trip.  Check out those features on our website, and read about two alumni in particular who are having a major impact in their communities. </p>
 
-				<h2>Danny McGee – Providence to Seattle 2009 – Grand Rapids, MI</h2>
+				<h2>Danny McGee</h2>
+				<h3>Providence to Seattle 2009</h3>
+				<h6>
+					 <span class="icon-location"></span><br>
+					 Grand Rapids, MI
+				</h6>
 				<p>Five years after his Bike & Build trip, Danny remains one of B&B’s most active alumni in the cause. In his current role as the Director of Sustainability for Well House, he helps provide safe and affordable homes to the homeless. He also works part-time as a consultant to help companies track energy, water, and environmental usage. If that wasn’t enough, he and several other B&Bers (Aileen Strickland, CUS’10 and William Gallmeyer, P2C’11) have started a nonprofit called Homes of Hope, which is building a “Living Building” home for a couple running a community garden in a low-income neighborhood in Grand Rapids. </p>
 
 				<p>Danny was a 2012 recipient of the Chris Webber Memorial Fellowship, a program that engages Bike & Build alumni in self-directed affordable housing projects. He earned funds to support the development of sustainable housing on the Crow Reservation in Montana. The fellowship eventually led to a full-time position, and he continued his work on three other Native American reservations.
@@ -366,7 +456,12 @@
 				<p>Danny’s extensive background befits his ambitious long-term goals: ending homelessness and the construction of homes that aren’t energy efficient. After that’s done, he might take a break for a little hiking and biking.</p>
 
 
-				<h2>Karla Sordia – Maine to Santa Barbara 2012 – Boston, MA</h2>
+				<h2>Karla Sordia</h2>
+				<h3>Maine to Santa Barbara 2012</h3>
+				<h6>
+					<span class="icon-location"></span><br>
+					 Boston, MA
+				</h6>
 				<p>Before Karla signed up for Bike & Build several years ago, she envisioned a life of entirely different pursuits than what she’s doing now. “All my life I had only ever wanted to be either in the medical profession, or do scholarly research. Bike & Build made me realize that I don't have to be a doctor to make a difference and save someone's life.”</p>
 
 				<p>She now works with Heading Home in Boston, an organization dedicated to ending homelessness in the city. As the Data & Research Manager, Karla is responsible for analyzing program outcomes and measurement. She also consults on HUD grant applications for Heading Home’s multiple housing programs across the city. “It's a little like the grant selection process on Bike & Build. You have a bunch of programs, a limited budget, and you use the facts to send on applications that will have the biggest impact.”</p>
@@ -377,23 +472,26 @@
 			</section>
 		</article>		
 		<article id="Partner">
-			<header class="sticky">Partner with Bike & Build</header>
+			<header class="sticky">
+				<h6>Partner with Bike & Build</h6>
+			</header>
 			<section>
 				<p>Bike & Build allows young adults to invest in communities across the United States through service-based cycling trips.</p> 
 
-				<iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>	
+				<iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen>
+				</iframe>	
 				
 				<p>Each summer our cyclists pedal across the United States, raising money for the affordable housing cause and building homes for low-income families. This experience also fosters a commitment to civic engagement far beyond their Bike & Build summer.</p>
 
-				<h3>Why We Ride</h3>
+				<h2>Why We Ride</h2>
 			
 				<p>Why is Bike & Build such an impactful experience on our riders? It starts with the <a href="http://www.bikeandbuild.org/cms/content/view/9242/492/"target=_blank>severity of this country’s affordable housing crisis</a>. The takeaway: nearly 50 million Americans do not have the means to own an affordable, durable home. That’s more than the populations of Texas and Florida, combined. </p>
 
-				<h3>How Can You Help?</h3>
+				<h2>How Can You Help?</h2>
 				 
 				<p>Become a sustaining partner with Bike & Build. We will work with you to customize a partnership package that accomplishes your organization’s needs, while empowering both of our organizations to have an impact on affordable housing in your community. </p>
 
-				<p>Our message reaches all corners of the United States.</p> 
+				<h2>Our message reaches all corners of the United States.</h2> 
 				<ul>
 					<li> We average 11,000 individual donors each year. 
 					</li>
@@ -409,12 +507,16 @@
 					Insert graphic, “Community Reach, Diner Background”
 
 				<p>For example, Federal Home Loan Bank of Boston has been a multi-year sponsor of Bike & Build.</p>
+				
 				<iframe width="560" height="315" src="//www.youtube.com/embed/bEDJVEE4SjM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
 
 				<p>We are excited to work with organizations that share our values. To learn more, contact Justin Villere, Director of Operations and Outreach, at <a href="mailto:justin@bikeandbuild.org">justin@bikeandbuild.org</a>.</p>
 
 				<p>Thank you to our 2013 partners<br>
-				   We look forward to working with you again!</p>
+				   We look forward to working with you again!
+			    </p>
+			</section>
+			<!--<div class="partner-logos">
 				<img class="partner-logo" src="img/content/partners/bokoo.jpg" alt="Bokoo" />
 				<img class="partner-logo" src="img/content/partners/earthbalance.jpg" alt="Earth Balance" />
 				<img class="partner-logo" src="img/content/partners/fhlb.jpg" alt="FHLB Boston" />
@@ -423,90 +525,127 @@
 				<img class="partner-logo" src="img/content/partners/univest.jpg" alt="Univest" />
 				<img class="partner-logo" src="img/content/partners/parktool.jpg" alt="Park Tool" />
 				<img class="partner-logo" src="img/content/partners/hincapie.jpg" alt="Hincapie" />
-
-			</section>
-		</article>
+			 </div>	 -->
+		</article>		
 		<article id="Contact">		
-			<header class="sticky">Contact Us</header>
-			<section>
-				<h1>Staff</h1>
-				<ul>
-					<li> Justin Villere
-					Director of Operations and Outreach
-					justin@bikeandbuild.org
+			<header class="sticky">
+				<h6>Contact Us</h6>
+			</header>
+			<h1>Staff</h1>
+			<ul id="staff">
+					<li> 
+					<p> <strong>Justin Villere</strong><br>
+						Director of Operations and Outreach<br>
+						<a href="mailto:justin@bikeandbuild.org">justin@bikeandbuild.org </a>
+					</p>
 					</li>
 				
-					<li> Brendan Newman
-					Program Director
-					brendan@bikeandbuild.org
+					<li> 
+					<p> <strong>Brendan Newman</strong><br>
+						Program Director<br>
+						<a href="mailto:brendan@bikeandbuild.org">brendan@bikeandbuild.org </a>
+					</p>
 					</li>
 				
-					<li> Natalie Serle’
-					Program Director
-					Natalie@bikeandbuild.org
+					<li> 
+					<str
+					<p> <strong>Natalie Serle’</strong><br>
+						Program Director<br>
+						<a href="mailto:natalie@bikeandbuild.org">natalie@bikeandbuild.org </a>
+					</p>
 					</li>
 				
-					<li> Matt Hartman
-					Office Coordinator
-					matt@bikeandbuild.org 
+					<li>
+					<p> 
+						<strong>Matt Hartman</strong><br>
+						Office Coordinator<br>
+						<a href="mailto:matt@bikeandbuild.org">matt@bikeandbuild.org </a> 
+					</p>
 					</li>			
 				</ul>
-				<ul>
-					<li>
-					Steve Truong - Chairman of the Board
-					Albridge Analytics, Director, Sales and Relationship Manager
+			<h1>Board</h1>
+			<ul id="board">
+					<li><p><strong>
+					Steve Truong </strong><br>
+					Chairman of the Board<br>
+					Albrige Analytics,<br> 
+					Director, Sales and Relationship Manager<br>
 					Wayne, PA  
-					</li>
-					<li>
-					George Jones – Treasurer
-					Gidus Solutions, LLCX, Consultant
+					</p></li>
+					<li><p><strong>
+					George Jones </strong><br>
+					Treasurer<br>					
+					Gidus Solutions, LLCX,<br> 
+					Consultant<br>
 					Sicklerville, NJ 
-					</li>
-					<li>
-					Ed Harris - Member At-Large, Digital Marketing Specialist
-					Valley Forge Tourism and Convention Board, VP of Marketing & Communications
+					</p></li>
+					<li><p><strong>
+					Ed Harris </strong><br>
+					Member At Large<br>
+					Digital Marketing Specialist<br>
+					Valley Forge Tourism and Convention Board,<br> 
+					VP of Marketing & Communications<br>
 					Narberth, PA 
-					</li>
-					<li>
-					Charlie Henderson - Member At-Large
-					Henderson Consulting & Risk Management, Owner
+					</p></li>
+					<li><p><strong>
+					Charlie Henderson </strong><br>
+					Member At Large<br>
+					
+					Henderson Consulting & Risk Management,<br> 
+					Owner<br>
 					Newtown Square, PA  
-					</li>
-					<li>
-					John Leonti - Member At-Large
-					Troutman Sanders LLP, Attorney
+					</p></li>
+					<li><p><strong>
+					John Leonti </strong><br>
+					Member At Large<br>
+					
+					Troutman Sanders LLP,<br> 
+					Attorney<br>
 					New York, NY 
-					</li>
-					<li>
-					David Michaluk - Member At-Large , Partnership Marketing Specialist
-					Bentley Systems, Senior Marketing Manager
+					</p></li>
+					<li><p><strong>
+					David Michaluk </strong><br>
+					Member At Large<br>
+					Partnership Marketing Specialist<br>
+					Bentley Systems,<br> 
+					Senior Marketing Manager<br>
 					Oaklyn, NJ  
-					</li>
-					<li>
-					Bill Meiklejohn - Member At-Large 
-					Lancer Systems, President
+					</p></li>
+					<li><p><strong>
+					Bill Meiklejohn </strong><br>
+					Member At Large<br>
+					 
+					Lancer Systems,<br> 
+					President<br>
 					Collegeville, PA 
-					</li>
-					<li>
-					Kristian Sekse - Member At-Large 
-					Board of Child Care, Director of Development
+					</p></li>
+					<li><p><strong>
+					Kristian Sekse </strong><br>
+					Member At Large<br>
+					Board of Child Care,<br>
+					Director of Development<br>
 					Baltimore, MD 
-					</li>
-					<li>
-					Bill West - Member At-Large
-					The Atlantic Partners, Managing Partner
+					</p></li>
+					<li><p><strong>
+					Bill West </strong><br>
+					Member At Large<br>
+					The Atlantic Partners, Managing Partner<br>
 					Greenville, SC 
-					</li>
-					<li>
-					Jesse Cohn - Alumni Council Co-Chair
-					Chapel Hill, NC
-					</li>
-					<li>
-					Erin Kinneen - Alumni Council Co-Chair
-					Seattle, WA
-					</li>
+					</p></li>
 				</ul>
-			</section>
+			<h1>Alumni Council</h1>
+			<ul id="alumni">
+					<li><p><strong>
+					Jesse Cohn </strong><br>
+					Alumni Council Co-Chair<br>
+					Chapel Hill, NC
+					</p></li>
+					<li><p><strong>
+					Erin Kinneen </strong><br>
+					Alumni Council Co-Chair<br>
+					Seattle, WA
+					</p></li>
+				</ul>		
 		</article>
 
 <?php include_once 'inc/footer.inc' ?>	 

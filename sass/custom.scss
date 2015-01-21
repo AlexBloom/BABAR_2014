@@ -27,36 +27,55 @@ img {
 
 
 #Intro{
-	background: linear-gradient(0deg, $blue-dark, $blue-light);
-	//background-image:url(../img/content/01intro/2014_cover.jpg);
-	//background-color:$blue-dark;
+	//background: linear-gradient(0deg, $blue-dark, $blue-light);
+	position:relative;
+	&:before{
+		display:block;
+		content:' ';
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		opacity:.75;
+		background: linear-gradient(0deg, $red, $blue-light);
+	}
+	background-image:url(../img/content/01intro/2014_cover.jpg);
 	text-align:center;
 	@include full-bleed-background;
+	background-position:50% 50%;
 	display:flex;
 	display:-webkit-flex;
 	color:$white;
 	section{
 		margin:auto;
-		//background-color:$red;
+		z-index:5;
 		h1{
 			text-transform:uppercase;
 			font-weight:500;
-			font-size:$base-font-size * 2;
+			font-size:$base-font-size * 1.5;
 			letter-spacing:.1em;
 			.number {
 				font-size:$base-font-size * 4;
 				font-weight:800;
 			}
 		}
+		@media screen and (min-width:$tablet){
+			h1{
+				font-size:$base-font-size * 2;
+			}
+		}
+		
 		img{
-			width:$spacing-unit * 20;
-			height:$spacing-unit * 20;
+			//width:30%;
+			max-width:$spacing-unit * 14;
+			//height:$spacing-unit * 20;
 		}
 	}
 	
 }
 #Letter{
-	background: linear-gradient(0deg, $blue-light, $white);
+	//background: linear-gradient(0deg, $blue-light, $white);
 	color:$blue-dark;
 	h1{
 		color:$blue-light;
@@ -77,12 +96,14 @@ img {
 		position:relative;
 		//z-index:1;
 	}
-	overflow:hidden;
+	//overflow:hidden;
 }
 #BB101{
-	//background-color:$blue-dark;
-	background: linear-gradient(0deg, $blue-dark, $black);
+	background-color:$red;
 	color:$white;
+	#Routes{
+		background-color:$blue-dark;
+	}
 	#routelist{
 	list-style-type:none;
 	@extend %clearfix;
@@ -126,15 +147,17 @@ img {
 #Accomplishments{	
 	//background: linear-gradient(0deg, $blue-dark, $red);
 	#accomplishments-numbers{
-		list-style-type:none;
-		text-align:center;
-		@extend %clearfix;
+		ul{
+			list-style-type:none;
+			text-align:center;
+			@extend %clearfix;
+		}
 		li{
-			//float:left;
+			background: linear-gradient(0deg, lighten($blue-light,15%), $white);
 			border-bottom:1px solid $blue-light;
 			h6{
-			margin-top:$spacing-unit *3;
-			margin-bottom:0;
+			margin-bottom:$spacing-unit *3;
+			margin-top:0;
 			text-transform:uppercase;
 			color:$blue-light;
 			}
@@ -149,8 +172,11 @@ img {
 		}
 	}
 	#accomplishments-grantee{
-		list-style-type:none;
-		text-align:center;
+		ul{
+			list-style-type:none;
+			text-align:center;
+			@extend %clearfix;
+		}
 		li{
 			//width:33%;
 			//float:left;
@@ -158,17 +184,24 @@ img {
 			font-size:$base-font-size * 4;
 			}
 		}
+	}	
+	#coastal-drift{
+		background: linear-gradient(0deg, $blue-dark, $red);
+		color:$white;
 	}
 	#fundraisers{
-		list-style-type:none;
-		padding:0;
-		margin:0;
-		@extend %clearfix;
-		display:flex;
-		display:-webkit-flex;
-		flex-flow: row wrap;
-		justify-content:center;
-		align-items: flex-start;
+		ul{
+			list-style-type:none;
+			text-align:center;
+			@extend %clearfix;
+			padding:0;
+			margin:0;
+			display:flex;
+			display:-webkit-flex;
+			flex-flow: row wrap;
+			justify-content:center;
+			align-items: flex-start;
+		}
 		li{
 			width:14em;
 			padding:1em;
@@ -181,7 +214,7 @@ img {
 			}
 			img{
 				width:80%;
-				border:10px solid $blue-dark;
+				//border:10px solid $blue-dark;
 				margin:1em auto;
 				display:block;
 				@extend %perfect-circle;
@@ -190,6 +223,25 @@ img {
 				font-size:1em;
 			}
 		}
+	}
+	.scholarship-grantee{
+		img{
+			width:60%;
+			padding:2em 0;
+			@extend %perfect-circle;
+		}
+	   float:left;
+	   @media screen and (min-width:$tablet){
+		   width:45%;
+		   padding:$spacing-unit 2.5%;
+		   img{
+		   	width:80%;
+		   }
+	   }
+	   
+	   blockquote{
+	   	
+	   }	
 	}
 }
 #Impact{
@@ -202,6 +254,7 @@ img {
 		
 		}
 	}
+	
 	
 }
 #Riders{
@@ -222,10 +275,64 @@ img {
 }
 #Alumni{}
 #Partner{
+	.partners{
+		@extend %clearfix;
+		width:100%;
+	}
 	.partner-logo{
 		display:block;
 		width:25%;
 		float:left;
 	}
 }
-#Contact{}
+#Contact{
+	color:$white;
+	//background-color:$blue-dark;
+	background: linear-gradient(0deg, $blue-dark, $red);
+	ul{
+		width:90%;
+		margin:0 auto;
+		list-style:none;
+		@extend %clearfix;
+		//text-align:center;
+		font-size:$small-font-size;
+		strong{
+			font-size:1.25em;
+		}
+		li{
+			float:left;
+			width:45%;
+			padding:$spacing-unit 2.5%;
+			&:nth-of-type(odd){
+				clear:left;
+			}
+		}
+		
+	}
+	#staff{
+		li{
+			@media screen and (min-width:$laptop *1.2){
+				width:20%;
+				&:nth-of-type(odd){
+					clear:none;
+				}
+			}
+		}
+		
+	}
+	#board{
+		li{
+			@media screen and (min-width:$laptop){
+				width:28%;
+				&:nth-of-type(odd){
+					clear:none;
+				}
+				&:nth-of-type(4), &:nth-of-type(7){
+					clear:left;
+				}
+			}
+		}
+		
+	}
+	
+}

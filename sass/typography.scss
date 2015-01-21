@@ -28,6 +28,29 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-youtube:before {
+	content: "\e60d";
+}
+
+.icon-twitter:before {
+	content: "\e60b";
+}
+
+.icon-instagram:before {
+	content: "\e609";
+}
+
+.icon-facebook:before {
+	content: "\e60a";
+}
+
+.icon-mail:before {
+	content: "\e002";
+}
+
+.icon-share:before {
+	content: "\e081";
+}
 .icon-mail:before {	content: "\e002";}
 .icon-arrow-left:before {content: "\e094";}
 .icon-arrow-right:before {content: "\e095";}
@@ -46,6 +69,85 @@
 .icon-terrain:before {content: "\e606";}
 .icon-people:before {content: "\e607";}
 .icon-globe:before {content: "\e608";}
+.icon-open:before {
+	content: "\e128";
+}
+
+
+
+
+//
+//.icon-arrow-left:before {
+//	content: "\e094";
+//}
+//
+//.icon-arrow-right:before {
+//	content: "\e095";
+//}
+//
+//.icon-arrow-up:before {
+//	content: "\e096";
+//}
+//
+//.icon-arrow-down:before {
+//	content: "\e097";
+//}
+//
+//.icon-plus:before {
+//	content: "\e114";
+//}
+//
+//.icon-minus:before {
+//	content: "\e115";
+//}
+//
+//.icon-cross:before {
+//	content: "\e117";
+//}
+//
+//.icon-menu:before {
+//	content: "\e120";
+//}
+//
+//
+//
+//.icon-visibility:before {
+//	content: "\e600";
+//}
+//
+//.icon-location:before {
+//	content: "\e601";
+//}
+//
+//.icon-time:before {
+//	content: "\e602";
+//}
+//
+//.icon-money:before {
+//	content: "\e603";
+//}
+//
+//.icon-timer:before {
+//	content: "\e604";
+//}
+//
+//.icon-bike:before {
+//	content: "\e605";
+//}
+//
+//.icon-terrain:before {
+//	content: "\e606";
+//}
+//
+//.icon-people:before {
+//	content: "\e607";
+//}
+//
+//.icon-globe:before {
+//	content: "\e608";
+//}
+
+
 
 
 

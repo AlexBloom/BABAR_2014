@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-#BB101 #routelist:after, #Accomplishments #accomplishments-numbers:after, #Accomplishments #fundraisers:after {
+article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Accomplishments #fundraisers ul:after, #Partner .partners:after, #Contact ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -24,20 +24,20 @@ dl, dd, ol, ul, figure {
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem; }
 
-#Accomplishments #fundraisers li img {
+#Accomplishments #fundraisers li img, #Accomplishments .scholarship-grantee img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%; }
 
-#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a {
+#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, article header.fixed h6, .window {
   -webkit-transition-duration: .15s;
   -moz-transition-duration: .15s;
   -ms-transition-duration: .15s;
   -o-transition-duration: .15s;
   transition-duration: .15s; }
 
-#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a {
+#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, .window {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out; }
 
@@ -77,6 +77,24 @@ body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-youtube:before {
+  content: "\e60d"; }
+
+.icon-twitter:before {
+  content: "\e60b"; }
+
+.icon-instagram:before {
+  content: "\e609"; }
+
+.icon-facebook:before {
+  content: "\e60a"; }
+
+.icon-mail:before {
+  content: "\e002"; }
+
+.icon-share:before {
+  content: "\e081"; }
 
 .icon-mail:before {
   content: "\e002"; }
@@ -131,6 +149,9 @@ body {
 
 .icon-globe:before {
   content: "\e608"; }
+
+.icon-open:before {
+  content: "\e128"; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -215,46 +236,69 @@ blockquote {
     #header #toggle:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75); }
   #header #toc {
-    color: #67b2e7;
-    background-color: #031d40;
-    padding: 2rem 0; }
+    color: #031d40;
+    padding: 2rem 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white; }
     #header #toc.fixed {
       position: fixed;
-      top: 100%;
+      top: 0;
+      right: -150%;
       bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 3; }
+      width: 80%;
+      max-width: 18.75em;
+      z-index: 3;
+      box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box; }
     #header #toc.open {
-      top: 0; }
+      right: 0; }
     #header #toc ol {
-      padding: 0;
-      border-bottom: 1px solid #021228; }
+      padding: 0 2em;
+      border-bottom: 1px solid #67b2e7; }
       #header #toc ol li {
-        border-top: 1px solid #021228;
+        border-top: 1px solid #67b2e7;
         margin: 0;
         padding: 0; }
     #header #toc a {
       display: block;
       padding: .25em 1em;
-      color: #67b2e7;
+      color: #031d40;
       font-size: 1em;
       text-decoration: none;
       outline: none; }
-      #header #toc a:hover {
-        color: white; }
       #header #toc a:active {
-        color: #e6e6e6;
-        background-color: #021228; }
+        background-color: #51a7e4; }
+
+button {
+  font-family: 'proxima-nova',helvetica,arial,sans-serif;
+  color: #e2231a;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border: none;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25); }
 
 .action {
   display: block;
-  margin: 0.5rem auto;
+  margin: 4rem auto;
   background-color: white;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5;
-  border-radius: 4rem; }
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #e2231a;
+  font-weight: 800;
+  letter-spacing: .1em; }
+  .action span {
+    font-size: 2em;
+    line-height: 2;
+    vertical-align: middle; }
 
 article {
   padding: 0 0 2rem 0; }
@@ -271,15 +315,35 @@ article {
       color: #828282;
       box-shadow: 0 1px 0 0 #828282; }
   article header {
-    box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
-    text-shadow: -1px 1px 0 #67b2e7, -2px 2px 0 #67b2e7;
     border-top: 2px solid #031d40;
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 0.5rem 1rem;
-    color: #031d40;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: .2em; }
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.95); }
+    article header nav a {
+      display: inline-block;
+      margin: 0;
+      padding: 0.5rem 0.5rem;
+      box-shadow: none;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      outline: none;
+      -webkit-border: none;
+      -webkit-outline: none; }
+    article header h6 {
+      text-align: center;
+      color: #031d40;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: .1em;
+      margin: 0;
+      padding: 0.5rem 0; }
+    article header h6 {
+      float: left;
+      text-align: left; }
+    article header nav {
+      float: right; }
+    article header.fixed {
+      box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25); }
+      article header.fixed h6 {
+        text-shadow: -1px 1px 0 #67b2e7, -2px 2px 0 #67b2e7; }
   article section {
     padding: 2rem;
     max-width: 45rem;
@@ -288,7 +352,8 @@ article {
   article h1 {
     font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: .1em; }
+    letter-spacing: .1em;
+    margin: 10rem 0; }
     @media screen and (min-width: 43.75em) {
       article h1 {
         font-size: 3em; } }
@@ -318,7 +383,11 @@ article {
   width: 100%;
   position: relative;
   max-height: 1000px !important;
-  overflow: hidden !important; }
+  overflow: hidden !important;
+  display: flex;
+  display: -webkit-flex; }
+  .full-screen section {
+    margin: auto; }
   .full-screen img {
     width: 100%; }
   .full-screen video {
@@ -357,6 +426,9 @@ article {
   z-index: -1000;
   overflow: hidden; }
 
+.overflow-hidden {
+  overflow: hidden; }
+
 .sticky {
   position: relative;
   z-index: 2; }
@@ -371,6 +443,29 @@ article {
 .sticky.fixed.absolute {
   position: absolute; }
 
+.window {
+  position: fixed;
+  z-index: 0;
+  opacity: 0;
+  top: 150%;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 1em; }
+  .window .close-window {
+    position: fixed;
+    top: 1em;
+    right: 1em; }
+  .window.open {
+    z-index: 1000;
+    top: 1em;
+    opacity: 1;
+    overflow-y: scroll; }
+
 /**
  * Images
  */
@@ -382,40 +477,55 @@ img {
   vertical-align: middle; }
 
 #Intro {
-  background: linear-gradient(0deg, #031d40, #67b2e7);
+  position: relative;
+  background-image: url(../img/content/01intro/2014_cover.jpg);
   text-align: center;
   background-position: 50% 0;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 50%;
   display: flex;
   display: -webkit-flex;
   color: white; }
+  #Intro:before {
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .75;
+    background: linear-gradient(0deg, #e2231a, #67b2e7); }
   #Intro section {
-    margin: auto; }
+    margin: auto;
+    z-index: 5; }
     #Intro section h1 {
       text-transform: uppercase;
       font-weight: 500;
-      font-size: 2em;
+      font-size: 1.5em;
       letter-spacing: .1em; }
       #Intro section h1 .number {
         font-size: 4em;
         font-weight: 800; }
+    @media screen and (min-width: 43.75em) {
+      #Intro section h1 {
+        font-size: 2em; } }
     #Intro section img {
-      width: 10rem;
-      height: 10rem; }
+      max-width: 7rem; }
 
 #Letter {
-  background: linear-gradient(0deg, #67b2e7, white);
-  color: #031d40;
-  overflow: hidden; }
+  color: #031d40; }
   #Letter h1 {
     color: #67b2e7; }
   #Letter section {
     position: relative; }
 
 #BB101 {
-  background: linear-gradient(0deg, #031d40, black);
+  background-color: #e2231a;
   color: white; }
+  #BB101 #Routes {
+    background-color: #031d40; }
   #BB101 #routelist {
     list-style-type: none; }
     #BB101 #routelist li {
@@ -458,27 +568,32 @@ img {
       background-color: #FCCE0D;
       color: black; }
 
-#Accomplishments #accomplishments-numbers {
+#Accomplishments #accomplishments-numbers ul {
   list-style-type: none;
   text-align: center; }
-  #Accomplishments #accomplishments-numbers li {
-    border-bottom: 1px solid #67b2e7; }
-    #Accomplishments #accomplishments-numbers li h6 {
-      margin-top: 1.5rem;
-      margin-bottom: 0;
-      text-transform: uppercase;
-      color: #67b2e7; }
-    #Accomplishments #accomplishments-numbers li .number {
-      font-size: 4em;
-      color: #031d40;
-      text-shadow: -1px 1px 0 white, -3px 3px 0 #67b2e7; }
-#Accomplishments #accomplishments-grantee {
+#Accomplishments #accomplishments-numbers li {
+  background: linear-gradient(0deg, #a9d3f1, white);
+  border-bottom: 1px solid #67b2e7; }
+  #Accomplishments #accomplishments-numbers li h6 {
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #67b2e7; }
+  #Accomplishments #accomplishments-numbers li .number {
+    font-size: 4em;
+    color: #031d40;
+    text-shadow: -1px 1px 0 white, -3px 3px 0 #67b2e7; }
+#Accomplishments #accomplishments-grantee ul {
   list-style-type: none;
   text-align: center; }
-  #Accomplishments #accomplishments-grantee li .number {
-    font-size: 4em; }
-#Accomplishments #fundraisers {
+#Accomplishments #accomplishments-grantee li .number {
+  font-size: 4em; }
+#Accomplishments #coastal-drift {
+  background: linear-gradient(0deg, #031d40, #e2231a);
+  color: white; }
+#Accomplishments #fundraisers ul {
   list-style-type: none;
+  text-align: center;
   padding: 0;
   margin: 0;
   display: flex;
@@ -486,29 +601,70 @@ img {
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start; }
-  #Accomplishments #fundraisers li {
-    width: 14em;
-    padding: 1em;
-    margin: 0;
-    text-align: center;
-    color: #031d40; }
-    #Accomplishments #fundraisers li h5 {
-      font-size: 1em;
-      margin: 0; }
-    #Accomplishments #fundraisers li img {
-      width: 80%;
-      border: 10px solid #031d40;
-      margin: 1em auto;
-      display: block; }
-    #Accomplishments #fundraisers li .number {
-      font-size: 1em; }
+#Accomplishments #fundraisers li {
+  width: 14em;
+  padding: 1em;
+  margin: 0;
+  text-align: center;
+  color: #031d40; }
+  #Accomplishments #fundraisers li h5 {
+    font-size: 1em;
+    margin: 0; }
+  #Accomplishments #fundraisers li img {
+    width: 80%;
+    margin: 1em auto;
+    display: block; }
+  #Accomplishments #fundraisers li .number {
+    font-size: 1em; }
+#Accomplishments .scholarship-grantee {
+  float: left; }
+  #Accomplishments .scholarship-grantee img {
+    width: 60%;
+    padding: 2em 0; }
+  @media screen and (min-width: 43.75em) {
+    #Accomplishments .scholarship-grantee {
+      width: 45%;
+      padding: 0.5rem 2.5%; }
+      #Accomplishments .scholarship-grantee img {
+        width: 80%; } }
 
 #Riders {
   color: #031d40; }
   #Riders h6 span {
     color: #e2231a; }
 
+#Partner .partners {
+  width: 100%; }
 #Partner .partner-logo {
   display: block;
   width: 25%;
   float: left; }
+
+#Contact {
+  color: white;
+  background: linear-gradient(0deg, #031d40, #e2231a); }
+  #Contact ul {
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 0.875em; }
+    #Contact ul strong {
+      font-size: 1.25em; }
+    #Contact ul li {
+      float: left;
+      width: 45%;
+      padding: 0.5rem 2.5%; }
+      #Contact ul li:nth-of-type(odd) {
+        clear: left; }
+  @media screen and (min-width: 75em) {
+    #Contact #staff li {
+      width: 20%; }
+      #Contact #staff li:nth-of-type(odd) {
+        clear: none; } }
+  @media screen and (min-width: 62.5em) {
+    #Contact #board li {
+      width: 28%; }
+      #Contact #board li:nth-of-type(odd) {
+        clear: none; }
+      #Contact #board li:nth-of-type(4), #Contact #board li:nth-of-type(7) {
+        clear: left; } }

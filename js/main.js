@@ -1,42 +1,26 @@
 function stickyTitles(stickies) {
-
 	this.load = function() {
-	
 		stickies.each(function(){
-		
 			var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
 			thisSticky.parent().height(thisSticky.outerHeight());
-		
 			jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
-		
 		});
 	}	
 	this.scroll = function() {
-		stickies.each(function(i){
-					
+		stickies.each(function(i){					
 			var thisSticky = jQuery(this),
 				nextSticky = stickies.eq(i+1),
 				prevSticky = stickies.eq(i-1),
-				pos = jQuery.data(thisSticky[0], 'pos');
-	
-			if (pos <= jQuery(window).scrollTop()) {
-			
-				thisSticky.addClass("fixed");
-			
-				if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {
-				
+				pos = jQuery.data(thisSticky[0], 'pos');	
+			if (pos <= jQuery(window).scrollTop()) {			
+				thisSticky.addClass("fixed");			
+				if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {				
 					thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
-
 				}
-			
 			} else {
-			
 				thisSticky.removeClass("fixed");
-			
 				if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
-			
 					prevSticky.removeClass("absolute").removeAttr("style");
-			
 				}				
 			}
 		});			
@@ -57,14 +41,17 @@ $(document).ready(function(){
 	$("#toggle").click(function(){
 		$("#toc").toggleClass('open');
 		$(this).toggleClass('active');
+		//$('body').toggleClass('overflow-hidden');
 	});
 
 	// Size Full-Screen Videos, Images, & Slideshows to window height.
 	$('.full-screen').css('min-height',$(window).height());
+	$('.tab-content').css('height',$(window).height());
 	$('.article-slider').css('min-height',$(window).height());
 
 	$(window).resize(function() {
 		$('.full-screen').css('min-height',$(window).height());
+		$('.tab-content').css('height',$(window).height());
 		$('.article-slider').css('min-height',$(window).height());
 	});
 	
@@ -80,6 +67,40 @@ $(document).ready(function(){
     //	});
    
 	
+	// Open Overlay Windows
+	
+	//Open Per ID
+	$('#open-letter-window').click(function (){
+		$('#Letter').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
+	
+	$('#open-accomplishments-window').click(function (){
+		$('#More-Accomplishments').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
+	$('#open-cause-window').click(function (){
+		$('#Cause').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
+	$('#open-routes-window').click(function (){
+		$('#Routes').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
+	$('#open-grantee-window').click(function (){
+		$('#Grantee').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
+	
+	
+	//Global close	
+	$('.close-window').click(function (){
+		$('.window').removeClass('open');
+		$('body').removeClass('overflow-hidden');
+	});
+	
+	
+	
 	//Fire Swipe Classes for Sliders
 	window.orgfigures = $('#orgfigures').Swipe().data('Swipe');
 	window.grantacc = $('#grantacc').Swipe().data('Swipe');
@@ -87,9 +108,8 @@ $(document).ready(function(){
       
 
 	// TABS Initiations
-	   
-	   
-		   $('#grantee-tabs a').click(function (e) {
+	  
+		   $('#Accomplishments-Tabs a').click(function (e) {
 		     e.preventDefault()
 		     $(this).tab('show')
 		   })
@@ -137,7 +157,13 @@ $(document).ready(function(){
 		});
 		
 		$(window).resize(function(){
+			
 			$('#Intro').css('height',$(window).height());
+			
+			//newStickies.load();
+			//$(window).on("scroll", function() {
+			//	newStickies.scroll();
+			//});
 		});	
 
   }); // Close Doc Ready Function
