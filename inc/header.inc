@@ -40,39 +40,39 @@
 		<nav id="toc">		
 			<h3> Contents </h3>
 			<ol>
-				<li> <a class="scrollnav-link" id="link-2" href="#Letter"> 	
-						<span class="toc-name"> Board and Staff Message	</span>	
+				<li> <a class="scrollnav-link" id="link" href="#Intro"> 	
+						<span class="toc-name"> Intro </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-3" href="#BB101"> 	
-						<span class="toc-name"> Bike and Build 101	</span>	
-					</a> 
-				</li>
-				<li> <a class="scrollnav-link" id="link-5" href="#Accomplishments">
+				<li> <a class="scrollnav-link" id="link" href="#Accomplishments">
 						<span class="toc-name"> 2014 Accomplishments		</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-6" href="#Impact"> 
+				<li> <a class="scrollnav-link" id="link" href="#BB101"> 	
+						<span class="toc-name"> Bike and Build 101	</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="link" href="#Impact"> 
 						<span class="toc-name"> Impact </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-7" href="#Riders"> 	
+				<li> <a class="scrollnav-link" id="link" href="#Riders"> 	
 						<span class="toc-name"> Riders </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-10" href="#Alumni"> 	
+				<li> <a class="scrollnav-link" id="link" href="#Alumni"> 	
 						<span class="toc-name"> Alumni </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-11" href="#Financials"> 
+				<li> <a class="scrollnav-link" id="link" href="#Financials"> 
 						<span class="toc-name"> Statement of Financials </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-12" href="#Partner"> 	
+				<li> <a class="scrollnav-link" id="link" href="#Partner"> 	
 						<span class="toc-name"> Partner	</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-13" href="#Contact"> 	
+				<li> <a class="scrollnav-link" id="link" href="#Contact"> 	
 						<span class="toc-name"> Contact	</span>	
 					</a> 
 				</li>

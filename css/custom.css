@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Accomplishments #fundraisers ul:after, #Partner .partners:after, #Contact ul:after {
+article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Accomplishments #fundraisers ul:after, #Partner .partner-logos:after, #Contact ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -24,7 +24,7 @@ article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem; }
 
-#Accomplishments #fundraisers li img, #Accomplishments .scholarship-grantee img {
+.window .close-window, #Accomplishments #fundraisers li img, #Accomplishments .scholarship-grantee img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -218,8 +218,8 @@ blockquote {
       display: block;
       position: absolute;
       padding: 0;
-      bottom: .4em;
-      right: .4em; }
+      bottom: .375em;
+      right: .35em; }
     #header #toggle #icon-menu {
       opacity: 1; }
     #header #toggle #icon-cross {
@@ -255,7 +255,6 @@ blockquote {
     #header #toc.open {
       right: 0; }
     #header #toc ol {
-      padding: 0 2em;
       border-bottom: 1px solid #67b2e7; }
       #header #toc ol li {
         border-top: 1px solid #67b2e7;
@@ -316,17 +315,21 @@ article {
       box-shadow: 0 1px 0 0 #828282; }
   article header {
     border-top: 2px solid #031d40;
-    padding: 0 1rem;
+    padding: 0;
     background-color: rgba(255, 255, 255, 0.95); }
     article header nav a {
       display: inline-block;
       margin: 0;
-      padding: 0.5rem 0.5rem;
+      padding: 0.5rem 1rem;
       box-shadow: none;
-      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-left: 1px solid #67b2e7;
       outline: none;
       -webkit-border: none;
       -webkit-outline: none; }
+      article header nav a span {
+        font-size: 1.5rem !important;
+        vertical-align: middle !important;
+        margin-left: .25rem; }
     article header h6 {
       text-align: center;
       color: #031d40;
@@ -334,7 +337,7 @@ article {
       font-weight: 700;
       letter-spacing: .1em;
       margin: 0;
-      padding: 0.5rem 0; }
+      padding: 0.5rem 1rem; }
     article header h6 {
       float: left;
       text-align: left; }
@@ -450,16 +453,19 @@ article {
   top: 150%;
   left: 1em;
   right: 1em;
-  bottom: 1em;
+  bottom: 0;
   overflow-y: hidden;
   overflow-x: hidden;
-  box-shadow: 0 0 0 0.5rem rgba(0, 0, 0, 0.5);
-  background-color: white;
-  padding: 1em; }
+  box-shadow: 0 0 0 1em rgba(0, 0, 0, 0.65);
+  background-color: white; }
   .window .close-window {
     position: fixed;
-    top: 1em;
-    right: 1em; }
+    bottom: 1em;
+    right: 48%;
+    z-index: 1001;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem; }
   .window.open {
     z-index: 1000;
     top: 1em;
@@ -522,8 +528,12 @@ img {
     position: relative; }
 
 #BB101 {
-  background-color: #e2231a;
-  color: white; }
+  background-color: white;
+  color: #031d40; }
+  #BB101 h2 {
+    color: #67b2e7; }
+  #BB101 #Cause {
+    background-color: black; }
   #BB101 #Routes {
     background-color: #031d40; }
   #BB101 #routelist {
@@ -633,12 +643,17 @@ img {
   #Riders h6 span {
     color: #e2231a; }
 
-#Partner .partners {
-  width: 100%; }
+#Partner #partner-facts {
+  list-style: none;
+  padding: 0; }
 #Partner .partner-logo {
   display: block;
-  width: 25%;
+  padding: 1em 2.5%;
+  width: 45%;
   float: left; }
+  @media screen and (min-width: 43.75em) {
+    #Partner .partner-logo {
+      width: 20%; } }
 
 #Contact {
   color: white;

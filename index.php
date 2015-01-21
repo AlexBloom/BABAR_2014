@@ -210,13 +210,13 @@
 			<header class="sticky">
 				<h6> Bike & Build 101 </h6>
 				<nav>
-					<a href="#"> Learn More <span class="icon-youtube"> </span> </a>
+					<a href="http://bikeandbuild.org"target=_blank> Learn More <span class="icon-open"> </span> </a>
 				</nav>
 			</header>
 			
-				<h1>What Is Bike &amp; Build?</h1>
-				<h6> Watch </h6>
+				
 				<iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				<h2>What Is Bike &amp; Build?</h2>
 				
 				<h6>For more clips, check out our <a href="https://www.youtube.com/channel/UCVmvOTU5tIhKTZYRdIoTFzA"target=_blank>YouTube channel</a>
 				</h6>
@@ -233,7 +233,18 @@
 				
 				
 				
-				<h6> <button id="open-cause-window"> About The Cause </button> <button id="open-routes-window"> Where We Ride </button></h6>
+				<h6> 
+					<button id="open-cause-window"> 
+						<span class="icon-youtube"></span> <br>
+						About The Cause 
+						 
+					</button> 
+					<button id="open-routes-window"> 
+						<span class="icon-location"></span> <br>
+						Where We Ride
+						
+					</button>
+				</h6>
 				
 				<div class="window" id="Routes">
 					<span class="icon-cross close-window"> </span>	
@@ -271,8 +282,8 @@
 				
 				<div class="window" id="Cause">
 					<span class="icon-cross close-window"> </span>
-					<h2>The Affordable Housing Cause</h2>
 					<iframe width="560" height="315" src="//www.youtube.com/embed/_lGmXUt4yEM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					<h2>The Affordable Housing Cause</h2>
 				</div>
 					
 			
@@ -307,15 +318,20 @@
 					<span class="icon-cross close-window"> </span>
 					<h1>Grantee Profiles</h1>
 					<article class="grantee" id="Idaho">
-					<h2> Habitat for Humanity of North Idaho</h2>
-					<h3> Hayden, ID | Providence to Seattle<h3> 
-					<h6> $8,120</h6>
+						<header>
+							
+						</header>
+						<section>
+							<h2> Habitat for Humanity of North Idaho</h2>
+							<h3> Hayden, ID | Providence to Seattle<h3> 
+							<h6> $8,120</h6>
 				
-					<p>Habitat for Humanity of North Idaho is using B&B grant funds to engage students from the Kootenai Technical Education (KTEC) High School in the construction of a home for a low-income family. In their original grant application funded by our riders, HfH of North Idaho estimated ten students would participate. However, the program has become so popular that 21 students are enrolled in the Fall 2014 semester. KTEC students receive hands-on training in residential construction to supplement classroom activities. </p>
+							<p>Habitat for Humanity of North Idaho is using B&B grant funds to engage students from the Kootenai Technical Education (KTEC) High School in the construction of a home for a low-income family. In their original grant application funded by our riders, HfH of North Idaho estimated ten students would participate. However, the program has become so popular that 21 students are enrolled in the Fall 2014 semester. KTEC students receive hands-on training in residential construction to supplement classroom activities. </p>
 			
-					<p>Katrina Boyer, HfH of North Idaho’s Volunteer Coordinator, stated that the Bike & Build grant has been one of the primary reasons this partnership formed. “The grant enabled us to get started on projects that we otherwise couldn’t have done. It’s very difficult to be unable to start projects for people who really need help. Establishing this relationship with KTEC allows us to reach more of our community members in need.” The grant may help lead to further expansion for the partnership from other sources as well. “Some of the members of KTEC’s Board of Directors have been able to see this progress, and that has opened doors for Habitat to these new networks,” Boyer stated. </p>
+							<p>Katrina Boyer, HfH of North Idaho’s Volunteer Coordinator, stated that the Bike & Build grant has been one of the primary reasons this partnership formed. “The grant enabled us to get started on projects that we otherwise couldn’t have done. It’s very difficult to be unable to start projects for people who really need help. Establishing this relationship with KTEC allows us to reach more of our community members in need.” The grant may help lead to further expansion for the partnership from other sources as well. “Some of the members of KTEC’s Board of Directors have been able to see this progress, and that has opened doors for Habitat to these new networks,” Boyer stated. </p>
 			
-					<p>Bike & Build has also built with Habitat for Humanity of North Idaho since 2009, and we look forward to continuing that relationship!</p>
+							<p>Bike & Build has also built with Habitat for Humanity of North Idaho since 2009, and we look forward to continuing that relationship!</p>
+						</section>
 				</article>
 			    	<article class="grantee" id="YouthBuild">
 					<h2>YouthBuild Philadelphia</h2>
@@ -329,36 +345,50 @@
 					<p>Zahfir Slaughter, one of the students working on this project, commented on how much he’s not only learning on the construction site, but also about himself. “I’m really learning how to push myself and build my character. This program is very exciting. We’re not only giving opportunities to a new homeowner, but it also opens up bright futures for students like me.” Zahfir is taking these lessons to heart; after college, he wants to start a career in real estate. “It’ll be fun to one day go past the house we’re building and say ‘I did this.’”</p>
 				</article>
 					<article class="grantee" id="Stafford">  
-					<h2>Stafford County Economic Development</h2>
-					<h3>St. John, KS | North Carolina to San Diego</h3>
-					<h6>$7,000</h6>
-					<p>Stafford EcoDevo is using affordable housing as a key tool in a broader goal: retaining and recruiting more young adults to live and raise their families in rural Kansas. “Population decline is a big issue in rural economic development, and housing is one the major things to address,” said Carolyn Dunn, Executive Director at Stafford EcoDevo. For example, one problem the community faces is finding housing for teachers hired by the local school district. The average age of a house in Stafford County is 84 years old, and 80% of the housing stock is in subpar condition. Bike & Build funds are being used to help build three new rental units for young professionals, like teachers, throughout the county. </p>
+						<header>
+						
+						</header>
+						<section>
+							<h2>Stafford County Economic Development</h2>
+							<h3>St. John, KS | North Carolina to San Diego</h3>
+							<h6>$7,000</h6>
+							<p>Stafford EcoDevo is using affordable housing as a key tool in a broader goal: retaining and recruiting more young adults to live and raise their families in rural Kansas. “Population decline is a big issue in rural economic development, and housing is one the major things to address,” said Carolyn Dunn, Executive Director at Stafford EcoDevo. For example, one problem the community faces is finding housing for teachers hired by the local school district. The average age of a house in Stafford County is 84 years old, and 80% of the housing stock is in subpar condition. Bike & Build funds are being used to help build three new rental units for young professionals, like teachers, throughout the county. </p>
 	
-					<p>Bike & Build riders didn’t volunteer with Stafford EcoDevo in 2014, but Carolyn had a chance to speak to the NC2SD riders in Dodge City, KS. “I came home after talking with them and, sensing their purpose and passion, I was pretty pumped up. I didn’t sleep much that night!” Stafford EcoDevo has taken the mission of engaging young adults in their community development to heart: they recently hired a college grad from Wichita (“That’s a big deal,” Carolyn said.), and this project inspired a local contractor to hire one of the students in the local high school’s building trades program that had been contributing to the project.</p> 
+							<p>Bike & Build riders didn’t volunteer with Stafford EcoDevo in 2014, but Carolyn had a chance to speak to the NC2SD riders in Dodge City, KS. “I came home after talking with them and, sensing their purpose and passion, I was pretty pumped up. I didn’t sleep much that night!” Stafford EcoDevo has taken the mission of engaging young adults in their community development to heart: they recently hired a college grad from Wichita (“That’s a big deal,” Carolyn said.), and this project inspired a local contractor to hire one of the students in the local high school’s building trades program that had been contributing to the project.</p> 
 	
-					<p>“It’s all about broad community development,” Carolyn commented. “Economic prosperity, housing, healthy living… it all goes hand-in-hand.” </p>
-				</article>
+							<p>“It’s all about broad community development,” Carolyn commented. “Economic prosperity, housing, healthy living… it all goes hand-in-hand.” </p>
+						</section>
+					</article>
 					<article class="grantee" id="Grid">
-					<h2>GRID Alternatives Colorado</h2>
-					<h3>Denver, CO | Central U.S.</h3>
-					<h6>$5,000</h6>
-					<p>GRID Alternatives Colorado provides low-to-no cost solar electric systems to families that qualify as low income, while also giving volunteers and job trainees hands-on experience that they can use to get jobs in the growing solar industry. GRID has been operating in Colorado since 2012, when they installed 12 systems. Next year they aim to install 60-70. With the support of Bike & Build funding, they aim to develop the first U.S.-based solar grid that is 100% dedicated to low-income subscribers.</p> 
+						<header>
+							
+						</header>
+						<section>
+							<h2>GRID Alternatives Colorado</h2>
+							<h3>Denver, CO | Central U.S.</h3>
+							<h6>$5,000</h6>
+							<p>GRID Alternatives Colorado provides low-to-no cost solar electric systems to families that qualify as low income, while also giving volunteers and job trainees hands-on experience that they can use to get jobs in the growing solar industry. GRID has been operating in Colorado since 2012, when they installed 12 systems. Next year they aim to install 60-70. With the support of Bike & Build funding, they aim to develop the first U.S.-based solar grid that is 100% dedicated to low-income subscribers.</p> 
 	
-					<p>A key piece of GRID’s outreach engages young adults in long-term contributions to sustainable, affordable housing. They work with multiple community colleges and technical schools to provide hands-on, rooftop experience installing panels. To go along with their classroom education, GRID trainees complete ten volunteer days and ten crew-leading. Once complete, individuals are eligible for to sit for the industry’s certification exam. GRID Colorado also runs its own Solar Corps program, similar to AmeriCorps (unaffiliated), where young adults who participate are employed by GRID but also earn a scholarship to continue their education. </p>
+							<p>A key piece of GRID’s outreach engages young adults in long-term contributions to sustainable, affordable housing. They work with multiple community colleges and technical schools to provide hands-on, rooftop experience installing panels. To go along with their classroom education, GRID trainees complete ten volunteer days and ten crew-leading. Once complete, individuals are eligible for to sit for the industry’s certification exam. GRID Colorado also runs its own Solar Corps program, similar to AmeriCorps (unaffiliated), where young adults who participate are employed by GRID but also earn a scholarship to continue their education. </p>
 	
-					<p>Kristina Sickles, Development Director at GRID Colorado, talked about GRID’s triple-bottom line impact: “We’re helping low-income homeowners with a hand-up, we’re helping young adults, veterans, women, and others gain valuable job experience, and we’re lowering utility costs and overall fossil fuel dependence. Ultimately, we want to bring new people into the convseration about renewable energy, especially those low-income individuals who are most impacted.”
-						</p>
-					<p>The program’s impact is also felt by their homeowners. “We have a very tight income and it has been a blessing to shave down our bills each month,” said Amy Sue Pinto, a recent GRID client. “We’d looked into solar and knew it was always something we wanted, but it was just not financially feasible until GRID Alternatives helped us out. Everyone on their team was amazing to work with!”</p>
-				</article>
+							<p>Kristina Sickles, Development Director at GRID Colorado, talked about GRID’s triple-bottom line impact: “We’re helping low-income homeowners with a hand-up, we’re helping young adults, veterans, women, and others gain valuable job experience, and we’re lowering utility costs and overall fossil fuel dependence. Ultimately, we want to bring new people into the convseration about renewable energy, especially those low-income individuals who are most impacted.”
+								</p>
+							<p>The program’s impact is also felt by their homeowners. “We have a very tight income and it has been a blessing to shave down our bills each month,” said Amy Sue Pinto, a recent GRID client. “We’d looked into solar and knew it was always something we wanted, but it was just not financially feasible until GRID Alternatives helped us out. Everyone on their team was amazing to work with!”</p>
+						</section>
+					</article>
 					<article class="grantee" id="Purdue">
-					<h2>Purdue University Habitat for Humanity</h2>
-					<h3>West Lafayette, IN | Providence to Seattle</h3>
-					<h6>$1,400</h6>
-					<p>The Habitat campus chapter at Purdue will be using Bike & Build funds this year to build their capacity for future fundraisers. Our P2S team awarded $1,400 to purchase new bicycles that the organization is using for bike-related fundraisers that will far exceed the grant total provided by B&B. Specifically, Purdue students will participate in the Bucket 100, a two-day ride that travels from Purdue to Indiana University in Bloomington, 120 miles away, and Cover Indiana, a week-long event that traverses Indiana. Students without their own wheels will be able to participate with the Bike & Build-funded bikes, enabling the campus chapter to raise at least $450 per bike/per year. </p>
+						<header>
+							
+						</header>
+						<section>
+							<h2>Purdue University Habitat for Humanity</h2>
+							<h3>West Lafayette, IN | Providence to Seattle</h3>
+							<h6>$1,400</h6>
+							<p>The Habitat campus chapter at Purdue will be using Bike & Build funds this year to build their capacity for future fundraisers. Our P2S team awarded $1,400 to purchase new bicycles that the organization is using for bike-related fundraisers that will far exceed the grant total provided by B&B. Specifically, Purdue students will participate in the Bucket 100, a two-day ride that travels from Purdue to Indiana University in Bloomington, 120 miles away, and Cover Indiana, a week-long event that traverses Indiana. Students without their own wheels will be able to participate with the Bike & Build-funded bikes, enabling the campus chapter to raise at least $450 per bike/per year. </p>
 	
-					<p>“These bikes will last us for awhile,” said Michell Obergfell, the chapter’s Vice President of Development. “We work closely with Lafayette Habitat for Humanity, and each year we aim to raise enough money to sponsor a house. This will help us do that.”</p>
-			
-				</article>
+							<p>“These bikes will last us for awhile,” said Michell Obergfell, the chapter’s Vice President of Development. “We work closely with Lafayette Habitat for Humanity, and each year we aim to raise enough money to sponsor a house. This will help us do that.”</p>
+						</section>
+					</article>
 				</div>
 				<h2>* Interested in applying for a Bike & Build Grant?</h2>
 				<p>We fund projects that engage young adults in addressing a demonstrated need in affordable housing. 2015 applications will be available in April and due Friday, June 5. We accept requests from 501(c)(3) organizations between $500 and $10,000. Visit bikeandbuild.org/grants for application materials.</p>
@@ -478,8 +508,8 @@
 			<section>
 				<p>Bike & Build allows young adults to invest in communities across the United States through service-based cycling trips.</p> 
 
-				<iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen>
-				</iframe>	
+				<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/7mmSN7J38Xg?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen>
+				</iframe> -->	
 				
 				<p>Each summer our cyclists pedal across the United States, raising money for the affordable housing cause and building homes for low-income families. This experience also fosters a commitment to civic engagement far beyond their Bike & Build summer.</p>
 
@@ -492,14 +522,23 @@
 				<p>Become a sustaining partner with Bike & Build. We will work with you to customize a partnership package that accomplishes your organization’s needs, while empowering both of our organizations to have an impact on affordable housing in your community. </p>
 
 				<h2>Our message reaches all corners of the United States.</h2> 
-				<ul>
-					<li> We average 11,000 individual donors each year. 
+				<ul id="partner-facts">
+					<li> 
+						<p>We average <strong>11,000 individual donors</strong> each year.</p> 
 					</li>
-					<li> Our 330 riders pedal through 47 states. 
+					<li> 
+						<p>Our <strong>330 riders</strong> pedal through <strong>47 states</strong>.</p> 
 					</li>
-					<li> We have a burgeoning social media following on Facebook, Twitter (@bikebuild), and Instagram (@bikeandbuild). 
+					<li> 
+						<p>We have a burgeoning social media following</p>
+						<h6>
+							<a href="http://facebook.com/bikeandbuild"target=_blank> Facebook </a>
+							<a href="http://twitter.com/bikebuild"target=_blank> Twitter </a>
+							<a href="http://instagram.com/bikeandbuild"target=_blank> Instagram
+						</h6> 
 					</li>
-					<li> And with over 2,600 alumni since our founding in 2003, our base of young adults only continues to grow. 
+					<li> 
+						And with over 2,600 alumni since our founding in 2003, our base of young adults only continues to grow. 
 				(I bolded and increased font size of those numbers… it looks terrible here, you probably get what I’m going for though.)
 					</li>
 				</ul>
@@ -512,11 +551,10 @@
 
 				<p>We are excited to work with organizations that share our values. To learn more, contact Justin Villere, Director of Operations and Outreach, at <a href="mailto:justin@bikeandbuild.org">justin@bikeandbuild.org</a>.</p>
 
-				<p>Thank you to our 2013 partners<br>
-				   We look forward to working with you again!
-			    </p>
+			    
 			</section>
-			<!--<div class="partner-logos">
+			<section class="partner-logos">
+				<h2>Thank you to our 2014 partners</h2>
 				<img class="partner-logo" src="img/content/partners/bokoo.jpg" alt="Bokoo" />
 				<img class="partner-logo" src="img/content/partners/earthbalance.jpg" alt="Earth Balance" />
 				<img class="partner-logo" src="img/content/partners/fhlb.jpg" alt="FHLB Boston" />
@@ -525,8 +563,11 @@
 				<img class="partner-logo" src="img/content/partners/univest.jpg" alt="Univest" />
 				<img class="partner-logo" src="img/content/partners/parktool.jpg" alt="Park Tool" />
 				<img class="partner-logo" src="img/content/partners/hincapie.jpg" alt="Hincapie" />
-			 </div>	 -->
-		</article>		
+				<h6>We look forward to working with you again!</h6>
+			 </section>	
+			 
+		</article>
+				
 		<article id="Contact">		
 			<header class="sticky">
 				<h6>Contact Us</h6>

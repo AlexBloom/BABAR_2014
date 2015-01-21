@@ -99,8 +99,12 @@ img {
 	//overflow:hidden;
 }
 #BB101{
-	background-color:$red;
-	color:$white;
+	background-color:$white;
+	color:$blue-dark;
+	h2{color:$blue-light;}
+	#Cause{
+		background-color:$black;
+	}
 	#Routes{
 		background-color:$blue-dark;
 	}
@@ -275,14 +279,21 @@ img {
 }
 #Alumni{}
 #Partner{
-	.partners{
+	#partner-facts{
+		list-style:none;
+		padding:0;
+	}
+	.partner-logos{
 		@extend %clearfix;
-		width:100%;
 	}
 	.partner-logo{
 		display:block;
-		width:25%;
+		padding:1em 2.5%;
+		width:45%;
 		float:left;
+		@media screen and (min-width:$tablet){
+			width:20%;
+		}
 	}
 }
 #Contact{

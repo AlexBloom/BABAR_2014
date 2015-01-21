@@ -43,6 +43,12 @@ $(document).ready(function(){
 		$(this).toggleClass('active');
 		//$('body').toggleClass('overflow-hidden');
 	});
+	
+	$("#toc a").click(function(){
+		$("#toc").toggleClass('open');
+		$('#toggle').toggleClass('active');
+		//$('body').toggleClass('overflow-hidden');
+	});
 
 	// Size Full-Screen Videos, Images, & Slideshows to window height.
 	$('.full-screen').css('min-height',$(window).height());
