@@ -2,6 +2,52 @@
  * Basic styling
  */
 
+@font-face {
+	font-family: 'bikeandbuild';
+	src:url('../fonts/bikeandbuild.eot?jyrtgi');
+	src:url('../fonts/bikeandbuild.eot?#iefixjyrtgi') format('embedded-opentype'),
+		url('../fonts/bikeandbuild.woff?jyrtgi') format('woff'),
+		url('../fonts/bikeandbuild.ttf?jyrtgi') format('truetype'),
+		url('../fonts/bikeandbuild.svg?jyrtgi#bikeandbuild') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'bikeandbuild';
+	speak: none;
+	font-size:1.5em;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {	content: "\e002";}
+.icon-arrow-left:before {content: "\e094";}
+.icon-arrow-right:before {content: "\e095";}
+.icon-arrow-up:before {content: "\e096";}
+.icon-arrow-down:before {content: "\e097";}
+.icon-plus:before {content: "\e114";}
+.icon-minus:before {content: "\e115";}
+.icon-cross:before {content: "\e117";}
+.icon-menu:before {content: "\e120";}
+.icon-visibility:before {content: "\e600";}
+.icon-location:before {content: "\e601";}
+.icon-time:before {content: "\e602";}
+.icon-money:before {content: "\e603";}
+.icon-timer:before {content: "\e604";}
+.icon-bike:before {content: "\e605";}
+.icon-terrain:before {content: "\e606";}
+.icon-people:before {content: "\e607";}
+.icon-globe:before {content: "\e608";}
+
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -14,16 +60,19 @@ ul, ol, dl, figure,
 }
 
 h1{
+	text-align:center;
 	margin-top: $spacing-unit * 2;
 	line-height:$base-line-height / 2;
 }
 h2{
-	font-size:2rem;
+	text-align:center;
+	font-size:2em;
 	margin-top: $spacing-unit * 2;
 	line-height:$base-line-height / 2;
 }
 h3{
-	font-size:1rem;
+	text-align:center;
+	font-size:1em;
 	text-transform:uppercase;
 	letter-spacing:.15rem;
 	font-weight:800;
@@ -31,15 +80,18 @@ h3{
 	
 }
 h6{
-	font-size:1rem;
+	text-align:center;
+	font-size:1em;
 	letter-spacing:.1rem;
+	text-transform:uppercase;
 }
 
 blockquote{
-	border-left:.25em solid $black;
+	border-left:.25em solid $blue-light;
 	padding-left:1rem;
-	font-size:1.1rem;
+	font-size:1.25em;
 	line-height:$spacing-unit * 4;
+	color:$blue-dark;
 }
 .author{
 	font-family:courier,serif;

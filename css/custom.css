@@ -13,16 +13,37 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-#fundraisers:after, #routelist:after {
+#BB101 #routelist:after, #Accomplishments #accomplishments-numbers:after, #Accomplishments #fundraisers:after {
   content: "";
   display: table;
   clear: both; }
 
-#routelist .label {
+#BB101 #routelist .label {
   border-radius: .5rem;
   -webkit-border-radius: .5rem;
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem; }
+
+#Accomplishments #fundraisers li img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%; }
+
+#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a {
+  -webkit-transition-duration: .15s;
+  -moz-transition-duration: .15s;
+  -ms-transition-duration: .15s;
+  -o-transition-duration: .15s;
+  transition-duration: .15s; }
+
+#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+#header #toggle #icon-menu, #header #toggle #icon-cross {
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in; }
 
 body {
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
@@ -32,14 +53,85 @@ body {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.85);
   background-color: white;
-  -webkit-text-size-adjust: 100%;
-  background-image: linear-gradient(to bottom, cyan 0, rgba(255, 255, 255, 0) 1px);
-  background-repeat: repeat-y;
-  background-size: 100% 1rem; }
+  -webkit-text-size-adjust: 100%; }
 
 /**
  * Basic styling
  */
+@font-face {
+  font-family: 'bikeandbuild';
+  src: url("../fonts/bikeandbuild.eot?jyrtgi");
+  src: url("../fonts/bikeandbuild.eot?#iefixjyrtgi") format("embedded-opentype"), url("../fonts/bikeandbuild.woff?jyrtgi") format("woff"), url("../fonts/bikeandbuild.ttf?jyrtgi") format("truetype"), url("../fonts/bikeandbuild.svg?jyrtgi#bikeandbuild") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'bikeandbuild';
+  speak: none;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-mail:before {
+  content: "\e002"; }
+
+.icon-arrow-left:before {
+  content: "\e094"; }
+
+.icon-arrow-right:before {
+  content: "\e095"; }
+
+.icon-arrow-up:before {
+  content: "\e096"; }
+
+.icon-arrow-down:before {
+  content: "\e097"; }
+
+.icon-plus:before {
+  content: "\e114"; }
+
+.icon-minus:before {
+  content: "\e115"; }
+
+.icon-cross:before {
+  content: "\e117"; }
+
+.icon-menu:before {
+  content: "\e120"; }
+
+.icon-visibility:before {
+  content: "\e600"; }
+
+.icon-location:before {
+  content: "\e601"; }
+
+.icon-time:before {
+  content: "\e602"; }
+
+.icon-money:before {
+  content: "\e603"; }
+
+.icon-timer:before {
+  content: "\e604"; }
+
+.icon-bike:before {
+  content: "\e605"; }
+
+.icon-terrain:before {
+  content: "\e606"; }
+
+.icon-people:before {
+  content: "\e607"; }
+
+.icon-globe:before {
+  content: "\e608"; }
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -49,67 +141,111 @@ ul, ol, dl, figure {
   margin-bottom: 1rem; }
 
 h1 {
+  text-align: center;
   margin-top: 1rem;
   line-height: 1; }
 
 h2 {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 2em;
   margin-top: 1rem;
   line-height: 1; }
 
 h3 {
-  font-size: 1rem;
+  text-align: center;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: .15rem;
   font-weight: 800;
   margin-bottom: 1rem; }
 
 h6 {
-  font-size: 1rem;
-  letter-spacing: .1rem; }
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: .1rem;
+  text-transform: uppercase; }
 
 blockquote {
-  border-left: 0.25em solid black;
+  border-left: 0.25em solid #67b2e7;
   padding-left: 1rem;
-  font-size: 1.1rem;
-  line-height: 2rem; }
+  font-size: 1.25em;
+  line-height: 2rem;
+  color: #031d40; }
 
 .author {
   font-family: courier,serif; }
   .author:before {
     content: "– "; }
 
-#header #toggle {
-  background-color: #e2231a;
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 3rem;
-  height: 3rem;
-  border: none;
-  border-radius: 1.5rem;
-  z-index: 500;
-  outline: none;
-  -webkit-border: none; }
-#header #toc {
-  -webkit-transition-duration: .15s;
-  -moz-transition-duration: .15s;
-  -ms-transition-duration: .15s;
-  -o-transition-duration: .15s;
-  transition-duration: .15s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  background-color: #031d40;
-  padding: 2rem; }
-  #header #toc.fixed {
+#header {
+  font-size: 18px; }
+  #header #toggle {
+    background-color: #e2231a;
+    color: white;
     position: fixed;
-    top: 100%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 3; }
-  #header #toc.open {
-    top: 0; }
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1.5rem;
+    z-index: 500;
+    outline: none;
+    -webkit-border: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
+    #header #toggle #icon-menu, #header #toggle #icon-cross {
+      display: block;
+      position: absolute;
+      padding: 0;
+      bottom: .4em;
+      right: .4em; }
+    #header #toggle #icon-menu {
+      opacity: 1; }
+    #header #toggle #icon-cross {
+      opacity: 0;
+      -webkit-transform: rotate(-90deg) scale(0.5); }
+    #header #toggle.active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75); }
+      #header #toggle.active #icon-menu {
+        opacity: 0;
+        -webkit-transform: rotate(90deg) scale(0.5); }
+      #header #toggle.active #icon-cross {
+        opacity: 1;
+        -webkit-transform: rotate(90deg) scale(1); }
+    #header #toggle:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75); }
+  #header #toc {
+    color: #67b2e7;
+    background-color: #031d40;
+    padding: 2rem 0; }
+    #header #toc.fixed {
+      position: fixed;
+      top: 100%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 3; }
+    #header #toc.open {
+      top: 0; }
+    #header #toc ol {
+      padding: 0;
+      border-bottom: 1px solid #021228; }
+      #header #toc ol li {
+        border-top: 1px solid #021228;
+        margin: 0;
+        padding: 0; }
+    #header #toc a {
+      display: block;
+      padding: .25em 1em;
+      color: #67b2e7;
+      font-size: 1em;
+      text-decoration: none;
+      outline: none; }
+      #header #toc a:hover {
+        color: white; }
+      #header #toc a:active {
+        color: #e6e6e6;
+        background-color: #021228; }
 
 .action {
   display: block;
@@ -120,15 +256,60 @@ blockquote {
   line-height: 5;
   border-radius: 4rem; }
 
-article header {
-  box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 1rem; }
-article section {
-  padding: 2rem;
-  max-width: 40rem; }
-article > article {
-  padding: 1rem; }
+article {
+  padding: 0 0 2rem 0; }
+  article a {
+    color: #67b2e7;
+    box-shadow: 0 1px 0 0 #67b2e7;
+    text-decoration: none; }
+    article a:hover {
+      box-shadow: 0 3px 0 0 #67b2e7; }
+    article a:active {
+      color: #031d40;
+      box-shadow: 0 3px 0 0 #031d40; }
+    article a:visited {
+      color: #828282;
+      box-shadow: 0 1px 0 0 #828282; }
+  article header {
+    box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25);
+    text-shadow: -1px 1px 0 #67b2e7, -2px 2px 0 #67b2e7;
+    border-top: 2px solid #031d40;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
+    color: #031d40;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2em; }
+  article section {
+    padding: 2rem;
+    max-width: 45rem;
+    margin: 0 auto;
+    font-size: 1em; }
+  article h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: .1em; }
+    @media screen and (min-width: 43.75em) {
+      article h1 {
+        font-size: 3em; } }
+    @media screen and (min-width: 62.5em) {
+      article h1 {
+        font-size: 4em; } }
+  article h2 {
+    font-size: 1.5em; }
+    @media screen and (min-width: 43.75em) {
+      article h2 {
+        font-size: 2em; } }
+    @media screen and (min-width: 62.5em) {
+      article h2 {
+        font-size: 2.5em; } }
+  article h3 {
+    font-weight: 500; }
+    @media screen and (min-width: 43.75em) {
+      article h3 {
+        font-size: 1.5em; } }
+  article > article {
+    padding: 1rem; }
 
 .full-screen {
   background-size: cover;
@@ -200,84 +381,134 @@ img {
   margin: 0 auto;
   vertical-align: middle; }
 
-#intro {
-  background-image: url(../img/content/01intro/2014_cover.jpg);
-  background-color: blue;
+#Intro {
+  background: linear-gradient(0deg, #031d40, #67b2e7);
   text-align: center;
   background-position: 50% 0;
   background-size: cover;
-  background-repeat: no-repeat; }
-  #intro h1 {
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 2em;
-    letter-spacing: .1em; }
-    #intro h1 .number {
-      font-size: 4em;
-      font-weight: 800; }
-  #intro img {
-    width: 10rem;
-    height: 10rem; }
+  background-repeat: no-repeat;
+  display: flex;
+  display: -webkit-flex;
+  color: white; }
+  #Intro section {
+    margin: auto; }
+    #Intro section h1 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 2em;
+      letter-spacing: .1em; }
+      #Intro section h1 .number {
+        font-size: 4em;
+        font-weight: 800; }
+    #Intro section img {
+      width: 10rem;
+      height: 10rem; }
 
-#fundraisers {
+#Letter {
+  background: linear-gradient(0deg, #67b2e7, white);
+  color: #031d40;
+  overflow: hidden; }
+  #Letter h1 {
+    color: #67b2e7; }
+  #Letter section {
+    position: relative; }
+
+#BB101 {
+  background: linear-gradient(0deg, #031d40, black);
+  color: white; }
+  #BB101 #routelist {
+    list-style-type: none; }
+    #BB101 #routelist li {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      float: left; }
+      #BB101 #routelist li:nth-of-type(odd) {
+        clear: left; }
+      @media screen and (min-width: 43.75em) {
+        #BB101 #routelist li {
+          width: 50%; } }
+    #BB101 #routelist .label {
+      display: inline-block;
+      border: 2px solid black;
+      padding: .25em 1em;
+      margin: 0.5rem auto;
+      color: white;
+      font-weight: 600;
+      letter-spacing: .01em;
+      border: 1px solid white;
+      -webkit-text-rendering: antialiased; }
+    #BB101 #routelist #CUS {
+      background-color: #B21E44; }
+    #BB101 #routelist #ME2SB {
+      background-color: white;
+      color: black; }
+    #BB101 #routelist #NC2SD {
+      background-color: #77C473; }
+    #BB101 #routelist #SC2SC {
+      background-color: black; }
+    #BB101 #routelist #NUS {
+      background-color: #F17AAB; }
+    #BB101 #routelist #SUS {
+      background-color: #EE4923; }
+    #BB101 #routelist #P2C {
+      background-color: #F38122; }
+    #BB101 #routelist #P2S {
+      background-color: #FCCE0D;
+      color: black; }
+
+#Accomplishments #accomplishments-numbers {
+  list-style-type: none;
+  text-align: center; }
+  #Accomplishments #accomplishments-numbers li {
+    border-bottom: 1px solid #67b2e7; }
+    #Accomplishments #accomplishments-numbers li h6 {
+      margin-top: 1.5rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: #67b2e7; }
+    #Accomplishments #accomplishments-numbers li .number {
+      font-size: 4em;
+      color: #031d40;
+      text-shadow: -1px 1px 0 white, -3px 3px 0 #67b2e7; }
+#Accomplishments #accomplishments-grantee {
+  list-style-type: none;
+  text-align: center; }
+  #Accomplishments #accomplishments-grantee li .number {
+    font-size: 4em; }
+#Accomplishments #fundraisers {
   list-style-type: none;
   padding: 0;
-  margin: 0; }
-  #fundraisers li {
-    float: left;
-    width: 15rem;
-    padding: 0;
-    margin: 0; }
-
-#routelist {
-  list-style-type: none; }
-  #routelist li {
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start; }
+  #Accomplishments #fundraisers li {
+    width: 14em;
+    padding: 1em;
+    margin: 0;
     text-align: center;
-    width: 50%;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    float: left; }
-  #routelist .label {
-    display: inline-block;
-    border: 2px solid black;
-    padding: .25rem .75rem;
-    margin: 0.5rem auto;
-    color: white;
-    font-weight: bold;
-    letter-spacing: .05rem; }
-  #routelist #CUS {
-    background-color: #B21E44; }
-  #routelist #ME2SB {
-    background-color: white;
-    color: black; }
-  #routelist #NC2SD {
-    background-color: #77C473; }
-  #routelist #SC2SC {
-    background-color: black; }
-  #routelist #NUS {
-    background-color: #F17AAB; }
-  #routelist #SUS {
-    background-color: #EE4923; }
-  #routelist #P2C {
-    background-color: #F38122; }
-  #routelist #P2S {
-    background-color: #FCCE0D;
-    color: black; }
+    color: #031d40; }
+    #Accomplishments #fundraisers li h5 {
+      font-size: 1em;
+      margin: 0; }
+    #Accomplishments #fundraisers li img {
+      width: 80%;
+      border: 10px solid #031d40;
+      margin: 1em auto;
+      display: block; }
+    #Accomplishments #fundraisers li .number {
+      font-size: 1em; }
 
-#accomplishments-numbers {
-  list-style-type: none;
-  text-align: center; }
-  #accomplishments-numbers li {
-    border-bottom: 1px solid #e8e8e8; }
-    #accomplishments-numbers li h6 {
-      text-transform: uppercase; }
-    #accomplishments-numbers li .number {
-      font-size: 4em; }
+#Riders {
+  color: #031d40; }
+  #Riders h6 span {
+    color: #e2231a; }
 
-#accomplishments-grantee {
-  list-style-type: none;
-  text-align: center; }
-  #accomplishments-grantee li .number {
-    font-size: 4em; }
+#Partner .partner-logo {
+  display: block;
+  width: 25%;
+  float: left; }

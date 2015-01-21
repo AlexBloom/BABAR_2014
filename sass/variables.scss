@@ -23,9 +23,18 @@ $blue-dark:rgb(003,029,064);
 $blue-light:rgb(103,178,231);
 $red:rgb(226,035,026);
 
+
+
 @function em($target, $context: 16) {
     @return ($target / $context) * 1em;
 }
+
+$phone:(em(320));
+$phablet:(em(500));
+$tablet:(em(700));
+$laptop:(em(1000));
+$desktop:(em(1400));
+$jumbotron:(em(2000));
 
 /**
  * Clearfix
@@ -45,13 +54,20 @@ $red:rgb(226,035,026);
 	-ms-border-radius:.5rem;
 }
 
+%perfect-circle{
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-ms-border-radius:50%;
+}
+
 @mixin full-bleed-background{
 background-position:50% 0;
 background-size:cover;
 background-repeat:no-repeat;
 }
 
-@mixin transition-tenth-sec {
+%t01s {
 -webkit-transition-duration: .15s;
 -moz-transition-duration: .15s;
 -ms-transition-duration: .15s;
@@ -59,7 +75,7 @@ background-repeat:no-repeat;
 transition-duration: .15s;
 }
 
-@mixin transition-quarter-sec {
+%t025s {
 -webkit-transition-duration: .25s;
 -moz-transition-duration: .25s;
 -ms-transition-duration: .25s;
@@ -67,7 +83,7 @@ transition-duration: .15s;
 transition-duration: .25s;
 }
 
-@mixin transition-half-sec{
+%t05s{
 -webkit-transition-duration: .5s;
 -moz-transition-duration: .5s;
 -ms-transition-duration: .5s;
@@ -75,11 +91,11 @@ transition-duration: .25s;
 transition-duration: .5s;
 }
 
-@mixin transition-ease-out {
+%teo {
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
-@mixin transition-ease-in {
+%tei {
 	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 }
@@ -97,8 +113,8 @@ body {
 
 
 //	BACKGROUND ALIGNMENT GUIDE
-	background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
-	background-repeat: repeat-y;
-	background-size: 100% 1rem;
+	//background-image: linear-gradient(to bottom,#0ff 0,rgba(255,255,255,0)1px);
+	//background-repeat: repeat-y;
+	//background-size: 100% 1rem;
 }
 

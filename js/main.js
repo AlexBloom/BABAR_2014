@@ -51,13 +51,80 @@ $('#toc').addClass('fixed');
 $(document).ready(function(){
     // Open Navigation on Toggle
 	
+	// Fire LocalScroll
+	$('body').localScroll();
+	
 	$("#toggle").click(function(){
 		$("#toc").toggleClass('open');
+		$(this).toggleClass('active');
 	});
+
+	// Size Full-Screen Videos, Images, & Slideshows to window height.
+	$('.full-screen').css('min-height',$(window).height());
+	$('.article-slider').css('min-height',$(window).height());
+
+	$(window).resize(function() {
+		$('.full-screen').css('min-height',$(window).height());
+		$('.article-slider').css('min-height',$(window).height());
+	});
+	
+    // Show and Play Full Screen Videos
+    //	$(".play-video").click(function(){
+    //		$('.video-overlay').css("display","block");
+    //		$('#header').css("display","none");
+    //	});
+    //
+    //	$(".close-video").click(function(){
+    //		$('.video-overlay').css("display","none");
+    //		$('#header').css("display","block");
+    //	});
+   
+	
+	//Fire Swipe Classes for Sliders
+	window.orgfigures = $('#orgfigures').Swipe().data('Swipe');
+	window.grantacc = $('#grantacc').Swipe().data('Swipe');
+	//window.highlightedgrantees = $('#highlighted-grantees').Swipe().data('Swipe');
+      
+
+	// TABS Initiations
+	   
+	   
+		   $('#grantee-tabs a').click(function (e) {
+		     e.preventDefault()
+		     $(this).tab('show')
+		   })
+	   
+		   $('#rider-tabs a').click(function (e) {
+		     e.preventDefault()
+		     $(this).tab('show')
+		   })
+	   
+		   $('#alumni-tabs a').click(function (e) {
+		     e.preventDefault()
+		     $(this).tab('show')
+		   })
+		   // You can activate individual tabs in several ways:
+		   // 
+		   // $('#myTab a[href="#profile"]').tab('show') // Select tab by name
+		   // $('#myTab a:first').tab('show') // Select first tab
+		   // $('#myTab a:last').tab('show') // Select last tab
+		   // $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
+
+
+	// Active Link Highlighting
+
+	 // Add Current Class to ScrollNav of Currently Depressed Item
+	  	$('.scrollnav-link').click(function() {
+	  		$('.scrollnav-link').removeClass('current');
+	  		$(this).addClass('current');
+	  	});	   
+	
+	
+	
 	
 	
 
-	$('#intro').css('height',$(window).height());
+	$('#Intro').css('height',$(window).height());
 	
 	// FitVids Video Containers.
     $("article").fitVids();
@@ -70,7 +137,7 @@ $(document).ready(function(){
 		});
 		
 		$(window).resize(function(){
-			$('#intro').css('height',$(window).height());
+			$('#Intro').css('height',$(window).height());
 		});	
 
   }); // Close Doc Ready Function

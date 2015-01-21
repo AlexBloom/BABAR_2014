@@ -33,66 +33,51 @@
 	<header id="header">			
 		<div class="" id="toggle-btn">
 	        <button type="button" id="toggle" role="button" aria-label="Toggle Navigation" class="lines-button x2">
-	          <span class="lines"> = </span>
+	          <span id="icon-menu" class="icon-menu">  </span>
+			  <span id="icon-cross" class="icon-cross"> </span>
 	        </button>
 		</div>
 		<nav id="toc">		
-			<h3>Contents</h3>
+			<h3> Contents </h3>
 			<ol>
-				<li> <a class="scrollnav-link" id="link-1" href="#intro"> 		
-						<span class="toc-name"> Introduction				</span>	
+				<li> <a class="scrollnav-link" id="link-2" href="#Letter"> 	
+						<span class="toc-name"> Board and Staff Message	</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-2" href="#letter"> 	
-						<span class="toc-name"> Board and Staff Message		</span>	
+				<li> <a class="scrollnav-link" id="link-3" href="#BB101"> 	
+						<span class="toc-name"> Bike and Build 101	</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-3" href="#housing"> 	
-						<span class="toc-name"> What is Affordable Housing?	</span>	
+				<li> <a class="scrollnav-link" id="link-5" href="#Accomplishments">
+						<span class="toc-name"> 2014 Accomplishments		</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-4" href="#about"> 		
-						<span class="toc-name"> What is Bike &amp; Build?	</span>	
+				<li> <a class="scrollnav-link" id="link-6" href="#Impact"> 
+						<span class="toc-name"> Impact </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-5" href="#accomplishments">
-						<span class="toc-name"> 2013 Accomplishments		</span>	
+				<li> <a class="scrollnav-link" id="link-7" href="#Riders"> 	
+						<span class="toc-name"> Riders </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-6" href="#scholarship"> 
-						<span class="toc-name"> Bike &amp; Build Scholarship</span>	
+				<li> <a class="scrollnav-link" id="link-10" href="#Alumni"> 	
+						<span class="toc-name"> Alumni </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-7" href="#grantees"> 	
-						<span class="toc-name"> Grantee Profiles			</span>	
+				<li> <a class="scrollnav-link" id="link-11" href="#Financials"> 
+						<span class="toc-name"> Statement of Financials </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-8" href="#hosts"> 		
-						<span class="toc-name"> Thanks to Our Hosts			</span>	
+				<li> <a class="scrollnav-link" id="link-12" href="#Partner"> 	
+						<span class="toc-name"> Partner	</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link-9" href="#riders"> 	
-						<span class="toc-name"> 2013 Rider Profiles			</span>	
-					</a> 
-				</li>
-				<li> <a class="scrollnav-link" id="link-10" href="#alumni"> 	
-						<span class="toc-name"> Alumni Spotlight			</span>	
-					</a> 
-				</li>
-				<li> <a class="scrollnav-link" id="link-11" href="#financials"> 
-						<span class="toc-name"> Statement of Financials		</span>	
-					</a> 
-				</li>
-				<li> <a class="scrollnav-link" id="link-12" href="#support"> 	
-						<span class="toc-name"> Supporting Bike &amp; Build	</span>	
-					</a> 
-				</li>
-				<li> <a class="scrollnav-link" id="link-13" href="#contact"> 	
-						<span class="toc-name"> Contact						</span>	
+				<li> <a class="scrollnav-link" id="link-13" href="#Contact"> 	
+						<span class="toc-name"> Contact	</span>	
 					</a> 
 				</li>
 				<li>
-					<a id="logo" href="http://bikeandbuild.org"target=_blank> Bike and Build Home &rarr;</a>
+					<a href="http://bikeandbuild.org"target=_blank> Bike and Build Home <span class="icon-launch"> </span> </a>
 				</li>
 			</ol>
 		</nav>
