@@ -50,15 +50,18 @@ $(document).ready(function(){
 		//$('body').toggleClass('overflow-hidden');
 	});
 
+	
 	// Size Full-Screen Videos, Images, & Slideshows to window height.
 	$('.full-screen').css('min-height',$(window).height());
 	$('.tab-content').css('height',$(window).height());
 	$('.article-slider').css('min-height',$(window).height());
-
+	$('#Intro').css('height',$(window).height());
+	
 	$(window).resize(function() {
 		$('.full-screen').css('min-height',$(window).height());
 		$('.tab-content').css('height',$(window).height());
 		$('.article-slider').css('min-height',$(window).height());
+		$('#Intro').css('height',$(window).height());
 	});
 	
     // Show and Play Full Screen Videos
@@ -99,13 +102,20 @@ $(document).ready(function(){
 	});
 	
 	
+	
+     
+	
 	//Global close	
 	$('.close-window').click(function (){
 		$('.window').removeClass('open');
 		$('body').removeClass('overflow-hidden');
 	});
 	
-	
+	//Lazy Load Content in Overlay Windows
+	//$("img.lazy").lazyload({         
+	//    effect : "fadeIn",
+	//    container: $(".window")		
+	//});
 	
 	//Fire Swipe Classes for Sliders
 	window.orgfigures = $('#orgfigures').Swipe().data('Swipe');
@@ -150,7 +160,7 @@ $(document).ready(function(){
 	
 	
 
-	$('#Intro').css('height',$(window).height());
+	
 	
 	// FitVids Video Containers.
     $("article").fitVids();

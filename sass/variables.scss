@@ -47,11 +47,17 @@ $jumbotron:(em(2000));
     }
 }
 
-%round-corner{
-	border-radius:.5rem;
-	-webkit-border-radius:.5rem;
-	-moz-border-radius:.5rem;
-	-ms-border-radius:.5rem;
+@mixin rc05{
+	border-radius:.5em;
+	-webkit-border-radius:.5em;
+	-moz-border-radius:.5em;
+	-ms-border-radius:.5em;
+}
+@mixin rc025{
+	border-radius:.25em;
+	-webkit-border-radius:.25em;
+	-moz-border-radius:.25em;
+	-ms-border-radius:.25em;
 }
 
 %perfect-circle{

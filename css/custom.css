@@ -18,12 +18,6 @@ article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments
   display: table;
   clear: both; }
 
-#BB101 #routelist .label {
-  border-radius: .5rem;
-  -webkit-border-radius: .5rem;
-  -moz-border-radius: .5rem;
-  -ms-border-radius: .5rem; }
-
 .window .close-window, #Accomplishments #fundraisers li img, #Accomplishments .scholarship-grantee img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -187,11 +181,29 @@ h6 {
   text-transform: uppercase; }
 
 blockquote {
-  border-left: 0.25em solid #67b2e7;
+  border-left: 3px solid #67b2e7;
   padding-left: 1rem;
   font-size: 1.25em;
   line-height: 2rem;
-  color: #031d40; }
+  color: #031d40;
+  font-style: italic;
+  font-weight: 300; }
+  @media screen and (min-width: 62.5em) {
+    blockquote {
+      border-left: none;
+      text-align: center;
+      width: 120%;
+      margin-left: -10%; }
+      blockquote:before, blockquote:after {
+        content: ' ';
+        display: block;
+        width: 20%;
+        margin: 2em auto;
+        border-top: 3px solid #67b2e7; } }
+  @media screen and (min-width: 87.5em) {
+    blockquote {
+      width: 140%;
+      margin-left: -20%; } }
 
 .author {
   font-family: courier,serif; }
@@ -201,8 +213,8 @@ blockquote {
 #header {
   font-size: 18px; }
   #header #toggle {
-    background-color: #e2231a;
-    color: white;
+    background-color: white;
+    color: #e2231a;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
@@ -225,16 +237,14 @@ blockquote {
     #header #toggle #icon-cross {
       opacity: 0;
       -webkit-transform: rotate(-90deg) scale(0.5); }
-    #header #toggle.active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75); }
-      #header #toggle.active #icon-menu {
-        opacity: 0;
-        -webkit-transform: rotate(90deg) scale(0.5); }
-      #header #toggle.active #icon-cross {
-        opacity: 1;
-        -webkit-transform: rotate(90deg) scale(1); }
+    #header #toggle.active #icon-menu {
+      opacity: 0;
+      -webkit-transform: rotate(90deg) scale(0.5); }
+    #header #toggle.active #icon-cross {
+      opacity: 1;
+      -webkit-transform: rotate(90deg) scale(1); }
     #header #toggle:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75); }
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
   #header #toc {
     color: #031d40;
     padding: 2rem 0;
@@ -272,15 +282,24 @@ blockquote {
 
 button {
   font-family: 'proxima-nova',helvetica,arial,sans-serif;
-  color: #e2231a;
+  color: white;
   padding: 1rem;
   margin: 0.5rem;
-  background-color: white;
+  background-color: #e2231a;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: .1em;
   border: none;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: .25em;
+  -webkit-border-radius: .25em;
+  -moz-border-radius: .25em;
+  -ms-border-radius: .25em;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  button:active {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
 
 .action {
   display: block;
@@ -293,7 +312,10 @@ button {
   text-transform: uppercase;
   color: #e2231a;
   font-weight: 800;
-  letter-spacing: .1em; }
+  letter-spacing: .1em;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
   .action span {
     font-size: 2em;
     line-height: 2;
@@ -348,10 +370,14 @@ article {
       article header.fixed h6 {
         text-shadow: -1px 1px 0 #67b2e7, -2px 2px 0 #67b2e7; }
   article section {
+    position: relative;
     padding: 2rem;
     max-width: 45rem;
     margin: 0 auto;
     font-size: 1em; }
+    article section p:first-of-type {
+      font-size: 1.25em;
+      line-height: 1.5; }
   article h1 {
     font-size: 2em;
     text-transform: uppercase;
@@ -465,7 +491,12 @@ article {
     z-index: 1001;
     background-color: white;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    cursor: pointer; }
+    .window .close-window:hover {
+      color: #e7372e; }
+    .window .close-window:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
   .window.open {
     z-index: 1000;
     top: 1em;

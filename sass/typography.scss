@@ -189,11 +189,32 @@ h6{
 }
 
 blockquote{
-	border-left:.25em solid $blue-light;
+	border-left:3px solid $blue-light;
 	padding-left:1rem;
 	font-size:1.25em;
 	line-height:$spacing-unit * 4;
 	color:$blue-dark;
+	font-style:italic;
+	font-weight:300;
+	
+	@media screen and (min-width:$laptop){
+		border-left:none;
+		text-align:center;
+		width:120%;
+		margin-left:-10%;		
+		&:before, &:after{
+			content:' ';
+			display:block;
+			width:20%;
+			margin:2em auto;
+			border-top:3px solid $blue-light;
+		}
+	}
+	@media screen and (min-width:$desktop){
+		width:140%;
+		margin-left:-20%;
+	}
+	
 }
 .author{
 	font-family:courier,serif;

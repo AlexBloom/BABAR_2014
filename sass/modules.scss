@@ -3,8 +3,8 @@
 #header{
 	font-size:18px;
 	#toggle{		
-		background-color:$red;
-		color:$white;
+		background-color:$white;
+		color:$red;
 		position:fixed;
 		bottom:$spacing-unit * 2;
 		right:$spacing-unit * 2;
@@ -38,7 +38,7 @@
 			-webkit-transform:rotate(-90deg) scale(.5);
 		}
 		&.active{
-			box-shadow:0 0 0 1px rgba(0,0,0,.75);
+			//box-shadow:0 0 0 1px rgba(0,0,0,.75);
 			#icon-menu{
 				opacity:0;
 				-webkit-transform:rotate(90deg) scale(.5);
@@ -53,7 +53,7 @@
 		}
 		&:active{
 			//background-color:darken($red,5%);
-			box-shadow:0 0 0 1px rgba(0,0,0,.75);
+			box-shadow:0 0 0 1px rgba(0,0,0,.5);
 			//transform:scale(.95);
 		}
 	}
@@ -122,15 +122,26 @@
 }
 button{
 	font-family:'proxima-nova',helvetica,arial,sans-serif;
-	color:$red;
+	//background: linear-gradient(0deg, $blue-dark, $red);
+	color:$white;
 	padding:$spacing-unit *2;
 	margin:$spacing-unit;
-	background-color:$white;
+	background-color:$red;
 	font-weight:800;
 	text-transform:uppercase;
 	letter-spacing:.1em;
 	border:none;
-	box-shadow:0 0 0 4px rgba(0,0,0,.25);
+	box-shadow:0 0 0 3px rgba(0,0,0,.1);
+	@include rc025;
+	outline:none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	&:hover{
+		//color:$blue-dark;
+	}
+	&:active{
+		box-shadow:0 0 0 1px rgba(0,0,0,.5);
+	}
 }
 .action{
 	display:block;
@@ -146,6 +157,9 @@ button{
 	color:$red;
 	font-weight:800;
 	letter-spacing:.1em;
+	outline:none;
+	border:none;
+	box-shadow:0 0 0 3px rgba(0,0,0,.2);
 	span{
 		font-size:2em;
 		line-height:2;
@@ -235,6 +249,13 @@ article{
 		}
 	}
 	section{
+		position:relative;
+		p{
+			&:first-of-type{
+				font-size:1.25em;
+				line-height:1.5;
+			}
+		}
 		padding:$spacing-unit * 4;
 		max-width:$spacing-unit * 90;
 		margin:0 auto;
@@ -377,7 +398,6 @@ article{
 	left:1em;
 	right:1em;
 	bottom:0;
-	
 	overflow-y:hidden;
 	overflow-x:hidden;
 	box-shadow:0 0 0 1em rgba(0,0,0,.65);
@@ -395,6 +415,13 @@ article{
 		box-shadow:0 0 0 2px rgba(0,0,0,.15);
 		@extend %perfect-circle;
 		padding:$spacing-unit;
+		cursor:pointer;
+		&:hover{
+			color:lighten($red,5%);
+		}
+		&:active{
+			box-shadow:0 0 0 1px rgba(0,0,0,.5);
+		}
 	}
 	&.open{
 		z-index:1000;
