@@ -27,9 +27,7 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-			
-			
-			
+						
 	<header id="header">			
 		<div class="" id="toggle-btn">
 	        <button type="button" id="toggle" role="button" aria-label="Toggle Navigation" class="lines-button x2">
@@ -68,18 +66,22 @@
 						<span class="toc-name"> Statement of Financials </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Partner"> 	
+			</ol>
+			<ul>
+				<li> 
+					<a class="scrollnav-link" id="link" href="partner"> 	
 						<span class="toc-name"> Partner	</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Contact"> 	
-						<span class="toc-name"> Contact	</span>	
+				<li> 
+					<a class="scrollnav-link" id="link" href="contact"> 	
+						<span class="toc-name"> Contact </span>	
 					</a> 
 				</li>
 				<li>
-					<a href="http://bikeandbuild.org"target=_blank> Bike and Build Home <span class="icon-launch"> </span> </a>
+					<a href="http://bikeandbuild.org"target=_blank> Bike and Build Home <span class="icon-open"> </span> </a>
 				</li>
-			</ol>
+			</ul>
 		</nav>
 
 	</header>

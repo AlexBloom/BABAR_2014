@@ -1,62 +1,55 @@
-function stickyTitles(stickies) {
-	this.load = function() {
-		stickies.each(function(){
-			var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
-			thisSticky.parent().height(thisSticky.outerHeight());
-			jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
-		});
-	}	
-	this.scroll = function() {
-		stickies.each(function(i){					
-			var thisSticky = jQuery(this),
-				nextSticky = stickies.eq(i+1),
-				prevSticky = stickies.eq(i-1),
-				pos = jQuery.data(thisSticky[0], 'pos');	
-			if (pos <= jQuery(window).scrollTop()) {			
-				thisSticky.addClass("fixed");			
-				if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {				
-					thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
-				}
-			} else {
-				thisSticky.removeClass("fixed");
-				if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
-					prevSticky.removeClass("absolute").removeAttr("style");
-				}				
-			}
-		});			
-	}
-}
-
-
-
-
 $('#toc').addClass('fixed');
 
 $(document).ready(function(){
-    // Open Navigation on Toggle
+    //Sticky Headers
+	function stickyTitles(stickies) {
+		this.load = function() {
+			stickies.each(function(){
+				var thisSticky = jQuery(this).wrap('<div class="followWrap" />');
+				thisSticky.parent().height(thisSticky.outerHeight());
+				jQuery.data(thisSticky[0], 'pos', thisSticky.offset().top);
+			});
+		}	
+		this.scroll = function() {
+			stickies.each(function(i){					
+				var thisSticky = jQuery(this),
+					nextSticky = stickies.eq(i+1),
+					prevSticky = stickies.eq(i-1),
+					pos = jQuery.data(thisSticky[0], 'pos');	
+				if (pos <= jQuery(window).scrollTop()) {			
+					thisSticky.addClass("fixed");			
+					if (nextSticky.length > 0 && thisSticky.offset().top >= jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight()) {				
+						thisSticky.addClass("absolute").css("top", jQuery.data(nextSticky[0], 'pos') - thisSticky.outerHeight());
+					}
+				} else {
+					thisSticky.removeClass("fixed");
+					if (prevSticky.length > 0 && jQuery(window).scrollTop() <= jQuery.data(thisSticky[0], 'pos')  - prevSticky.outerHeight()) {
+						prevSticky.removeClass("absolute").removeAttr("style");
+					}				
+				}
+			});			
+		}
+	}
 	
 	// Fire LocalScroll
 	$('body').localScroll();
 	
+	// Open Navigation with Toggle
 	$("#toggle").click(function(){
 		$("#toc").toggleClass('open');
 		$(this).toggleClass('active');
-		//$('body').toggleClass('overflow-hidden');
 	});
-	
+	// Close Nav on Local Link Click
 	$("#toc a").click(function(){
 		$("#toc").toggleClass('open');
 		$('#toggle').toggleClass('active');
-		//$('body').toggleClass('overflow-hidden');
 	});
 
-	
 	// Size Full-Screen Videos, Images, & Slideshows to window height.
 	$('.full-screen').css('min-height',$(window).height());
 	$('.tab-content').css('height',$(window).height());
 	$('.article-slider').css('min-height',$(window).height());
-	$('#Intro').css('height',$(window).height());
-	
+	$('#Intro').css('height',$(window).height());	
 	$(window).resize(function() {
 		$('.full-screen').css('min-height',$(window).height());
 		$('.tab-content').css('height',$(window).height());
@@ -74,16 +67,13 @@ $(document).ready(function(){
     //		$('.video-overlay').css("display","none");
     //		$('#header').css("display","block");
     //	});
-   
-	
-	// Open Overlay Windows
-	
-	//Open Per ID
+
+	// Open Overlay Window Content	
+	//Open Individual Windows By ID
 	$('#open-letter-window').click(function (){
 		$('#Letter').addClass('open');
 		$('body').addClass('overflow-hidden');
 	});
-	
 	$('#open-accomplishments-window').click(function (){
 		$('#More-Accomplishments').addClass('open');
 		$('body').addClass('overflow-hidden');
@@ -100,12 +90,12 @@ $(document).ready(function(){
 		$('#Grantee').addClass('open');
 		$('body').addClass('overflow-hidden');
 	});
+	$('#open-alumni-window').click(function (){
+		$('#alumni-spotlight').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
 	
-	
-	
-     
-	
-	//Global close	
+	//Globally Close Windows with Class	
 	$('.close-window').click(function (){
 		$('.window').removeClass('open');
 		$('body').removeClass('overflow-hidden');
@@ -123,18 +113,15 @@ $(document).ready(function(){
 	//window.highlightedgrantees = $('#highlighted-grantees').Swipe().data('Swipe');
       
 
-	// TABS Initiations
-	  
+	// TABS Initiations	  
 		   $('#Accomplishments-Tabs a').click(function (e) {
 		     e.preventDefault()
 		     $(this).tab('show')
 		   })
-	   
 		   $('#rider-tabs a').click(function (e) {
 		     e.preventDefault()
 		     $(this).tab('show')
 		   })
-	   
 		   $('#alumni-tabs a').click(function (e) {
 		     e.preventDefault()
 		     $(this).tab('show')
@@ -148,7 +135,6 @@ $(document).ready(function(){
 
 
 	// Active Link Highlighting
-
 	 // Add Current Class to ScrollNav of Currently Depressed Item
 	  	$('.scrollnav-link').click(function() {
 	  		$('.scrollnav-link').removeClass('current');

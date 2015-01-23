@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Accomplishments #fundraisers ul:after, #Partner .partner-logos:after, #Contact ul:after {
+article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Accomplishments #fundraisers ul:after, #Partner .partner-logos:after, #Contact ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -24,18 +24,18 @@ article header:after, #BB101 #routelist:after, #Accomplishments #accomplishments
   -moz-border-radius: 50%;
   -ms-border-radius: 50%; }
 
-#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, article header.fixed h6, .window {
+#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, article header.sticky.fixed h6, .window {
   -webkit-transition-duration: .15s;
   -moz-transition-duration: .15s;
   -ms-transition-duration: .15s;
   -o-transition-duration: .15s;
   transition-duration: .15s; }
 
-#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, .window {
+#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc.open, #header #toc a, article a, .window {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out; }
 
-#header #toggle #icon-menu, #header #toggle #icon-cross {
+#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc {
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in; }
 
@@ -326,7 +326,10 @@ article {
   article a {
     color: #67b2e7;
     box-shadow: 0 1px 0 0 #67b2e7;
-    text-decoration: none; }
+    text-decoration: none;
+    outline: none;
+    -webkit-border: none;
+    -webkit-outline: none; }
     article a:hover {
       box-shadow: 0 3px 0 0 #67b2e7; }
     article a:active {
@@ -335,40 +338,60 @@ article {
     article a:visited {
       color: #828282;
       box-shadow: 0 1px 0 0 #828282; }
-  article header {
+  article header.sticky {
     border-top: 2px solid #031d40;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.95); }
-    article header nav a {
-      display: inline-block;
-      margin: 0;
-      padding: 0.5rem 1rem;
-      box-shadow: none;
-      border-left: 1px solid #67b2e7;
-      outline: none;
-      -webkit-border: none;
-      -webkit-outline: none; }
-      article header nav a span {
-        font-size: 1.5rem !important;
-        vertical-align: middle !important;
-        margin-left: .25rem; }
-    article header h6 {
-      text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0.05em 0 0 rgba(0, 0, 0, 0.15); }
+    article header.sticky nav {
+      float: right;
+      position: absolute;
+      right: 0;
+      top: 0; }
+      article header.sticky nav a {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        box-shadow: none;
+        color: #e2231a;
+        border-left: 1px solid rgba(0, 0, 0, 0.15); }
+        article header.sticky nav a:hover {
+          outline: none;
+          box-shadow: inset 0 -3px 0 #e2231a; }
+        article header.sticky nav a:active {
+          outline: none;
+          color: white;
+          background-color: #e2231a; }
+        article header.sticky nav a:visited {
+          color: #828282; }
+          article header.sticky nav a:visited:hover {
+            color: #e2231a; }
+          article header.sticky nav a:visited:active {
+            color: white; }
+        article header.sticky nav a span {
+          font-size: 1em !important;
+          vertical-align: middle !important;
+          margin-left: .1em;
+          margin-right: 0; }
+    article header.sticky h6 {
+      float: left;
+      text-align: left;
       color: #031d40;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: .1em;
       margin: 0;
       padding: 0.5rem 1rem; }
-    article header h6 {
-      float: left;
-      text-align: left; }
-    article header nav {
-      float: right; }
-    article header.fixed {
-      box-shadow: 0 0.1em 0 0 rgba(0, 0, 0, 0.25); }
-      article header.fixed h6 {
-        text-shadow: -1px 1px 0 #67b2e7, -2px 2px 0 #67b2e7; }
+  article header.hero {
+    text-align: center;
+    color: white;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    width: 100%;
+    margin-bottom: 2rem; }
   article section {
     position: relative;
     padding: 2rem;
@@ -483,13 +506,29 @@ article {
   overflow-y: hidden;
   overflow-x: hidden;
   box-shadow: 0 0 0 1em rgba(0, 0, 0, 0.65);
-  background-color: white; }
+  background-color: white;
+  text-align: left; }
+  .window:after {
+    font-family: 'bikeandbuild';
+    speak: none;
+    font-size: 1.5em;
+    line-height: 1;
+    content: "\e117";
+    display: block;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    color: #e2231a;
+    padding: 1em;
+    margin-bottom: -2em; }
   .window .close-window {
     position: fixed;
-    bottom: 1em;
-    right: 48%;
+    top: 1em;
+    left: 1em;
     z-index: 1001;
-    background-color: white;
+    background-color: #e2231a;
+    color: white;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
     padding: 0.5rem;
     cursor: pointer; }
@@ -502,6 +541,19 @@ article {
     top: 1em;
     opacity: 1;
     overflow-y: scroll; }
+  .window header {
+    text-align: center;
+    color: white;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .window header h6 {
+      color: white; }
+    .window header h6 {
+      text-align: center;
+      float: none; }
+    .window header small {
+      color: white; }
 
 /**
  * Images
@@ -550,11 +602,17 @@ img {
         font-size: 2em; } }
     #Intro section img {
       max-width: 7rem; }
+  #Intro #open-letter-window {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    cursor: pointer; }
 
 #Letter {
   color: #031d40; }
-  #Letter h1 {
-    color: #67b2e7; }
+  #Letter header {
+    background-image: url(../img/content/02horizons/horizons.jpg); }
   #Letter section {
     position: relative; }
 
@@ -563,8 +621,6 @@ img {
   color: #031d40; }
   #BB101 h2 {
     color: #67b2e7; }
-  #BB101 #Cause {
-    background-color: black; }
   #BB101 #Routes {
     background-color: #031d40; }
   #BB101 #routelist {
@@ -609,6 +665,8 @@ img {
       background-color: #FCCE0D;
       color: black; }
 
+#Accomplishments header.hero {
+  background-image: url(../img/content/03accomplishments/accomplishments.jpg); }
 #Accomplishments #accomplishments-numbers ul {
   list-style-type: none;
   text-align: center; }
@@ -669,11 +727,22 @@ img {
       #Accomplishments .scholarship-grantee img {
         width: 80%; } }
 
+#Impact header.hero {
+  background-image: url(../img/content/05impact/impact.jpg); }
+
 #Riders {
   color: #031d40; }
   #Riders h6 span {
     color: #e2231a; }
 
+#Alumni header.hero {
+  background-image: url(../img/content/07alumni/alumni.jpg); }
+
+#Closing header.hero {
+  background-image: url(../img/content/08closing/closing.jpg); }
+
+#Partner header.hero {
+  background-image: url(../img/content//.jpg); }
 #Partner #partner-facts {
   list-style: none;
   padding: 0; }
@@ -689,6 +758,8 @@ img {
 #Contact {
   color: white;
   background: linear-gradient(0deg, #031d40, #e2231a); }
+  #Contact header.hero {
+    background-image: url(../img/content/08closing/closing.jpg); }
   #Contact ul {
     width: 90%;
     margin: 0 auto;
