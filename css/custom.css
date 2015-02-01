@@ -13,25 +13,32 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Accomplishments #fundraisers ul:after, #Partner .partner-logos:after, #Contact ul:after {
+article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Riders #fundraisers ul:after, #Closing .share:after, #Closing .links:after, #Partner .partner-logos:after, #Contact ul:after {
   content: "";
   display: table;
   clear: both; }
 
-.window .close-window, #Accomplishments #fundraisers li img, #Accomplishments .scholarship-grantee img {
+.pre-window, .window .close-window, #Accomplishments .scholarship-grantee img, #Impact .grantee header, #Riders .rider-portrait, #Riders #fundraisers li img, #Alumni .alumni-portrait {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%; }
 
-#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, article header.sticky.fixed h6, .window {
+#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, article header.sticky.fixed h6, .window .close-window, .window .close-window:hover {
   -webkit-transition-duration: .15s;
   -moz-transition-duration: .15s;
   -ms-transition-duration: .15s;
   -o-transition-duration: .15s;
   transition-duration: .15s; }
 
-#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc.open, #header #toc a, article a, .window {
+.pre-window, .pre-window:before, .window {
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -ms-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s; }
+
+#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc.open, #header #toc a, article a, .window, .window .close-window, .window .close-window:hover {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out; }
 
@@ -307,6 +314,7 @@ button {
   background-color: white;
   width: 4rem;
   height: 4rem;
+  padding: 0;
   border-radius: 4rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -316,6 +324,8 @@ button {
   outline: none;
   border: none;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
+  .action:active {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
   .action span {
     font-size: 2em;
     line-height: 2;
@@ -384,19 +394,34 @@ article {
       margin: 0;
       padding: 0.5rem 1rem; }
   article header.hero {
-    text-align: center;
-    color: white;
-    background-position: 50% 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
     float: left;
     width: 100%;
-    margin-bottom: 2rem; }
+    text-align: center;
+    color: white;
+    margin-bottom: 5rem;
+    padding: 2rem 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    article header.hero:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      background: black;
+      opacity: .5;
+      z-index: 0; }
+    article header.hero * {
+      position: relative;
+      z-index: 1; }
   article section {
     position: relative;
-    padding: 2rem;
+    padding: 0 2rem;
     max-width: 45rem;
-    margin: 0 auto;
+    margin: 2.5rem auto;
     font-size: 1em; }
     article section p:first-of-type {
       font-size: 1.25em;
@@ -495,56 +520,86 @@ article {
 .sticky.fixed.absolute {
   position: absolute; }
 
+.pre-window {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  padding: 0;
+  margin: 4rem auto;
+  text-align: center;
+  color: white;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer; }
+  .pre-window:after {
+    content: ' ';
+    display: block;
+    margin-top: 100%; }
+  .pre-window h3 {
+    margin: auto; }
+  .pre-window button {
+    display: none; }
+  .pre-window:hover {
+    overflow: hidden; }
+    .pre-window:hover:before {
+      background: #031d40; }
+  .pre-window:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: #e2231a;
+    opacity: .75;
+    z-index: 0; }
+  .pre-window * {
+    position: relative;
+    z-index: 0; }
+  .pre-window.half {
+    float: left;
+    width: 45%;
+    margin: 4rem 2.5%; }
+
 .window {
   position: fixed;
   z-index: 0;
   opacity: 0;
-  top: 150%;
-  left: 1em;
-  right: 1em;
+  top: 100%;
+  left: 0em;
+  right: 0em;
   bottom: 0;
   overflow-y: hidden;
   overflow-x: hidden;
-  box-shadow: 0 0 0 1em rgba(0, 0, 0, 0.65);
   background-color: white;
   text-align: left; }
-  .window:after {
-    font-family: 'bikeandbuild';
-    speak: none;
-    font-size: 1.5em;
-    line-height: 1;
-    content: "\e117";
-    display: block;
-    background-color: white;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    color: #e2231a;
-    padding: 1em;
-    margin-bottom: -2em; }
   .window .close-window {
     position: fixed;
-    top: 1em;
-    left: 1em;
+    top: .5em;
+    left: .5em;
     z-index: 1001;
-    background-color: #e2231a;
-    color: white;
+    background-color: white;
+    color: #e2231a;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
     padding: 0.5rem;
-    cursor: pointer; }
+    cursor: pointer;
+    font-size: 2em; }
     .window .close-window:hover {
       color: #e7372e; }
     .window .close-window:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
   .window.open {
     z-index: 1000;
-    top: 1em;
+    top: 0;
     opacity: 1;
     overflow-y: scroll; }
   .window header {
     text-align: center;
     color: white;
-    background-position: 50% 0;
+    background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat; }
     .window header h6 {
@@ -569,7 +624,7 @@ img {
   position: relative;
   background-image: url(../img/content/01intro/2014_cover.jpg);
   text-align: center;
-  background-position: 50% 0;
+  background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -690,31 +745,6 @@ img {
 #Accomplishments #coastal-drift {
   background: linear-gradient(0deg, #031d40, #e2231a);
   color: white; }
-#Accomplishments #fundraisers ul {
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start; }
-#Accomplishments #fundraisers li {
-  width: 14em;
-  padding: 1em;
-  margin: 0;
-  text-align: center;
-  color: #031d40; }
-  #Accomplishments #fundraisers li h5 {
-    font-size: 1em;
-    margin: 0; }
-  #Accomplishments #fundraisers li img {
-    width: 80%;
-    margin: 1em auto;
-    display: block; }
-  #Accomplishments #fundraisers li .number {
-    font-size: 1em; }
 #Accomplishments .scholarship-grantee {
   float: left; }
   #Accomplishments .scholarship-grantee img {
@@ -726,21 +756,130 @@ img {
       padding: 0.5rem 2.5%; }
       #Accomplishments .scholarship-grantee img {
         width: 80%; } }
+  #Accomplishments .scholarship-grantee figcaption {
+    text-align: center; }
+  #Accomplishments .scholarship-grantee blockquote {
+    width: 100%;
+    margin: 0.5rem 0; }
 
 #Impact header.hero {
   background-image: url(../img/content/05impact/impact.jpg); }
+#Impact .grantee header {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 15.625em;
+  height: 15.625em; }
+  @media screen and (min-width: 43.75em) {
+    #Impact .grantee header {
+      width: 25em;
+      height: 25em; } }
+#Impact #Idaho header {
+  background-image: url(../img/content/05impact/grantee_KTEC.jpg); }
+#Impact #YouthBuild header {
+  background-image: url(../img/content/05impact/grantee_YBPhilly.jpg); }
+#Impact #Stafford header {
+  background-image: url(../img/content/05impact/grantee_Stafford.jpg); }
+#Impact #Grid header {
+  background-image: url(../img/content/05impact/grantee_GRID.jpg); }
+#Impact #Purdue header {
+  background-image: url(../img/content/05impact/grantee_Purdue.jpg); }
 
 #Riders {
   color: #031d40; }
+  #Riders .rider-portrait {
+    margin: 2.5rem auto;
+    padding: 0;
+    overflow: hidden;
+    width: 15.625em;
+    height: 15.625em; }
+    #Riders .rider-portrait img {
+      margin-left: -15%;
+      width: 150%; }
+    @media screen and (min-width: 43.75em) {
+      #Riders .rider-portrait {
+        width: 25em;
+        height: 25em; } }
+  #Riders #fundraisers ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start; }
+  #Riders #fundraisers li {
+    width: 14em;
+    padding: 1em;
+    margin: 0;
+    text-align: center;
+    color: #031d40; }
+    #Riders #fundraisers li h5 {
+      font-size: 1em;
+      margin: 0; }
+    #Riders #fundraisers li img {
+      width: 80%;
+      margin: 1em auto;
+      display: block; }
+    #Riders #fundraisers li .number {
+      font-size: 1em; }
   #Riders h6 span {
     color: #e2231a; }
 
 #Alumni header.hero {
   background-image: url(../img/content/07alumni/alumni.jpg); }
+#Alumni .alumni-portrait {
+  width: 15.625em;
+  height: 15.625em;
+  overflow: hidden;
+  margin: 2.5rem auto; }
+  @media screen and (min-width: 43.75em) {
+    #Alumni .alumni-portrait {
+      width: 25em;
+      height: 25em; } }
+  #Alumni .alumni-portrait img {
+    margin-top: -3em; }
 
 #Closing header.hero {
   background-image: url(../img/content/08closing/closing.jpg); }
+#Closing .share, #Closing .links {
+  list-style: none;
+  text-align: center; }
+  #Closing .share a, #Closing .share a:visited, #Closing .links a, #Closing .links a:visited {
+    box-shadow: none; }
+    #Closing .share a:hover, #Closing .share a:visited:hover, #Closing .links a:hover, #Closing .links a:visited:hover {
+      box-shadow: none;
+      color: #e2231a !important; }
+    #Closing .share a:active, #Closing .share a:visited:active, #Closing .links a:active, #Closing .links a:visited:active {
+      color: #031d40 !important; }
+#Closing .share li {
+  float: left;
+  width: 100%;
+  text-align: left; }
+  #Closing .share li:last-child span {
+    vertical-align: -.2em; }
+  @media screen and (min-width: 43.75em) {
+    #Closing .share li {
+      width: 20.5%;
+      padding: 0 0 0 12.5%; }
+      #Closing .share li:last-child {
+        padding: 1em 0;
+        width: 100% !important;
+        text-align: center; } }
+#Closing .links a {
+  display: block; }
+#Closing .links li {
+  float: left;
+  width: 25%; }
+#Closing .links span {
+  display: block; }
 
+/* Separate Pages */
 #Partner header.hero {
   background-image: url(../img/content//.jpg); }
 #Partner #partner-facts {
@@ -757,7 +896,8 @@ img {
 
 #Contact {
   color: white;
-  background: linear-gradient(0deg, #031d40, #e2231a); }
+  background-color: #031d40;
+  background: linear-gradient(45deg, #031d40, #e2231a); }
   #Contact header.hero {
     background-image: url(../img/content/08closing/closing.jpg); }
   #Contact ul {
@@ -785,3 +925,33 @@ img {
         clear: none; }
       #Contact #board li:nth-of-type(4), #Contact #board li:nth-of-type(7) {
         clear: left; } }
+
+#footer {
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-top: 1px solid #e8e8e8; }
+  #footer a {
+    color: #67b2e7; }
+    #footer a:hover {
+      color: #e2231a; }
+    #footer a:active {
+      color: #031d40; }
+
+#open-coastal-drift-window {
+  background-image: url(../img/content/03accomplishments/drift.jpg); }
+
+#open-scholarships-window {
+  background-image: url(../img/content/03accomplishments/scholarship.jpg); }
+
+#open-cause-window {
+  background-image: url(../img/content/04about/whyweride.jpg); }
+
+#open-routes-window {
+  background-image: url(../img/content/04about/whereweride.jpg); }
+
+#open-grantee-window {
+  background-image: url(../img/content/05impact/grantees.jpg); }
+
+#open-alumni-window {
+  background-image: url(../img/content/07alumni/pre-alumni.jpg); }

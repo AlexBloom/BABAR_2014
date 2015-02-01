@@ -68,7 +68,7 @@ $jumbotron:(em(2000));
 }
 
 @mixin full-bleed-background{
-background-position:50% 0;
+background-position:50% 50%;
 background-size:cover;
 background-repeat:no-repeat;
 }

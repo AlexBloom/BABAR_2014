@@ -1,4 +1,17 @@
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+		<footer id="footer">
+			<p>
+				<a href="index">2015 Annual Report</a> |
+				<a href="partner">Partner</a> |
+				<a href="contact">Contact</a> | 
+				<a href="http://bikeandbuild.org"target=_blank> Bike &amp; Build Home </a>  
+			</p>
+			
+			<p><small>All content © Bike & Build Inc. 2014&ndash;2015</small></p>
+		</footer>
+		
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>

@@ -74,8 +74,12 @@ $(document).ready(function(){
 		$('#Letter').addClass('open');
 		$('body').addClass('overflow-hidden');
 	});
-	$('#open-accomplishments-window').click(function (){
-		$('#More-Accomplishments').addClass('open');
+	$('#open-coastal-drift-window').click(function (){
+		$('#coastal-drift').addClass('open');
+		$('body').addClass('overflow-hidden');
+	});
+	$('#open-scholarships-window').click(function (){
+		$('#scholarships').addClass('open');
 		$('body').addClass('overflow-hidden');
 	});
 	$('#open-cause-window').click(function (){
