@@ -49,92 +49,124 @@
 			    </nav>
 			</header>
 			<div class=" " id="accomplishments-numbers">				
-				<h1> By The Numbers </h1>
+				<section></section>
+				<!--<section class="full-screen">					
+					<section id="ByTheNumbers">
+						 <h1> By The Numbers </h1> 
+					</section>	
+				</section>-->
+				<h2 id="counter"> 2014 </h2>
 				<ul id="countdown">
-					<li class="full-screen" id="build-days">	
-						
-						<section>
+					<li class="full-screen" id="by-the-numbers">		
+						<section id="">
+							<h2>By The Numbers</h2>
+						</section>
+					</li>
+					<li class="full-screen" id="build-days">		
+						<section id="build-days-info">
+							<h2><span class="icon-timer"> </span></h2>
 							<strong class="number"> 113 </strong>
 							<h6> Build Days </h6>
+						</section>
 					</li>
 					<li class="full-screen" id="total-riders">	
-						</section>
-						<section>
+						
+						<section id="total-riders-info">
+							<h2><span class="icon-bike"> </span></h2>
 							<strong class="number"> 328 </strong>
 							<h6> Total Riders</h6> 
+						</section>
 					</li>
 					<li class="full-screen" id="grants-recieved">	
-						</section>
-						<section>
+						
+						<section id="grants-recieved-info">
+							<h2><span class="icon-people"> </span></h2>
 							<strong class="number"> 387 </strong>
 							<h6> Organizations Receiving a B&B Grant</h6> 
+						</section>
 					</li>
 					<li class="full-screen" id="average-dollars">	
-						</section>
-						<section>
+						
+						<section id="average-dollars-info">
+							<h2><span class="icon-money"> </span></h2>
 							<strong class="number"> $4,986 </strong>
 							<h6> Average dollars raised per rider</h6> 
+						</section>
 					</li>
 					<li class="full-screen" id="build-hours">	 
-						</section>
-						<section>
+						
+						<section id="build-hours-info">
+							<h2><span class="icon-timer"> </span></h2>
 							<strong class="number"> 24,500 </strong>
 							<h6> Build Hours</h6>
+						</section>
 					</li>
 					<li class="full-screen" id="dollars-granted">	
-						</section>
-						<section>
+						
+						<section id="dollars-granted-info">
+							<h2><span class="icon-money"> </span></h2>
 							<strong class="number"> $622,563 </strong>
 							<h6> Dollars Granted </h6>
+						</section>
 					</li>
 					<li class="full-screen" id="miles-pedaled">	
-						</section>
-						<section>
+						
+						<section id="miles-pedaled-info">
+							<h2><span class="icon-terrain"> </span></h2>
 							<strong class="number"> 1,049,000 </strong>
 							<h6> Miles Pedaled </h6>
 						</section>
+						
 					</li>
+					<li class="full-screen" id="accomplishments-grantee">
+						<section id="">	
+								<h3> 2013 Grantee Accomplishments </h3>
+								<ul>
+									<li class="ga-item" id="dwellings-impacted">	
+										
+											<strong class="number"> 455 </strong> 
+											<p> <strong> houses, apartments and dwellings impacted </strong><br>
+												by Bike & Build grants
+											</p>
+										
+									</li>		
+									<li class="ga-item" id="youth-engaged">	
+										
+											<strong class="number"> 6,670 </strong> 
+											<p> <strong> youth or young adults engaged </strong><br>
+												in a Bike & Build funded project
+											</p>
+										
+									</li>
+					
+									<li class="ga-item" id="communities-impacted">	
+										
+											<strong class="number"> 10,860 </strong> 
+											<p> <strong> community members impacted </strong><br>
+												by homes or projects funded by Bike & Build
+											</p>
+										
+									</li>
+								</ul>
+						</section>
+					</li>	
 				</ul>
 			</div>
-			<div class=" " id="accomplishments-grantee">	
-				<h1> 2013 Grantee Accomplishments </h1>
-				<ul>
-					<li class="full-screen" id="youth-engaged">	
-						<section>
-						<strong class="number"> 6,670 </strong> <br>
-						<strong> youth or young adults engaged </strong>
-						in a Bike & Build funded project
-						</section>
-					</li>
-					<li class="full-screen" id="dwellings-impacted">	
-						<section>
-						<strong class="number"> 455 </strong> <br>
-						<strong> houses, apartments and dwellings impacted </strong>
-						by Bike & Build grants
-						</section>
-					</li>
-					<li class="full-screen" id="communities-impacted">	
-						<section>
-						<strong class="number"> 10,860 </strong> <br>
-						<strong> community members impacted </strong>
-						by homes or projects funded by Bike & Build
-						</section>
-					</li>
-				</ul>
-			</div>
+			
 			<h2>Explore More Accomplishments</h2>
 			<section>		
 				<div class="pre-window half" id="open-coastal-drift-window">
 					<h3>Coastal Drift</h3> 
-					<button class="action">
+					<!-- <button class="action">
 						<span class="icon-plus"> </span>
-					</button>	
+					</button> -->	
 				</div>
 				<div class="pre-window half" id="open-scholarships-window">
 					<h3>Bike &amp; Build Scholarships</h3>
-					<button class="action">
+					<!-- <button class="action">
 						<span class="icon-plus"> </span>
-					</button>
+					</button> -->
+						
 				</div>
 			</section>
 			<div class="window" id="coastal-drift">

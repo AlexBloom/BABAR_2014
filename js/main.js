@@ -32,7 +32,7 @@ $(document).ready(function(){
 	}
 	
 	// Fire LocalScroll
-	$('body').localScroll();
+	//$('body').localScroll();
 	
 	// Open Navigation with Toggle
 	$("#toggle").click(function(){
@@ -51,6 +51,7 @@ $(document).ready(function(){
 	$('.article-slider').css('min-height',$(window).height());
 	$('#Intro').css('height',$(window).height());	
 	$(window).resize(function() {
+		
 		$('.full-screen').css('min-height',$(window).height());
 		$('.tab-content').css('height',$(window).height());
 		$('.article-slider').css('min-height',$(window).height());
@@ -112,10 +113,15 @@ $(document).ready(function(){
 	//});
 	
 	//Fire Swipe Classes for Sliders
-	window.orgfigures = $('#orgfigures').Swipe().data('Swipe');
-	window.grantacc = $('#grantacc').Swipe().data('Swipe');
+	//window.orgfigures = $('#orgfigures').Swipe().data('Swipe');
+	//window.grantacc = $('#grantacc').Swipe().data('Swipe');
 	//window.highlightedgrantees = $('#highlighted-grantees').Swipe().data('Swipe');
       
+
+
+
+		
+
 
 	// TABS Initiations	  
 		   $('#Accomplishments-Tabs a').click(function (e) {

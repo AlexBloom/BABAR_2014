@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers ul:after, #Accomplishments #accomplishments-grantee ul:after, #Riders #fundraisers ul:after, #Closing .share:after, #Closing .links:after, #Partner .partner-logos:after, #Contact ul:after {
+article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments #accomplishments-numbers:after, #Accomplishments #accomplishments-numbers > ul:after, #Accomplishments #accomplishments-grantee ul:after, #Riders #fundraisers ul:after, #Closing .share:after, #Closing .links:after, #Partner .partner-logos:after, #Contact ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -533,7 +533,8 @@ article {
   background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.75); }
   .pre-window:after {
     content: ' ';
     display: block;
@@ -543,7 +544,9 @@ article {
   .pre-window button {
     display: none; }
   .pre-window:hover {
-    overflow: hidden; }
+    overflow: hidden;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+    transform: scale(1.05); }
     .pre-window:hover:before {
       background: #031d40; }
   .pre-window:before {
@@ -554,6 +557,7 @@ article {
     bottom: 0;
     width: 100%;
     background: #e2231a;
+    border-radius: 50%;
     opacity: .75;
     z-index: 0; }
   .pre-window * {
@@ -722,26 +726,67 @@ img {
 
 #Accomplishments header.hero {
   background-image: url(../img/content/03accomplishments/accomplishments.jpg); }
-#Accomplishments #accomplishments-numbers ul {
-  list-style-type: none;
-  text-align: center; }
-#Accomplishments #accomplishments-numbers li {
-  background: linear-gradient(0deg, #a9d3f1, white);
-  border-bottom: 1px solid #67b2e7; }
-  #Accomplishments #accomplishments-numbers li h6 {
-    margin-bottom: 1.5rem;
-    margin-top: 0;
-    text-transform: uppercase;
-    color: #67b2e7; }
-  #Accomplishments #accomplishments-numbers li .number {
+#Accomplishments #accomplishments-numbers {
+  position: relative; }
+  #Accomplishments #accomplishments-numbers #counter {
+    display: none;
+    text-align: left;
+    padding: 0 5rem;
+    z-index: 1000;
+    color: #e2231a;
+    font-weight: bold;
+    z-index: 5000;
     font-size: 4em;
     color: #031d40;
     text-shadow: -1px 1px 0 white, -3px 3px 0 #67b2e7; }
+    @media screen and (min-width: 43.75em) {
+      #Accomplishments #accomplishments-numbers #counter {
+        display: block; } }
+  #Accomplishments #accomplishments-numbers > ul {
+    list-style-type: none;
+    text-align: center; }
+    #Accomplishments #accomplishments-numbers > ul > li {
+      font-size: 1rem; }
+      #Accomplishments #accomplishments-numbers > ul > li section {
+        width: 100%;
+        max-width: 100%; }
+      #Accomplishments #accomplishments-numbers > ul > li span {
+        color: #67b2e7; }
+      #Accomplishments #accomplishments-numbers > ul > li h6 {
+        margin-bottom: 1.5rem;
+        margin-top: 0;
+        text-transform: uppercase;
+        color: #031d40;
+        font-weight: 500; }
+      #Accomplishments #accomplishments-numbers > ul > li .number {
+        font-size: 4em;
+        color: #031d40;
+        text-shadow: -1px 1px 0 white, -3px 3px 0 #67b2e7; }
+        @media screen and (min-width: 43.75em) {
+          #Accomplishments #accomplishments-numbers > ul > li .number {
+            display: none; } }
+      @media screen and (min-width: 43.75em) {
+        #Accomplishments #accomplishments-numbers > ul > li {
+          font-size: 1.5rem; } }
+#Accomplishments #accomplishments-grantee section, #Accomplishments #accomplishments-grantee ul {
+  max-width: 100%;
+  width: 100%; }
 #Accomplishments #accomplishments-grantee ul {
   list-style-type: none;
   text-align: center; }
-#Accomplishments #accomplishments-grantee li .number {
-  font-size: 4em; }
+  #Accomplishments #accomplishments-grantee ul li {
+    font-size: 1rem;
+    float: left;
+    width: 100%;
+    color: #031d40; }
+    @media screen and (min-width: 43.75em) {
+      #Accomplishments #accomplishments-grantee ul li {
+        width: 33%; } }
+    #Accomplishments #accomplishments-grantee ul li .number {
+      display: block;
+      font-size: 4em; }
+    #Accomplishments #accomplishments-grantee ul li p {
+      font-size: 1em; }
 #Accomplishments #coastal-drift {
   background: linear-gradient(0deg, #031d40, #e2231a);
   color: white; }

@@ -161,41 +161,87 @@ img {
 		background-image:url(../img/content/03accomplishments/accomplishments.jpg);
 	}
 	#accomplishments-numbers{
-		ul{
-			list-style-type:none;
-			text-align:center;
-			@extend %clearfix;
-		}
-		li{
-			background: linear-gradient(0deg, lighten($blue-light,15%), $white);
-			border-bottom:1px solid $blue-light;
-			h6{
-			margin-bottom:$spacing-unit *3;
-			margin-top:0;
-			text-transform:uppercase;
-			color:$blue-light;
-			}
-			.number{
+		position:relative;
+		@extend %clearfix;
+		#counter{
+			display: none;
+			text-align:left;
+			//position:fixed;
+			padding:0 $spacing-unit *10;
+			z-index: 1000;
+			color: #e2231a;
+			font-weight: bold;
+			//left: 10rem;
+			//top: 0rem;
+			z-index: 5000;
+			//background-color: white;
+			//padding: 5em;
 			font-size:$base-font-size * 4;
 			color:$blue-dark;
 			text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
-			}
 			@media screen and (min-width:$tablet){
-				//width:50%;
+				display:block;
+			}
+		}
+		>ul{
+			list-style-type:none;
+			text-align:center;
+			@extend %clearfix;		
+			>li{
+				font-size:1rem;
+				//background: linear-gradient(0deg, lighten($blue-light,15%), $white);
+				//border-bottom:1px solid $blue-light;
+				section{
+					width:100%;
+					max-width:100%;
+				}
+				span{
+					color:$blue-light;
+				}
+				h6{
+				margin-bottom:$spacing-unit *3;
+				margin-top:0;
+				text-transform:uppercase;
+				color:$blue-dark;
+				font-weight:500;
+				}
+				.number{
+				font-size:$base-font-size * 4;
+				color:$blue-dark;
+				text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
+					@media screen and (min-width:$tablet){
+						display:none;
+					}
+				}
+				
+				@media screen and (min-width:$tablet){
+					font-size:1.5rem;
+				}
 			}
 		}
 	}
 	#accomplishments-grantee{
+		section, ul{
+			max-width:100%;
+			width:100%;
+		}
 		ul{
 			list-style-type:none;
 			text-align:center;
 			@extend %clearfix;
-		}
-		li{
-			//width:33%;
-			//float:left;
-			.number{
-			font-size:$base-font-size * 4;
+			li{
+				font-size:1rem;
+				float:left;
+				width:100%;
+				color:$blue-dark;
+				@media screen and (min-width:$tablet){
+					width:33%;
+				}
+				.number{
+					display:block;
+					font-size:$base-font-size * 4;
+				}
+				p{font-size:1em;}
 			}
 		}
 	}	
@@ -227,6 +273,9 @@ img {
 	   }	
 	}
 }
+
+
+
 #Impact{
 	header.hero{
 		background-image:url(../img/content/05impact/impact.jpg);
