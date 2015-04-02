@@ -77,7 +77,7 @@ var scene = new ScrollScene({triggerElement: "#build-hours", duration: dur, offs
 // build tween
 var tween = TweenMax.fromTo("#counter", 0.5, 
 		{text:"24,500"},
-		{text:"622,563", ease:Power3.easeInOut}
+		{text:"613,264", ease:Power3.easeInOut}
 	);
 // build scene
 var scene = new ScrollScene({triggerElement: "#dollars-granted", duration: dur, offset: 0 })
@@ -86,7 +86,7 @@ var scene = new ScrollScene({triggerElement: "#dollars-granted", duration: dur, 
 	.addTo(controller);
 // build tween
 var tween = TweenMax.fromTo("#counter", 0.5, 
-		{text:"622,563"},
+		{text:"613,264"},
 		{text:"1,049,000", ease:Power3.easeInOut}
 	);
 // build scene

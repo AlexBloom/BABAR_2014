@@ -3,13 +3,16 @@
 		<article id="Partner">
 			<header class="sticky">
 				
-				<h6> <a href="index"> <span class="icon-arrow-left"></span></a> Partner with Bike & Build</h6>
+				<h6> Partner </h6>
 				<nav>
 					<a href="index"><span class="icon-arrow-left"></span> </a>
 					<a href="mailto:justin@bikeandbuild.org">Partner Info <span class="icon-mail"></span> </a>
 				</nav>
 			</header>
-			<h1>Partner</h1>
+			<header class="hero">
+				<h1>Partner with Bike &amp; Build </h1>
+			</header>
+			
 			<section>
 				<p>Bike & Build allows young adults to invest in communities across the United States through service-based cycling trips.</p> 	
 				
@@ -17,11 +20,11 @@
 
 				<h2>Why We Ride</h2>
 			
-				<p>Why is Bike & Build such an impactful experience on our riders? It starts with the <a href="http://www.bikeandbuild.org/cms/content/view/9242/492/"target=_blank>severity of this country’s affordable housing crisis</a>. The takeaway: nearly 50 million Americans do not have the means to own an affordable, durable home. That’s more than the populations of Texas and Florida, combined. </p>
+				<p>Why is Bike &amp; Build such an impactful experience on our riders? It starts with the <a href="http://www.bikeandbuild.org/cms/content/view/9242/492/" target=_blank>severity of this country’s affordable housing crisis</a>. The takeaway: nearly 50 million Americans do not have the means to own an affordable, durable home. That’s more than the populations of Texas and Florida, combined. </p>
 
 				<h2>How Can You Help?</h2>
 				 
-				<p>Become a sustaining partner with Bike & Build. We will work with you to customize a partnership package that accomplishes your organization’s needs, while empowering both of our organizations to have an impact on affordable housing in your community. </p>
+				<p>Become a sustaining partner with Bike &amp; Build. We will work with you to customize a partnership package that accomplishes your organization’s needs, while empowering both of our organizations to have an impact on affordable housing in your community. </p>
 
 				<p>Our message reaches all corners of the United States.</p> 
 				<ul id="partner-facts">
@@ -43,26 +46,21 @@
 					</li>				
 				</ul>
 				
-				<p>We are excited to work with organizations that share our values. To learn more, contact Justin Villere, Director of Operations and Outreach, at <a href="mailto:justin@bikeandbuild.org">justin@bikeandbuild.org</a>.</p>	
-					
-				 
-					<img src="" alt="“Community Reach, Diner Background”" />
-
-				<h6> 
-					Case Study<br>
-					<button id="open-window-fhlb"> 
-						<span class="icon-youtube"></span><br>
-						FHLB Boston
-				 	</button> 
-			 	</h6>
-				<div class="window" id="fhlb"> 
-					<iframe width="560" height="315" src="//www.youtube.com/embed/bEDJVEE4SjM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
-					<section>
-						<p> Federal Home Loan Bank of Boston has been a multi-year sponsor of Bike & Build. </p>
-					</section>
-				</div>
+				<p>We are excited to work with organizations that share our values. To learn more, contact Justin Villere, Director of Operations and Outreach, at <a href="mailto:justin@bikeandbuild.org"> justin@bikeandbuild.org </a>. </p>					
 			    
 			</section>
+			<hr />
+			<section id="fhlb">
+				<h6>Case Study</h6>
+				<h2>FHLB Boston</h2>
+				<p> Federal Home Loan Bank of Boston has been a multi-year sponsor of Bike &amp; Build. </p>
+				
+			<iframe width="560" height="315" src="//www.youtube.com/embed/bEDJVEE4SjM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> 
+			
+			
+			</section>
+			
+			<hr />
 			<section class="partner-logos">
 				<h2>Thank you to our 2014 partners</h2>
 				<img class="partner-logo" src="img/content/partners/bokoo.jpg" alt="Bokoo" />

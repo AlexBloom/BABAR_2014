@@ -80,8 +80,8 @@ $(document).ready(function(){
 		$('body').addClass('overflow-hidden');
 	});
 	$('#open-scholarships-window').click(function (){
-		$('#scholarships').addClass('open');
-		$('body').addClass('overflow-hidden');
+		$(this).addClass('open');
+		//$('body').addClass('overflow-hidden');
 	});
 	$('#open-cause-window').click(function (){
 		$('#Cause').addClass('open');
@@ -112,8 +112,8 @@ $(document).ready(function(){
 	//    container: $(".window")		
 	//});
 	
-	//Fire Swipe Classes for Sliders
-	//window.orgfigures = $('#orgfigures').Swipe().data('Swipe');
+
+	
 	//window.grantacc = $('#grantacc').Swipe().data('Swipe');
 	//window.highlightedgrantees = $('#highlighted-grantees').Swipe().data('Swipe');
       

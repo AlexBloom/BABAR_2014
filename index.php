@@ -10,6 +10,7 @@
 					Annual Report
 				</h1>
 				<a class="action" href="#Accomplishments"> <span class="icon-arrow-down"></span> </a>
+				<small> <span class="icon-camera">  </span> Mark Benjamin NUS 2014 </small>
 			</section>
 			<h6 id="open-letter-window"> <span class="icon-visibility"></span> <br> Foreword </h6>
 			<article class="window" id="Letter">
@@ -18,7 +19,7 @@
 				<header>
 					<h6>From the Board and Staff</h6>
 					<h1>Horizons</h1>
-					<small> <span class="icon-camera"> </span> Todd Detweiler P2C 2014 </small>
+					<small> <span class="icon-camera"> </span> Todd Detweiler, P2C 2014 </small>
 				</header>
 				
 				<section>
@@ -44,72 +45,80 @@
 		<article id="Accomplishments">	
 			<header class="sticky">
 				<h6>Accomplishments</h6>
+			
 			    <nav class="nav-tabs" id="Accomplishments-Tabs"> 
 			       <a href="#BB101" title="Bike &amp; Build 101"><span class="icon-arrow-down"></span></a>
 			    </nav>
 			</header>
-			<div class=" " id="accomplishments-numbers">				
-				<section></section>
-				<!--<section class="full-screen">					
-					<section id="ByTheNumbers">
-						 <h1> By The Numbers </h1> 
-					</section>	
-				</section>-->
-				<h2 id="counter"> 2014 </h2>
-				<ul id="countdown">
-					<li class="full-screen" id="by-the-numbers">		
+			<nav id="accomplishments-nav-wrap" class="swipe-nav-wrap">
+				<ul id="accomplishments-nav" class="swipe-nav">
+					<li class="selected">1 </li>
+					<li>2 </li>
+					<li>3 </li>
+					<li>4 </li>
+					<li>5 </li>
+					<li>6 </li>
+					<li>7 </li>
+					<li>8 </li>
+					<li>9 </li>
+				</ul>
+			</nav>
+			<div class="swipe" id="accomplishments-numbers">				
+				<div class="swipe-wrap">
+					<div class="full-screen" id="by-the-numbers">		
 						<section id="">
-							<h2>By The Numbers</h2>
+							<strong class="number"> 2014</strong>
+							<h6>By The Numbers</h6>
 						</section>
-					</li>
-					<li class="full-screen" id="build-days">		
+					</div>
+					<div class="full-screen" id="build-days">		
 						<section id="build-days-info">
 							<h2><span class="icon-timer"> </span></h2>
 							<strong class="number"> 113 </strong>
 							<h6> Build Days </h6>
 						</section>
-					</li>
-					<li class="full-screen" id="total-riders">	
+					</div>
+					<div class="full-screen" id="total-riders">	
 						
 						<section id="total-riders-info">
 							<h2><span class="icon-bike"> </span></h2>
 							<strong class="number"> 328 </strong>
 							<h6> Total Riders</h6> 
 						</section>
-					</li>
-					<li class="full-screen" id="grants-recieved">	
+					</div>
+					<div class="full-screen" id="grants-recieved">	
 						
 						<section id="grants-recieved-info">
 							<h2><span class="icon-people"> </span></h2>
 							<strong class="number"> 387 </strong>
 							<h6> Organizations Receiving a B&B Grant</h6> 
 						</section>
-					</li>
-					<li class="full-screen" id="average-dollars">	
+					</div>
+					<div class="full-screen" id="average-dollars">	
 						
 						<section id="average-dollars-info">
 							<h2><span class="icon-money"> </span></h2>
 							<strong class="number"> $4,986 </strong>
 							<h6> Average dollars raised per rider</h6> 
 						</section>
-					</li>
-					<li class="full-screen" id="build-hours">	 
+					</div>
+					<div class="full-screen" id="build-hours">	 
 						
 						<section id="build-hours-info">
 							<h2><span class="icon-timer"> </span></h2>
 							<strong class="number"> 24,500 </strong>
 							<h6> Build Hours</h6>
 						</section>
-					</li>
-					<li class="full-screen" id="dollars-granted">	
+					</div>
+					<div class="full-screen" id="dollars-granted">	
 						
 						<section id="dollars-granted-info">
 							<h2><span class="icon-money"> </span></h2>
 							<strong class="number"> $622,563 </strong>
 							<h6> Dollars Granted </h6>
 						</section>
-					</li>
-					<li class="full-screen" id="miles-pedaled">	
+					</div>
+					<div class="full-screen" id="miles-pedaled">	
 						
 						<section id="miles-pedaled-info">
 							<h2><span class="icon-terrain"> </span></h2>
@@ -117,40 +126,41 @@
 							<h6> Miles Pedaled </h6>
 						</section>
 						
-					</li>
-					<li class="full-screen" id="accomplishments-grantee">
+					</div>
+					<div class="full-screen" id="accomplishments-grantee">
 						<section id="">	
-								<h3> 2013 Grantee Accomplishments </h3>
-								<ul>
-									<li class="ga-item" id="dwellings-impacted">	
-										
-											<strong class="number"> 455 </strong> 
-											<p> <strong> houses, apartments and dwellings impacted </strong><br>
-												by Bike & Build grants
-											</p>
-										
-									</li>		
-									<li class="ga-item" id="youth-engaged">	
-										
-											<strong class="number"> 6,670 </strong> 
-											<p> <strong> youth or young adults engaged </strong><br>
-												in a Bike & Build funded project
-											</p>
-										
-									</li>
-					
-									<li class="ga-item" id="communities-impacted">	
-										
-											<strong class="number"> 10,860 </strong> 
-											<p> <strong> community members impacted </strong><br>
-												by homes or projects funded by Bike & Build
-											</p>
-										
-									</li>
-								</ul>
+							<h3> 2013 Grantee Accomplishments </h3>
+							<ul>
+								<li class="ga-item" id="dwellings-impacted">	
+									
+										<strong class="number"> 455 </strong> 
+										<p> <strong> houses, apartments and dwellings impacted </strong><br>
+											by Bike & Build grants
+										</p>
+									
+								</li>		
+								<li class="ga-item" id="youth-engaged">	
+									
+										<strong class="number"> 6,670 </strong> 
+										<p> <strong> youth or young adults engaged </strong><br>
+											in a Bike & Build funded project
+										</p>
+									
+								</li>
+				
+								<li class="ga-item" id="communities-impacted">	
+									
+										<strong class="number"> 10,860 </strong> 
+										<p> <strong> community members impacted </strong><br>
+											by homes or projects funded by Bike & Build
+										</p>
+									
+								</li>
+							</ul>
 						</section>
-					</li>	
-				</ul>
+					</div>	
+				</div>
+				
 			</div>
 			
 			<h2>Explore More Accomplishments</h2>
@@ -171,18 +181,20 @@
 			</section>
 			<div class="window" id="coastal-drift">
 				<span class="icon-cross close-window"> </span>	
+					<header class="hero" id="drift-hero">
+						<h6></h6>
+						<h1>Coastal Drift</h1>
+						<small> <span class="icon-camera"> </span> Andy Short, Coastal Drift, 2014</small>
+					</header>
 					<section>
-						<h2>Coastal Drift</h2>
 						<p>This year, Bike & Build unveiled Coastal Drift, a new regional route from Maine’s Acadia National Park to New York City. Over the course of 3 weeks and 830 miles, riders weaved in and out of island towns and major metropolises, traversing both urban and rural landscapes and experiencing the mutable affordable housing issue that parallels the varied terrain. Riders experienced the best of Bike & Build in a compact time frame: scenic roads, multiple build days, and the ability to observe and create change in the world around them. The trip was shorter, but the soul was the same- spurred by young adults with adventurous spirits and involved citizens with tremendous hearts.</p>
 					</section>
-					
-					Cool infographics?
-						•	See attached data sheet
 					
 			</div>
 			<div class="window" id="scholarships">	
 				<span class="icon-cross close-window"> </span>					
 				<section>
+					
 					<h2>Bike & Build Scholarship</h2>
 					<p>The Bike & Build Scholarship program engages young adults from at-risk backgrounds, ages 18-25, in a life-changing opportunity to be engaged in their community. Riders develop skills in teamwork, leadership, and perseverance. This accomplishment furthers empower scholarship recipients to serve others for many years beyond the completion of the trip. </p>
 
@@ -310,10 +322,10 @@
 			<header class="hero">
 				<h6>Bike &amp; Build's Grant Programs</h6>
 				<h1>IMPACT</h1>
-				<small> <strong>Photo:</strong> </small>
+				<small> <strong>Photo: Marah Holland P2C</strong> </small>
 			</header>
 			<section>		
-					<h2>In 2014, Bike & Build granted over $622,000 to 387 affordable housing organizations across the United States.</h2>
+					<h2>In 2014, Bike & Build granted over $613,264 to 387 affordable housing organizations across the United States.</h2>
 					<p>We did that through four programs:</p>
 					
 				<ol id="GrantPrograms">	
@@ -335,91 +347,109 @@
 				</div>
 				
 				<div class="window" id="Grantee"> 
-					<span class="icon-cross close-window"> </span>
-					<h1>Grantee Profiles</h1>
-					<article class="grantee" id="Idaho">
-						<header>
+				<span class="icon-cross close-window"> </span>
+				
+				<h6>Grantee Profiles</h6>
+				
+				<nav id="grantee-nav-wrap" class="swipe-nav-wrap">
+					<ul id="grantee-nav" class="swipe-nav">
+						<li class="selected"> </li>
+						<li> </li>
+						<li> </li>
+						<li> </li>
+						<li> </li>
+					</ul>
+				</nav>
+				
+				<div class="swipe" id="grantee-profiles">
+		
+					<div class="swipe-wrap"> 			
+						<div> <article class="grantee" id="Idaho">
+							<header>
 							
-						</header>
-						<section>
+							</header>
+							<section>
 							
-							<h2> Habitat for Humanity of North Idaho</h2>
-							<h3> Hayden, ID | Providence to Seattle<h3> 
-							<h6> $8,120</h6>
+								<h2> Habitat for Humanity of North Idaho</h2>
+								<h3> Hayden, ID | Providence to Seattle<h3> 
+								<h6> $8,120</h6>
 							
-							<p>Habitat for Humanity of North Idaho is using B&B grant funds to engage students from the Kootenai Technical Education (KTEC) High School in the construction of a home for a low-income family. In their original grant application funded by our riders, HfH of North Idaho estimated ten students would participate. However, the program has become so popular that 21 students are enrolled in the Fall 2014 semester. KTEC students receive hands-on training in residential construction to supplement classroom activities. </p>
+								<p>Habitat for Humanity of North Idaho is using B&B grant funds to engage students from the Kootenai Technical Education (KTEC) High School in the construction of a home for a low-income family. In their original grant application funded by our riders, HfH of North Idaho estimated ten students would participate. However, the program has become so popular that 21 students are enrolled in the Fall 2014 semester. KTEC students receive hands-on training in residential construction to supplement classroom activities. </p>
 			
-							<p>Katrina Boyer, HfH of North Idaho’s Volunteer Coordinator, stated that the Bike & Build grant has been one of the primary reasons this partnership formed. “The grant enabled us to get started on projects that we otherwise couldn’t have done. It’s very difficult to be unable to start projects for people who really need help. Establishing this relationship with KTEC allows us to reach more of our community members in need.” The grant may help lead to further expansion for the partnership from other sources as well. “Some of the members of KTEC’s Board of Directors have been able to see this progress, and that has opened doors for Habitat to these new networks,” Boyer stated. </p>
+								<p>Katrina Boyer, HfH of North Idaho’s Volunteer Coordinator, stated that the Bike & Build grant has been one of the primary reasons this partnership formed. “The grant enabled us to get started on projects that we otherwise couldn’t have done. It’s very difficult to be unable to start projects for people who really need help. Establishing this relationship with KTEC allows us to reach more of our community members in need.” The grant may help lead to further expansion for the partnership from other sources as well. “Some of the members of KTEC’s Board of Directors have been able to see this progress, and that has opened doors for Habitat to these new networks,” Boyer stated. </p>
 			
-							<p>Bike & Build has also built with Habitat for Humanity of North Idaho since 2009, and we look forward to continuing that relationship!</p>
-						</section>
-					</article>
-			    	<article class="grantee" id="YouthBuild">
-						<header> 
+								<p>Bike & Build has also built with Habitat for Humanity of North Idaho since 2009, and we look forward to continuing that relationship!</p>
+							</section>
+						</article> </div>
+				    	<div> <article class="grantee" id="YouthBuild">
+							<header> 
 							
-						</header>
-						<section>
-							<h2>YouthBuild Philadelphia</h2>
-							<h3> Philadelphia, PA | Providence to California</h3> 
-							<h6>$8,000</h6>
+							</header>
+							<section>
+								<h2>YouthBuild Philadelphia</h2>
+								<h3> Philadelphia, PA | Providence to California</h3> 
+								<h6>$8,000</h6>
 					
-							<p>YouthBuild's innovative alternative education program helps out-of-school youth rebuild their lives while they rebuild their communities. Students receive hands-on construction training as they rehabilitate a dilapidated property for a first time, low-income homeowner. Additionally, YB students take classes towards their high school diploma and prepare for college.  This combination of academic skill building, job training, and support services help former dropouts change the trajectory of their lives and transition to post-secondary education or meaningful employment.  </p>
+								<p>YouthBuild's innovative alternative education program helps out-of-school youth rebuild their lives while they rebuild their communities. Students receive hands-on construction training as they rehabilitate a dilapidated property for a first time, low-income homeowner. Additionally, YB students take classes towards their high school diploma and prepare for college.  This combination of academic skill building, job training, and support services help former dropouts change the trajectory of their lives and transition to post-secondary education or meaningful employment.  </p>
 	
-							<p>Bike & Build’s grant is supporting YB Philly’s Building Trades Training Program. Three teams of students are working throughout the semester on three properties in Philadelphia. One property is combining the need for affordable housing with the goal of making it green, as the students are helping build the home to LEED Platinum certification standards. “The students really take ownership of these houses. They have a lot of pride in what they are building,” said Sarah Peterson, YB Philly’s Communications and Development Associate.</p>
+								<p>Bike & Build’s grant is supporting YB Philly’s Building Trades Training Program. Three teams of students are working throughout the semester on three properties in Philadelphia. One property is combining the need for affordable housing with the goal of making it green, as the students are helping build the home to LEED Platinum certification standards. “The students really take ownership of these houses. They have a lot of pride in what they are building,” said Sarah Peterson, YB Philly’s Communications and Development Associate.</p>
 	
-							<p>Zahfir Slaughter, one of the students working on this project, commented on how much he’s not only learning on the construction site, but also about himself. “I’m really learning how to push myself and build my character. This program is very exciting. We’re not only giving opportunities to a new homeowner, but it also opens up bright futures for students like me.” Zahfir is taking these lessons to heart; after college, he wants to start a career in real estate. “It’ll be fun to one day go past the house we’re building and say ‘I did this.’”</p>
-						</section>
-					</article>
-					<article class="grantee" id="Stafford">  
-						<header>
+								<p>Zahfir Slaughter, one of the students working on this project, commented on how much he’s not only learning on the construction site, but also about himself. “I’m really learning how to push myself and build my character. This program is very exciting. We’re not only giving opportunities to a new homeowner, but it also opens up bright futures for students like me.” Zahfir is taking these lessons to heart; after college, he wants to start a career in real estate. “It’ll be fun to one day go past the house we’re building and say ‘I did this.’”</p>
+							</section>
+						</article> </div>
+						<div> <article class="grantee" id="Stafford">  
+							<header>
 							
-						</header>
-						<section>
+							</header>
+							<section>
 							
-							<h2>Stafford County Economic Development</h2>
-							<h3>St. John, KS | North Carolina to San Diego</h3>
-							<h6>$7,000</h6>
+								<h2>Stafford County Economic Development</h2>
+								<h3>St. John, KS | North Carolina to San Diego</h3>
+								<h6>$7,000</h6>
 							
-							<p>Stafford EcoDevo is using affordable housing as a key tool in a broader goal: retaining and recruiting more young adults to live and raise their families in rural Kansas. “Population decline is a big issue in rural economic development, and housing is one the major things to address,” said Carolyn Dunn, Executive Director at Stafford EcoDevo. For example, one problem the community faces is finding housing for teachers hired by the local school district. The average age of a house in Stafford County is 84 years old, and 80% of the housing stock is in subpar condition. Bike & Build funds are being used to help build three new rental units for young professionals, like teachers, throughout the county. </p>
+								<p>Stafford EcoDevo is using affordable housing as a key tool in a broader goal: retaining and recruiting more young adults to live and raise their families in rural Kansas. “Population decline is a big issue in rural economic development, and housing is one the major things to address,” said Carolyn Dunn, Executive Director at Stafford EcoDevo. For example, one problem the community faces is finding housing for teachers hired by the local school district. The average age of a house in Stafford County is 84 years old, and 80% of the housing stock is in subpar condition. Bike & Build funds are being used to help build three new rental units for young professionals, like teachers, throughout the county. </p>
 	
-							<p>Bike & Build riders didn’t volunteer with Stafford EcoDevo in 2014, but Carolyn had a chance to speak to the NC2SD riders in Dodge City, KS. “I came home after talking with them and, sensing their purpose and passion, I was pretty pumped up. I didn’t sleep much that night!” Stafford EcoDevo has taken the mission of engaging young adults in their community development to heart: they recently hired a college grad from Wichita (“That’s a big deal,” Carolyn said.), and this project inspired a local contractor to hire one of the students in the local high school’s building trades program that had been contributing to the project.</p> 
+								<p>Bike & Build riders didn’t volunteer with Stafford EcoDevo in 2014, but Carolyn had a chance to speak to the NC2SD riders in Dodge City, KS. “I came home after talking with them and, sensing their purpose and passion, I was pretty pumped up. I didn’t sleep much that night!” Stafford EcoDevo has taken the mission of engaging young adults in their community development to heart: they recently hired a college grad from Wichita (“That’s a big deal,” Carolyn said.), and this project inspired a local contractor to hire one of the students in the local high school’s building trades program that had been contributing to the project.</p> 
 	
-							<p>“It’s all about broad community development,” Carolyn commented. “Economic prosperity, housing, healthy living… it all goes hand-in-hand.” </p>
-						</section>
-					</article>
-					<article class="grantee" id="Grid">
-						<header>
+								<p>“It’s all about broad community development,” Carolyn commented. “Economic prosperity, housing, healthy living… it all goes hand-in-hand.” </p>
+							</section>
+						</article> </div>
+						<div> <article class="grantee" id="Grid">
+							<header>
 							
-						</header>
-						<section>
-							<h2>GRID Alternatives Colorado</h2>
-							<h3>Denver, CO | Central U.S.</h3>
-							<h6>$5,000</h6>
+							</header>
+							<section>
+								<h2>GRID Alternatives Colorado</h2>
+								<h3>Denver, CO | Central U.S.</h3>
+								<h6>$5,000</h6>
 							
-							<p>GRID Alternatives Colorado provides low-to-no cost solar electric systems to families that qualify as low income, while also giving volunteers and job trainees hands-on experience that they can use to get jobs in the growing solar industry. GRID has been operating in Colorado since 2012, when they installed 12 systems. Next year they aim to install 60-70. With the support of Bike & Build funding, they aim to develop the first U.S.-based solar grid that is 100% dedicated to low-income subscribers.</p> 
+								<p>GRID Alternatives Colorado provides low-to-no cost solar electric systems to families that qualify as low income, while also giving volunteers and job trainees hands-on experience that they can use to get jobs in the growing solar industry. GRID has been operating in Colorado since 2012, when they installed 12 systems. Next year they aim to install 60-70. With the support of Bike & Build funding, they aim to develop the first U.S.-based solar grid that is 100% dedicated to low-income subscribers.</p> 
 	
-							<p>A key piece of GRID’s outreach engages young adults in long-term contributions to sustainable, affordable housing. They work with multiple community colleges and technical schools to provide hands-on, rooftop experience installing panels. To go along with their classroom education, GRID trainees complete ten volunteer days and ten crew-leading. Once complete, individuals are eligible for to sit for the industry’s certification exam. GRID Colorado also runs its own Solar Corps program, similar to AmeriCorps (unaffiliated), where young adults who participate are employed by GRID but also earn a scholarship to continue their education. </p>
+								<p>A key piece of GRID’s outreach engages young adults in long-term contributions to sustainable, affordable housing. They work with multiple community colleges and technical schools to provide hands-on, rooftop experience installing panels. To go along with their classroom education, GRID trainees complete ten volunteer days and ten crew-leading. Once complete, individuals are eligible for to sit for the industry’s certification exam. GRID Colorado also runs its own Solar Corps program, similar to AmeriCorps (unaffiliated), where young adults who participate are employed by GRID but also earn a scholarship to continue their education. </p>
 	
-							<p>Kristina Sickles, Development Director at GRID Colorado, talked about GRID’s triple-bottom line impact: “We’re helping low-income homeowners with a hand-up, we’re helping young adults, veterans, women, and others gain valuable job experience, and we’re lowering utility costs and overall fossil fuel dependence. Ultimately, we want to bring new people into the convseration about renewable energy, especially those low-income individuals who are most impacted.”
-								</p>
-							<p>The program’s impact is also felt by their homeowners. “We have a very tight income and it has been a blessing to shave down our bills each month,” said Amy Sue Pinto, a recent GRID client. “We’d looked into solar and knew it was always something we wanted, but it was just not financially feasible until GRID Alternatives helped us out. Everyone on their team was amazing to work with!”</p>
-						</section>
-					</article>
-					<article class="grantee" id="Purdue">
-						<header>
+								<p>Kristina Sickles, Development Director at GRID Colorado, talked about GRID’s triple-bottom line impact: “We’re helping low-income homeowners with a hand-up, we’re helping young adults, veterans, women, and others gain valuable job experience, and we’re lowering utility costs and overall fossil fuel dependence. Ultimately, we want to bring new people into the convseration about renewable energy, especially those low-income individuals who are most impacted.”
+									</p>
+								<p>The program’s impact is also felt by their homeowners. “We have a very tight income and it has been a blessing to shave down our bills each month,” said Amy Sue Pinto, a recent GRID client. “We’d looked into solar and knew it was always something we wanted, but it was just not financially feasible until GRID Alternatives helped us out. Everyone on their team was amazing to work with!”</p>
+							</section>
+						</article> </div>
+						<div> <article class="grantee" id="Purdue">
+							<header>
 							
-						</header>
-						<section>
+							</header>
+							<section>
 							
-							<h2>Purdue University Habitat for Humanity</h2>
-							<h3>West Lafayette, IN | Providence to Seattle</h3>
-							<h6>$1,400</h6>
+								<h2>Purdue University Habitat for Humanity</h2>
+								<h3>West Lafayette, IN | Providence to Seattle</h3>
+								<h6>$1,400</h6>
 							
-							<p>The Habitat campus chapter at Purdue will be using Bike & Build funds this year to build their capacity for future fundraisers. Our P2S team awarded $1,400 to purchase new bicycles that the organization is using for bike-related fundraisers that will far exceed the grant total provided by B&B. Specifically, Purdue students will participate in the Bucket 100, a two-day ride that travels from Purdue to Indiana University in Bloomington, 120 miles away, and Cover Indiana, a week-long event that traverses Indiana. Students without their own wheels will be able to participate with the Bike & Build-funded bikes, enabling the campus chapter to raise at least $450 per bike/per year. </p>
+								<p>The Habitat campus chapter at Purdue will be using Bike & Build funds this year to build their capacity for future fundraisers. Our P2S team awarded $1,400 to purchase new bicycles that the organization is using for bike-related fundraisers that will far exceed the grant total provided by B&B. Specifically, Purdue students will participate in the Bucket 100, a two-day ride that travels from Purdue to Indiana University in Bloomington, 120 miles away, and Cover Indiana, a week-long event that traverses Indiana. Students without their own wheels will be able to participate with the Bike & Build-funded bikes, enabling the campus chapter to raise at least $450 per bike/per year. </p>
 	
-							<p>“These bikes will last us for awhile,” said Michell Obergfell, the chapter’s Vice President of Development. “We work closely with Lafayette Habitat for Humanity, and each year we aim to raise enough money to sponsor a house. This will help us do that.”</p>
-						</section>
-					</article>
+								<p>“These bikes will last us for awhile,” said Michell Obergfell, the chapter’s Vice President of Development. “We work closely with Lafayette Habitat for Humanity, and each year we aim to raise enough money to sponsor a house. This will help us do that.”</p>
+							</section>
+						</article> </div>
+					</div>
+					
+				</div>
 				</div>
 				
 				<h2>Interested in applying for a Bike & Build Grant?</h2>
@@ -515,7 +545,7 @@
 			<header class="hero">
 				<h6> Bike & Build’s Greatest Resource </h6>
 				<h1>Alumni</h1>
-				<small> <strong>Photo:</strong> </small>
+				<small> <strong>Photo: Marah Holland, P2C 2014</strong> </small>
 			</header>
 			
 			<section>
@@ -595,18 +625,176 @@
 			</div>
 					
 		</article>	
+		<article id="financials">
+			<header class="sticky">
+				<h6>Audited Financials</h6>
+				<nav>	
+					<a href="#Closing"><span class="icon-arrow-down"></span></a>
+				</nav>
+			</header>
+			<section>
+				<h2>Statement of Financials</h2>
+				<blockquote>
+					 76.6% of money raised goes directly to support Bike &amp; Build's mission.
+				</blockquote>
+			</section>
+			
+			<section>
+				<figure>
+					<figcaption> </figcaption>
+				</figure>
+				<div class="financials-grants">
+					<h6> 2014 Affordable Housing Grants </h6>
+					<table class="t2">
+						<thead>
+							<tr> <th> Grant Type 							</th> <th> Value </th></tr>
+						</thead>
+						<tbody>
+							<tr> <td> Competitive Grant Program	 	 	 	</td> <td> $372,275 </td> </tr>
+							<tr> <td> Pre-Arranged Partner Contributions	</td> <td> $71,550  </td> </tr>
+							<tr> <td> Rider $500 Donations	 	 	 		</td> <td> $94,250  </td> </tr>
+							<tr> <td> On the Road Gifts	 	 	 			</td> <td> $37,700  </td> </tr>
+							<tr> <td> Alumni Council Emergency Grants	 	</td> <td> $4,000   </td> </tr>
+							<tr> <td> CWM Contributions	 	 	 			</td> <td> $32,784  </td> </tr>
+							<tr> <td> Other	 	 	 						</td> <td> $705     </td> </tr>
+							<tr> <td> </td> <td> </td> </tr>
+							<tr> <td> Total Bike &amp; Build Grants	 	 	</td> <td> $613,264 </td> </tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="financials-by-year">
+					<h6>Total By The Years</h6>
+					<table class="t2">
+						<thead>
+						<tr>
+							<th>Year</th>
+							<th>Value</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr> 
+							<td>2006</td>
+							<td>$376,820</td>
+						</tr>	
+						<tr> 
+							<td>2007</td>
+							<td>$394,998</td>
+						</tr>	
+						<tr> 
+							<td>2008</td>
+							<td>$494,609</td>
+						</tr>	
+						<tr> 
+							<td>2009</td>
+							<td>$740,044</td>
+						</tr>	
+						<tr> 
+							<td>2010</td>
+							<td>$563,569</td>
+						</tr>	
+						<tr> 
+							<td>2011</td>
+							<td>$608,023</td>
+						</tr>	
+						<tr> 
+							<td>2012</td>
+							<td>$648,857</td>
+						</tr>	
+						<tr> 
+							<td>2013</td>
+							<td>$468,640</td>
+						</tr>
+						<tr> 
+							<td>2014</td>
+							<td>$613,264</td>
+						</tr>	 
+						</tbody>
+					</table>
+				</div>
+			</section>
+			
+			<section>
+				<h3> Audited Financial Statements </h3>
+				
+				<table>
+					<thead>
+					  	<tr> <th>Unrestricted Net Assets </th> <th> 2014 </th> <th> 2013 </th> </tr>
+					</thead>
+					<tbody>				   	 	 	 	 	 
+					    <tr> <td> Donations Income	 	 			</td> <td> $1,422,075 </td> <td> $1,201,090 </td> </tr>
+					    <tr> <td> Application Fees	 				</td> <td> $63,683	 </td> <td> $52,245    </td> </tr>
+					    <tr> <td> Apparel Sales	 	 				</td> <td> $31,683	 </td> <td> $29,719	  </td> </tr>	 	 	 	 
+					    <tr> <td> In-Kind Contributions	 	 	 	</td> <td> $8,073	 </td> <td> $6,996	  </td> </tr>	 	 	 	 
+					    <tr> <td> Other Income	 	 	 	 		</td> <td> $5,198	 </td> <td> $3,695	  </td> </tr>	 	 	 	 
+					    <tr> <td> Subtotal	 	 	 		 		</td> <td> $1,530,712 </td> <td> $1,293,745 </td> </tr>
+					    <tr> <td> Assets Released from Restriction	</td> <td> $35,097	 </td> <td> $61,559    </td> </tr>
+					    <tr> <td> Total Support and Revenue	 	 	</td> <td> $1,565,756 </td> <td> $1,355,304 </td> </tr>
+					</tbody>
+				 </table>
+				
+				 <table>
+				 	<thead>
+				 		<tr><th> Expenses</th> <th> 2014 </th> <th> 2013</th></tr>
+				 	</thead>
+					<tbody>	 	 	 	 
+					    <tr> <td> Program Services	 	 </td> <td> $1,322,250</td> <td> $1,043,357 </td></tr>
+					    <tr> <td> Management and General </td> <td> $214,306</td> <td> $205,794    </td></tr>
+					    <tr> <td> Fundraising	 	 	 </td> <td> $43,008	</td> <td> $31,317     </td></tr>
+					    <tr> <td> Subtotal	 	 	 	 </td> <td> $1,579,564</td> <td> $1,280,468 </td></tr>
+					    <tr> <td> Change in Unrestricted Net Assets</td> <td>-$13,808</td> <td> $74,836     </td></tr>
+					</tbody>
+				 </table> 
+				
+				 <table>
+				 	<thead>
+						<tr>
+							<th> Totals </th> <th> 2014 </th> <th> 2013 </th>
+						</tr>
+				 	</thead>
+					<tbody>	 
+				 		<tr> <td> Total Other Income </td> <td> $5,198	</td> <td> $3,695 </td> </tr>
+					    <tr> <td> Change, Total Net Assets</td> <td> -$84	</td> <td> $52,108 </td> </tr>
+					    <tr> <td> Net Assets, Beginning </td> <td> $208,231	</td> <td> $156,123</td> </tr>
+					    <tr> <td> Net Assets, Ending </td> <td> $208,147	</td> <td> $208,231</td> </tr>
+					</tbody>
+				 </table>	 
+			</section>
+			
+			<section>
+				<h6> 2014 Program Expenses </h6>
+				<table class="t2"> 
+					<thead>
+						<tr> <th> Type 								</th> <th> Value 	  </th> </tr>
+					</thead>
+					<tbody> 
+						<tr> <td> Contributions	 	 	 			</td> <td> $613,264   </td> </tr>
+						<tr> <td> Trip Gear, Activities	 	 	 	</td> <td> $337,305   </td> </tr>
+						<tr> <td> Salaries, Benefits, Stipends	 	</td> <td> $178,836   </td> </tr>
+						<tr> <td> Auto	 	 	 					</td> <td> $74,972    </td> </tr>
+						<tr> <td> Insurance	 	 					</td> <td> $40,946    </td> </tr>
+						<tr> <td> Technology	 					</td> <td> $9,054     </td> </tr>
+						<tr> <td> Director Travel	 	 	 		</td> <td> $7,781     </td> </tr>
+						<tr> <td> Depreciation	 	 	 			</td> <td> $51,192    </td> </tr>
+						<tr> <td> Other	 	 	 					</td> <td> $8,900     </td> </tr>
+						<tr> <td> Total Expenses	 	 	 		</td> <td> $1,322,250 </td> </tr>
+					</tbody>
+				</table>
+			</section>
+			
+		</article>
+		
 		<article id="Closing">
 			<header class="sticky">
 				<h6>THANKS!</h6>
-				<nav>
-					<a href="#Intro"><span class="icon-arrow-up"></span></a>
+				<nav>	
 					<a href="contact"target=_blank> <span class="icon-mail"></span> </a>
+					<a href="#Intro"><span class="icon-arrow-up"></span></a>
 				</nav>
 			</header>
 			<header class="hero">
 				<!-- <h6> Congratulations 2014 </h6> -->
 				<h1> On To 2015 </h1>
-				<small> <strong>Photo:</strong> </small>
+				<small> <strong>Photo:</strong> Reuben Cheng SC2SC, 2014 </small>
 			</header>
 			<section>
 				<h2> What to do now </h2>

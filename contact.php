@@ -41,89 +41,148 @@
 					</li>			
 			</ul>
 			<h1>Board</h1>
+			<h3>Voting Members</h3>
 			<ul id="board">
-					<li><p><strong>
-					Steve Truong </strong><br>
-					Chairman of the Board<br>
-					Albrige Analytics,<br> 
-					Director, Sales and Relationship Manager<br>
-					Wayne, PA  
-					</p></li>
-					<li><p><strong>
-					George Jones </strong><br>
-					Treasurer<br>					
-					Gidus Solutions, LLCX,<br> 
-					Consultant<br>
-					Sicklerville, NJ 
-					</p></li>
-					<li><p><strong>
-					Ed Harris </strong><br>
-					Member At Large<br>
-					Digital Marketing Specialist<br>
-					Valley Forge Tourism and Convention Board,<br> 
-					VP of Marketing & Communications<br>
-					Narberth, PA 
-					</p></li>
-					<li><p><strong>
-					Charlie Henderson </strong><br>
-					Member At Large<br>
-					
-					Henderson Consulting & Risk Management,<br> 
-					Owner<br>
-					Newtown Square, PA  
-					</p></li>
-					<li><p><strong>
-					John Leonti </strong><br>
-					Member At Large<br>
-					
-					Troutman Sanders LLP,<br> 
-					Attorney<br>
-					New York, NY 
-					</p></li>
-					<li><p><strong>
-					David Michaluk </strong><br>
-					Member At Large<br>
-					Partnership Marketing Specialist<br>
-					Bentley Systems,<br> 
-					Senior Marketing Manager<br>
-					Oaklyn, NJ  
-					</p></li>
-					<li><p><strong>
-					Bill Meiklejohn </strong><br>
-					Member At Large<br>
-					 
-					Lancer Systems,<br> 
-					President<br>
-					Collegeville, PA 
-					</p></li>
-					<li><p><strong>
-					Kristian Sekse </strong><br>
-					Member At Large<br>
-					Board of Child Care,<br>
-					Director of Development<br>
-					Baltimore, MD 
-					</p></li>
-					<li><p><strong>
-					Bill West </strong><br>
-					Member At Large<br>
-					The Atlantic Partners, Managing Partner<br>
-					Greenville, SC 
-					</p></li>
+				<li>
+					<p>
+						<strong> Kristian Sekse</strong> <br>
+						Interim Chairperson <br>
+						Board of Child Care, Director of Development<br>
+						Baltimore, MD<br>
+						Joined Board: January 2011
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> George Jones</strong> <br>
+						Treasurer <br>
+						Gidus Solutions, LLCX, Consultant <br>
+						Sicklerville, NJ<br>
+						Joined Board: March 2014
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Kristin Anderson</strong> <br>
+						Affordable Housing Representative <br>
+						North Shore Community Development Coalition, Chief Program Officer <br>
+						Medford, MA<br>
+						Joined Board: March 2015
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Ed Harris</strong> <br>
+						Member-At-Large, Digital Marketing Specialist<br>
+						Valley Forge Tourism and Convention Board, VP of Marketing & Communications<br>
+						St. Joseph’s University, Adjunct Professor <br>
+						Narberth, PA<br>
+						Joined Board: February 2014
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Charlie Henderson</strong> <br>
+						Member At-Large<br>
+						Henderson Consulting &amp; Risk Management, Owner<br>
+						Newtown Square, PA<br>
+						Joined Board: April 2013
+	
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> David Michaluk</strong> <br>
+						Member-At-Large Partnership Marketing Specialist<br>
+						Bentley Systems, Senior Marketing Manager<br>
+						Oaklyn, NJ<br>
+						Joined Board: February 2014
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Bill Meiklejohn</strong> <br>
+						Member At-Large<br> 
+						Lancer Systems, President<br>
+						Collegeville, PA<br>
+						Joined Board: December 2013
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Bill West</strong> <br>
+						Member At-Large<br>
+						The Atlantic Partners, Managing Partner<br>
+						Greenville, SC<br>
+						Joined Board: February 2007
+					</p>
+				</li>
+				
+			</ul>
+			<h3>Finance Committee</h3>
+			<ul id="board">
+				<li>
+					<p>
+						<strong> George Jones </strong> <br>
+						Treasurer  <br>
+						Gidus Solutions, LLCX, Consultant  <br>
+						Sicklerville, NJ <br>
+						Joined Board: March 2013
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Justin Villere </strong> <br>
+						Staff (Director of Operations and Outreach) <br>
+						Philadelphia, PA  <br>
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Andrew Schneider </strong> <br>
+						Contributor (non-voting member) <br>
+						Price Waterhouse Coopers, LLP, Advisory Senior Associate <br>
+						Bike & Build Alumni, P2S’04 <br>
+						New York, NY
+					</p>
+				</li>
 			</ul>
 			<h1>Alumni Council</h1>
+			<h3>Non Voting Members</h3>
 			<ul id="alumni">
-					<li><p><strong>
-					Jesse Cohn </strong><br>
-					Alumni Council Co-Chair<br>
-					Chapel Hill, NC
-					</p></li>
-					<li><p><strong>
-					Erin Kinneen </strong><br>
-					Alumni Council Co-Chair<br>
-					Seattle, WA
-					</p></li>
+				<li>
+					<p>
+						<strong> Jesse Cohn </strong> <br>
+						Alumni Council Co-Chair<br>
+						Chapel Hill, NC<br>
+						<a href="mailto:jcohn@bikeandbuild.org">jcohn@bikeandbuild.org</a> <br> 
+						Joined Board: November 2014
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Erin Kinneen </strong> <br>
+						Alumni Council Co-Chair<br>
+						Seattle, WA<br>
+						<a href="mailto:ekinneen@bikeandbuild.org">ekinneen@bikeandbuild.org</a> <br> 
+						Joined Board: November 2014
+					</p>
+				</li>
+				<li>
+					<p>
+						<strong> Chris Norton </strong> <br>
+						Alumni Council Operations Manager<br>
+						Washington, DC<br>
+						<a href="mailto:cnorton@bikeandbuild.org">cnorton@bikeandbuild.org</a> <br>  
+						Joined Board: November 2014
+					</p>
+				</li>
 			</ul>				
 		</article>				
+
+
+		
+
 
 
 <?php include_once 'inc/footer.inc' ?>	 

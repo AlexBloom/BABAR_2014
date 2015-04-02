@@ -114,6 +114,7 @@ img {
 	}
 	#Routes{
 		background-color:$blue-dark;
+		color:$white;
 	}
 	#routelist{
 	list-style-type:none;
@@ -165,7 +166,7 @@ img {
 		@extend %clearfix;
 		#counter{
 			display: none;
-			text-align:left;
+			text-align:center;
 			//position:fixed;
 			padding:0 $spacing-unit *10;
 			z-index: 1000;
@@ -176,50 +177,72 @@ img {
 			z-index: 5000;
 			//background-color: white;
 			//padding: 5em;
-			font-size:$base-font-size * 4;
+			font-size:$base-font-size * 6;
 			color:$blue-dark;
 			text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
 			@media screen and (min-width:$tablet){
 				display:block;
 			}
 		}
-		>ul{
-			list-style-type:none;
-			text-align:center;
+		#countdown{
+			@media screen and (min-width:$tablet){
+				//text-align:left;
+				//width:75%;
+				//margin-left:25%;
+			}
+		}
+		>div{
 			@extend %clearfix;		
-			>li{
+			>div{
 				font-size:1rem;
 				//background: linear-gradient(0deg, lighten($blue-light,15%), $white);
 				//border-bottom:1px solid $blue-light;
+				
+				text-align:center;
+				color:$white;
 				section{
 					width:100%;
 					max-width:100%;
 				}
 				span{
-					color:$blue-light;
+					//color:$blue-light;
+					opacity:.5;
 				}
 				h6{
 				margin-bottom:$spacing-unit *3;
 				margin-top:0;
 				text-transform:uppercase;
-				color:$blue-dark;
+				//color:$blue-dark;
 				font-weight:500;
 				}
 				.number{
 				font-size:$base-font-size * 4;
-				color:$blue-dark;
-				text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
+				font-size:15vw;
+				//color:$blue-dark;
+				//text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
 					@media screen and (min-width:$tablet){
-						display:none;
+						//display:none;
 					}
+					
 				}
 				
 				@media screen and (min-width:$tablet){
 					font-size:1.5rem;
 				}
 			}
+			
 		}
 	}
+	#by-the-numbers{background:$red;}
+	#build-days{background:linear-gradient(90deg, $red, $blue-light );}
+	#total-riders{background:linear-gradient(90deg, $blue-light, $blue-dark );}
+	#grants-recieved{background:linear-gradient(90deg, $blue-dark, $red);}
+	#average-dollars{background:linear-gradient(90deg, $red, $blue-light );}
+	#build-hours{background:linear-gradient(90deg, $red, $blue-light );}
+	#dollars-granted{background:linear-gradient(90deg, $red, $blue-light );}
+	#miles-pedaled{background:linear-gradient(90deg, $red, $blue-light );}
+	#accomplishments-grantee{background:linear-gradient(90deg, $red, $blue-light );}
+	
 	#accomplishments-grantee{
 		section, ul{
 			max-width:100%;
@@ -246,8 +269,12 @@ img {
 		}
 	}	
 	#coastal-drift{
-		background: linear-gradient(0deg, $blue-dark, $red);
-		color:$white;
+		//background: linear-gradient(0deg, $blue-dark, $red);
+		//color:$white;
+	}
+	#drift-hero{
+		background-image: url(../img/content/03accomplishments/CoastalDrift_AndyShort.jpg);
+		@include full-bleed-background;
 	}
 	
 	.scholarship-grantee{
@@ -349,12 +376,16 @@ img {
 			text-align:center;
 			@extend %clearfix;
 			padding:0;
-			margin:0;
+			margin:2em auto;
 			display:flex;
 			display:-webkit-flex;
 			flex-flow: row wrap;
 			justify-content:center;
 			align-items: flex-start;
+			max-width:(em(1000));
+			@media screen and (min-width:$laptop){
+				//width:15em;
+			}
 		}
 		li{
 			width:14em;
@@ -362,6 +393,7 @@ img {
 			margin:0;
 			text-align:center;
 			color:$blue-dark;
+			
 			h5{
 				font-size:1em;
 				margin:0;
@@ -410,6 +442,56 @@ img {
 			margin-top:-3em;
 		}
 	}
+}
+#financials{
+	table{
+		width:100%;
+		text-align:left;
+		thead{
+			th:nth-of-type(2){
+				text-align:right;
+			}
+			th:last-child{
+				text-align:right;
+			}
+		}
+		tbody{
+			td{
+				
+			}
+			td:nth-of-type(2){
+				text-align:right;
+			}
+			td:last-child{
+				text-align:right;
+			}
+		}
+	}
+	table.t3{
+		
+	}
+	table.t2{
+		
+	}
+	@media screen and (min-width:$tablet){
+		//.financials-grants{
+		//	width:60%;
+		//	margin:1em 5% 1em 0;
+		//	float:left;
+		//}
+		//.financials-by-year{
+		//	width:30%;
+		//	margin:1em 0 1em 5%;
+		//	float:left;
+		//}
+	}
+	
+	.financials-expenses{
+		//width:35%;
+		//margin:1em 2.5%;
+		//float:left;
+	}
+	
 }
 #Closing{
 	header.hero{
@@ -471,7 +553,13 @@ img {
 /* Separate Pages */
 #Partner{
 	header.hero{
-		background-image:url(../img/content//.jpg);
+		//background-image:url(../img/content//.jpg);
+		color:$white;
+		//background-color:$red;
+		background: linear-gradient(0deg, $red, $blue-light );
+		&:before, &:after{
+			display:none;
+		}
 	}
 	#partner-facts{
 		list-style:none;
@@ -496,7 +584,7 @@ img {
 	}
 	color:$white;
 	background-color:$blue-dark;
-	background: linear-gradient(45deg, $blue-dark, $red);
+	background: linear-gradient(45deg, $red, $blue-dark );
 	ul{
 		width:90%;
 		margin:0 auto;
@@ -541,6 +629,16 @@ img {
 			}
 		}
 		
+	}
+	#alumni{
+		li{
+			@media screen and (min-width:$laptop){
+				width:28%;
+				&:nth-of-type(odd){
+					clear:none;
+				}
+			}
+		}
 	}
 	
 }
