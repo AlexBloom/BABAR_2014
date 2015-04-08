@@ -25,6 +25,10 @@ img {
     vertical-align: middle;
 }
 #Intro{
+	
+	
+	
+	
 	//background: linear-gradient(0deg, $blue-dark, $blue-light);
 	position:relative;
 	&:before{
@@ -48,35 +52,88 @@ img {
 	section{
 		margin:auto;
 		z-index:5;
-		h1{
+		
+		img{
+			//width:30%;
+			max-width:$spacing-unit * 14;
+			width:14vh;
+			//height:$spacing-unit * 20;
+		}
+		h2{
+			font-size:4vh;
+		}
+		
+		h1#title{
 			text-transform:uppercase;
 			font-weight:500;
 			font-size:$base-font-size * 1.5;
+			font-size:3vh;
 			letter-spacing:.1em;
 			.number {
 				font-size:$base-font-size * 4;
 				font-weight:800;
 			}
+			
+			@media screen and (min-width:$tablet){
+				position:absolute;
+				top:0;
+				right:2rem;
+				margin-top:0;
+				font-size:1.5em!important;
+			}
+			
 		}
 		@media screen and (min-width:$tablet){
+			#logo{
+				position:absolute;
+				top:2rem;
+				left:2rem;
+				width:9em;
+				img{
+					width:4.5em!important;
+				}
+				h2{
+					font-size:1.5em;
+				}
+			}
 			h1{
 				font-size:$base-font-size * 2;
+				font-size:4vh;
 			}
 		}
 		
-		img{
-			//width:30%;
-			max-width:$spacing-unit * 14;
-			//height:$spacing-unit * 20;
-		}
+		
 	}
-	#open-letter-window{
+	//#open-letter-window
+	button, a.button{
+		border:2px solid $white;
+		background-color:transparent;
 		color:$white;
-		position:absolute;
-		bottom:0;
-		left:$spacing-unit *3;
+		&:hover, &:active{
+			background-color:$white;
+			color:$blue-light;
+		}
+		a{
+			color:$white;
+			text-decoration:none;
+			border:none;
+			&:hover, &:active{
+				background-color:$white;
+				color:$blue-light;
+			}
+		}
+		//position:absolute;
+		//bottom:0;
+		//left:$spacing-unit *3;
 		cursor:pointer;
 	}
+	
+	
+	p.credit{
+		text-align:left;
+		left:2em;
+	}
+	
 }
 #Letter{
 	//background: linear-gradient(0deg, $blue-light, $white);
@@ -107,8 +164,9 @@ img {
 }
 #BB101{
 	background-color:$white;
-	color:$blue-dark;
-	h2{color:$blue-light;}
+	color:$red;
+	h2{//color:$blue-light;
+	}
 	#Cause{
 		//background-color:$black;
 	}
@@ -157,47 +215,54 @@ img {
 	}
 }
 #Accomplishments{	
+	//position:relative;
 	//background: linear-gradient(0deg, $blue-dark, $red);
+	@extend %clearfix;
 	header.hero{
-		background-image:url(../img/content/03accomplishments/accomplishments.jpg);
+		//background-image:url(../img/content/03accomplishments/accomplishments.jpg);
 	}
+	.pre-window{
+		//display:none;
+	}
+	#accomplishments-nav-wrap{
+		//display:none;
+		position:absolute;
+		bottom:2em;
+		left:0;
+		right:0;
+	}
+	#accomplishments-nav{
+		li{
+			span.dot{
+				background-color:rgba(255,255,255,.25);
+			}
+			
+		}
+		li.selected{
+			span.dot{
+				background-color:$white;
+			}
+		}
+	}
+	#accNumNext{
+		position:absolute;
+		right:1em;
+		top:46%;
+		margin:1em;
+		//padding:1em;
+		&.rotate{
+			transform:rotate(90deg);
+		}
+	}	
 	#accomplishments-numbers{
+		//display:none;
 		position:relative;
 		@extend %clearfix;
-		#counter{
-			display: none;
-			text-align:center;
-			//position:fixed;
-			padding:0 $spacing-unit *10;
-			z-index: 1000;
-			color: #e2231a;
-			font-weight: bold;
-			//left: 10rem;
-			//top: 0rem;
-			z-index: 5000;
-			//background-color: white;
-			//padding: 5em;
-			font-size:$base-font-size * 6;
-			color:$blue-dark;
-			text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
-			@media screen and (min-width:$tablet){
-				display:block;
-			}
-		}
-		#countdown{
-			@media screen and (min-width:$tablet){
-				//text-align:left;
-				//width:75%;
-				//margin-left:25%;
-			}
-		}
+		margin-top:-50px;
 		>div{
 			@extend %clearfix;		
 			>div{
 				font-size:1rem;
-				//background: linear-gradient(0deg, lighten($blue-light,15%), $white);
-				//border-bottom:1px solid $blue-light;
-				
 				text-align:center;
 				color:$white;
 				section{
@@ -208,7 +273,8 @@ img {
 					//color:$blue-light;
 					opacity:.5;
 				}
-				h6{
+				h3{
+			    //margin-top:1em;
 				margin-bottom:$spacing-unit *3;
 				margin-top:0;
 				text-transform:uppercase;
@@ -217,7 +283,9 @@ img {
 				}
 				.number{
 				font-size:$base-font-size * 4;
-				font-size:15vw;
+				font-size:10vw;
+				line-height:1.5;
+				//margin:1rem auto !important;
 				//color:$blue-dark;
 				//text-shadow:-1px 1px 0 #FFF, -3px 3px 0 $blue-light;
 					@media screen and (min-width:$tablet){
@@ -227,23 +295,32 @@ img {
 				}
 				
 				@media screen and (min-width:$tablet){
-					font-size:1.5rem;
+					//font-size:1.5rem;
 				}
 			}
 			
 		}
 	}
-	#by-the-numbers{background:$red;}
-	#build-days{background:linear-gradient(90deg, $red, $blue-light );}
-	#total-riders{background:linear-gradient(90deg, $blue-light, $blue-dark );}
-	#grants-recieved{background:linear-gradient(90deg, $blue-dark, $red);}
-	#average-dollars{background:linear-gradient(90deg, $red, $blue-light );}
-	#build-hours{background:linear-gradient(90deg, $red, $blue-light );}
-	#dollars-granted{background:linear-gradient(90deg, $red, $blue-light );}
-	#miles-pedaled{background:linear-gradient(90deg, $red, $blue-light );}
-	#accomplishments-grantee{background:linear-gradient(90deg, $red, $blue-light );}
-	
+	#by-the-numbers{
+		background:$blue-dark;
+	}
+	#total-riders{
+		background:linear-gradient(90deg, $blue-dark, $blue-light  );
+	}
+	#miles-pedaled{
+		background:$blue-light;
+	}
+	#average-dollars{
+		background:linear-gradient(90deg, $blue-light, $red );
+	}
+	#dollars-granted{	
+		background:$red;
+	}
+	#grants-recieved{
+		background:linear-gradient(90deg, $red, $blue-dark);
+	}
 	#accomplishments-grantee{
+		background:$blue-dark;
 		section, ul{
 			max-width:100%;
 			width:100%;
@@ -256,27 +333,37 @@ img {
 				font-size:1rem;
 				float:left;
 				width:100%;
-				color:$blue-dark;
+				color:$blue-light;
 				@media screen and (min-width:$tablet){
 					width:33%;
 				}
 				.number{
 					display:block;
-					font-size:$base-font-size * 4;
+					font-size:$base-font-size * 3;
 				}
 				p{font-size:1em;}
 			}
 		}
-	}	
+	}
+	#build-days{
+		background:linear-gradient(90deg, $blue-dark, $red);
+	}
+	#build-hours{
+		background:$red;
+	}
+	#total-riders{
+		background:$red;
+		//background:linear-gradient(90deg, $red, $blue-light );
+	}
+	#moreAcc{
+		padding-top:4em;
+	}		
 	#coastal-drift{
-		//background: linear-gradient(0deg, $blue-dark, $red);
-		//color:$white;
+		#drift-hero{
+			background-image: url(../img/content/03accomplishments/CoastalDrift_AndyShort.jpg);
+			@include full-bleed-background;
+		}
 	}
-	#drift-hero{
-		background-image: url(../img/content/03accomplishments/CoastalDrift_AndyShort.jpg);
-		@include full-bleed-background;
-	}
-	
 	.scholarship-grantee{
 		img{
 			width:60%;
@@ -332,7 +419,59 @@ img {
 			}
 		}
 	}
-	
+	#grantee-nav-wrap{
+		text-align:center;
+		#grantee-nav{
+			
+			@media screen and (min-width:$laptop){
+				width:90%;
+				margin:1em 5%;
+			}
+			li{
+				margin:0;
+				@extend %t01s;
+				
+				span.dot{
+					display:block;
+				}
+				span.text{
+					display:none;
+				}
+				
+				@media screen and (min-width:$laptop){
+					span.dot{
+						display:none;
+					}
+					span.text{
+						display:inline;
+					}
+					line-height:1.5;
+					width:16%;
+					position:relative;
+					padding:1em 2%;
+					box-shadow:0 0 0 0 rgba(0,0,0,0);					
+					&.selected{
+						//box-shadow:0 4px 0 0 $brand-color;
+						@extend %t01s;
+						&:after{
+							//display:block;
+							//content:' ';
+							//position:absolute;
+							//bottom:-.75em;
+							//left:45%;
+							//width: 0; 
+							//height: 0; 
+							//border-left: 0.5em solid transparent;
+							//border-right: 0.5em solid transparent;
+							//border-top: 0.5em solid $brand-color;
+						}
+					}
+					
+				}
+			}
+		}
+		
+	}
 	#Idaho{
 		header{background-image:url(../img/content/05impact/grantee_KTEC.jpg)}
 	}
@@ -425,6 +564,7 @@ img {
 	
 }
 #Alumni{
+	color:$blue-light;
 	header.hero{
 		background-image:url(../img/content/07alumni/alumni.jpg);
 	}
@@ -444,6 +584,112 @@ img {
 	}
 }
 #financials{
+	//background-color:$blue-dark;
+	color:$blue-dark;
+	div{
+		@extend %clearfix;
+		padding:$spacing-unit *4 $spacing-unit;
+	}
+	.financials-intro{
+		background-color:$blue-dark;
+		color:$white;
+		#pie-cause{
+			img{
+				margin:$spacing-unit *4 auto;
+				width:15vw;
+				border:.5em solid rgba(255,255,255,.1);
+				border-radius:50%;
+			}
+			figcaption{
+				color:rgba(255,255,255,.65);
+				span.highlight{
+					color:$white;
+				}
+			}
+		}
+	}
+	.financials-grants{
+		background-color:$white;
+		color:$blue-dark;
+		figure{
+			img{}
+			figcaption{}
+			@media screen and (min-width:$tablet){
+				img{
+					float:left;
+					width:35%;
+					margin:1em 2.5% 1em 5%;
+				}
+				figcaption{
+					float:left;
+					width:50%;
+					margin:1em 5% 1em 2.5%;
+				}
+			}
+		}
+	}
+	.financials-by-year{
+		background-color:$red;
+		color:$white;
+		figure{
+			position:relative;
+			img{width:90%;margin:1em auto;}
+			figcaption{
+				
+			}
+			table#by-the-years{
+				th,td{
+					text-align:center;
+				}
+				td.donation-value{
+					position:absolute;
+					width:10%;
+					&:after{
+						position:absolute;
+						
+					}
+				}
+				td.a{bottom:25%;left:0%;}
+				td.b{bottom:35%;left:11.1%;}
+				td.c{bottom:50%;left:22.2%;}
+				td.d{bottom:97%;left:33.3%;}
+				td.e{bottom:68%;left:44.4%}
+				td.f{bottom:75%;left:55.5%;}
+				td.g{bottom:83%;left:66.6%;}
+				td.h{bottom:49%;left:77.7%;}
+				td.i{bottom:72%;left:88.8%;}
+		
+				tr.donation-values{
+					display:block;
+					margin:4em 0;
+					border:none;
+				}
+				
+				tr.year-values{
+					
+					border-top:1px dotted $white;
+					border-top:1px dotted rgba(255,255,255,.5);
+				}
+				
+				td.year-value{
+					position:relative;
+					text-align:center;
+					&:before{
+						position:absolute;
+						display:block;
+						content:' ';
+						margin:-.5em 48% 0;
+						width:1px;
+						height:10px;
+						background-color:$white;
+						background-color:rgba(255,255,255,.5);
+					}
+				}
+			}
+			
+		}
+	}
+	
 	table{
 		width:100%;
 		text-align:left;

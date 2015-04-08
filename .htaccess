@@ -212,7 +212,12 @@ AddDefaultCharset utf-8
   # Options +SymLinksIfOwnerMatch
     RewriteEngine On
   # RewriteBase /
+  
+  #remove php filename
+  	RewriteCond %{REQUEST_FILENAME} !-f
+  	RewriteRule ^([^\.]+)$ $1.php [NC,L]
 </IfModule>
+
 
 # ------------------------------------------------------------------------------
 # | Suppressing / Forcing the `www.` at the beginning of URLs                  |

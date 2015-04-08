@@ -43,48 +43,50 @@
 		<nav id="toc">		
 			<h3> Contents </h3>
 			<ol>
-				<li> <a class="scrollnav-link" id="link" href="#Intro"> 	
+				<li> <a class="scrollnav-link" id="intro-link" href="#Intro"> 	
 						<span class="toc-name"> Intro </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Accomplishments">
+				<li> <a class="scrollnav-link" id="acc-link" href="#Accomplishments">
 						<span class="toc-name"> 2014 Accomplishments		</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#BB101"> 	
+				<li> <a class="scrollnav-link" id="bb-link" href="#BB101"> 	
 						<span class="toc-name"> Bike and Build 101	</span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Impact"> 
+				<li> <a class="scrollnav-link" id="impact-link" href="#Impact"> 
 						<span class="toc-name"> Impact </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Riders"> 	
+				<li> <a class="scrollnav-link" id="riders-link" href="#Riders"> 	
 						<span class="toc-name"> Riders </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Alumni"> 	
+				<li> <a class="scrollnav-link" id="alumni-link" href="#Alumni"> 	
 						<span class="toc-name"> Alumni </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="link" href="#Financials"> 
+				<li> <a class="scrollnav-link" id="financials-link" href="#financials"> 
 						<span class="toc-name"> Statement of Financials </span>	
 					</a> 
 				</li>
 			</ol>
 			<ul>
 				<li> 
-					<a class="scrollnav-link" id="link" href="partner"> 	
-						<span class="toc-name"> Partner	</span>	
+					<a class="page-link" href="partner"> 	
+						<span class="icon-arrow-right"> </span> Partner	
 					</a> 
 				</li>
 				<li> 
-					<a class="scrollnav-link" id="link" href="contact"> 	
-						<span class="toc-name"> Contact </span>	
+					<a class="page-link" href="contact"> 	
+						<span class="icon-arrow-right"> </span> Contact	
 					</a> 
 				</li>
 				<li>
-					<a href="http://bikeandbuild.org"target=_blank> Bike and Build Home <span class="icon-open"> </span> </a>
+					<a class="page-link" href="http://bikeandbuild.org"target=_blank> 
+						<span class="icon-open"> </span> Bike and Build Home  
+					</a>
 				</li>
 			</ul>
 		</nav>
