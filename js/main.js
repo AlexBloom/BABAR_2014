@@ -46,16 +46,16 @@ $(document).ready(function(){
 	});
 
 	// Size Full-Screen Videos, Images, & Slideshows to window height.
-	$('.full-screen').css('min-height',$(window).height());
-	$('.tab-content').css('height',$(window).height());
-	$('.article-slider').css('min-height',$(window).height());
-	$('#Intro').css('height',$(window).height());	
+	//$('.full-screen').css('min-height',$(window).height());
+	//$('.tab-content').css('height',$(window).height());
+	//$('.article-slider').css('min-height',$(window).height());
+	//$('#Intro').css('height',$(window).height());	
 	$(window).resize(function() {
 		
-		$('.full-screen').css('min-height',$(window).height());
-		$('.tab-content').css('height',$(window).height());
-		$('.article-slider').css('min-height',$(window).height());
-		$('#Intro').css('height',$(window).height());
+		//$('.full-screen').css('min-height',$(window).height());
+		//$('.tab-content').css('height',$(window).height());
+		//$('.article-slider').css('min-height',$(window).height());
+		//$('#Intro').css('height',$(window).height());
 	});
 	
     // Show and Play Full Screen Videos
@@ -80,7 +80,8 @@ $(document).ready(function(){
 		$('body').addClass('overflow-hidden');
 	});
 	$('#open-scholarships-window').click(function (){
-		$(this).addClass('open');
+		$('#scholarships').addClass('open');
+		$('#scholarship-placeholder').addClass('activated');
 		//$('body').addClass('overflow-hidden');
 	});
 	$('#open-cause-window').click(function (){
@@ -104,6 +105,7 @@ $(document).ready(function(){
 	$('.close-window').click(function (){
 		$('.window').removeClass('open');
 		$('body').removeClass('overflow-hidden');
+		$('.window-placeholder').removeClass('activated');
 	});
 	
 	//Lazy Load Content in Overlay Windows

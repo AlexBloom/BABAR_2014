@@ -47,6 +47,12 @@ $jumbotron:(em(2000));
     }
 }
 
+%pseudo-block{
+	display:block;
+	content:' ';
+	
+}
+
 @mixin rc05{
 	border-radius:.5em;
 	-webkit-border-radius:.5em;

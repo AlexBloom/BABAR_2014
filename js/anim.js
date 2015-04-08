@@ -194,12 +194,19 @@ var scene = new ScrollScene({triggerElement: "#accomplishments-grantee", duratio
 	
 	
 	
+	/* EXPAND FULL SCREEN DOCS*/
+	
+	window.onload = function(){
+	 TweenLite.to("#scholarships", 10, {left:-100});
+	}
 					
 	
 	
 	
 	
 	
+	
+	/* SCROLL WINDOW ANIMATION */
 					
 
 	// change behaviour of controller to animate scroll instead of jump

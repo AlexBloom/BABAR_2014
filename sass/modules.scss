@@ -410,6 +410,7 @@ article{
 	overflow:hidden!important;
 	display:flex;
 	display:-webkit-flex;
+	min-height:100vh;
 	section{
 		margin:auto;
 	}
@@ -594,23 +595,90 @@ article{
 	}
 }
 
-
-
-.window{
+.window.noshow{
+	//section{display:none;}
 	position:fixed;
 	z-index:0;
 	opacity:0;
 	top:100%;
-	left:0em;
-	right:0em;
-	bottom:0;
+	&.open{
+		left:0;
+		right:0;
+	}
+}
+.window.circle{
+	header{
+		border-radius:50%;
+		overflow:hidden;
+		cursor:pointer;
+		display:flex;
+		h1{
+			display:block;
+			margin:auto;
+			padding:0;
+			font-size:1.5em;
+		}
+		&:before,&:after{
+			display:block;
+			border-radius:50%;
+			padding-top:75%;
+		}
+	}
+}
+.window.half{
+	&.left{
+		float: left;
+		&.open{
+			left:0;
+		}
+		
+	}
+	&.right{
+		float: right;
+		&.open{
+			right:0;
+		}
+	}
+   
+    width: 45%;
+    margin: 4rem 2.5%;
+	
+	
+}
+.window-placeholder{
+	position:absolute;
+	&:after{
+		@extend %pseudo-block;
+		padding-top:75%;
+	}
+	&.left{
+		&.activated{
+			position:static;
+			float:left;
+			width:45%;
+			
+		}
+	}
+	&.right{
+		&.activated{
+			position:static;
+			float:right;
+			width:45%;
+			
+		}
+	}
+}
+
+
+.window{
 	overflow-y:hidden;
 	overflow-x:hidden;
-	//box-shadow:0 0 0 1em rgba(0,0,0,.65);
-	//box-shadow:inset 0px -5px 0px rgba(0,0,0,.2);
-	background-color:$white;
-	//padding:1em;
-	text-align:left;
+	.content, .credit, .close-window {display:none;}
+	
+	//section{display:none;}
+	//z-index:0;
+	//opacity:0;
+	//top:100%;
 	&:after{
 		//font-family: 'bikeandbuild';
 		//speak: none;
@@ -626,7 +694,7 @@ article{
 		//padding:1em;
 		//margin-bottom:-2em;
 	}
-	@extend %t025s;
+	@extend %t01s;
 	@extend %teo;
 	.close-window{
 		position:fixed;
@@ -654,11 +722,27 @@ article{
 		}
 	}
 	&.open{
-		z-index:1000;
+		position:fixed;
+		
+		bottom:0;
 		top:0;
-		//top:0;
+		background-color:$white;
+		text-align:left;
+		z-index:1000;
 		opacity:1;
 		overflow-y:scroll;
+		width:100%;
+		margin:0;
+		.content, .credit, .close-window {display:block;}
+		header{
+			border-radius:0;
+			overflow:scroll;
+			//cursor:pointer;
+			&:before,&:after{
+				border-radius:0;
+			}
+		}
+		
 	}
 	
 	header{

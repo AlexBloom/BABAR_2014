@@ -20,7 +20,7 @@
 				<p class="credit"> Mark Benjamin, NUS </p>
 			</section>
 			
-			<article class="window" id="Letter">
+			<article class="window noshow" id="Letter">
 				<span class="icon-cross close-window"> </span>
 				
 				<header class="hero">
@@ -176,65 +176,61 @@
 			</div>
 			<section id="moreAcc">
 				<h3>Explore More Accomplishments</h3>		
-				<div class="pre-window half" id="open-coastal-drift-window">
-					<h3>Coastal Drift</h3> 
-					<!-- <button class="action">
-						<span class="icon-plus"> </span>
-					</button> -->	
-				</div>
-				<div class="pre-window half" id="open-scholarships-window">
-					<h3>Bike &amp; Build Scholarships</h3>
-					
-					<div class=" " id="scholarships">	
-						<span class="icon-cross close-window"> </span>					
+				<div class="window-placeholder left"></div> 	
+				<div class="window circle half left" id="coastal-drift">
+				<span class="icon-cross close-window"> </span>	
+					<header class="hero" id="open-coastal-drift-window">
+						<h6></h6>
+						<h1>Coastal Drift</h1>
+						<p class="credit"> Andy Short, Coastal Drift, 2014</p>
+					</header>
+					<div class="content">
 						<section>
-					
-							<h2>Bike & Build Scholarship</h2>
+							<p>This year, Bike & Build unveiled Coastal Drift, a new regional route from Maine’s Acadia National Park to New York City. Over the course of 3 weeks and 830 miles, riders weaved in and out of island towns and major metropolises, traversing both urban and rural landscapes and experiencing the mutable affordable housing issue that parallels the varied terrain. Riders experienced the best of Bike & Build in a compact time frame: scenic roads, multiple build days, and the ability to observe and create change in the world around them. The trip was shorter, but the soul was the same- spurred by young adults with adventurous spirits and involved citizens with tremendous hearts.</p>
+							<p>Want to learn more? Visit <a href="http://coastaldrift.org" target=_blank>coastaldrift.org</a>.</p>
+						</section>
+					</div>
+				</div>
+				
+				<div class="window-placeholder right" id="scholarship-placeholder"></div> 
+				<div class="window circle half right" id="scholarships">	
+					<span class="icon-cross close-window"> </span>					
+				
+					<header class="hero" id="open-scholarships-window">
+						<h1>Bike & Build Scholarships</h1>
+					</header>
+					<div class="content">
+				
+						<section>
 							<p>The Bike & Build Scholarship program engages young adults from at-risk backgrounds, ages 18-25, in a life-changing opportunity to be engaged in their community. Riders develop skills in teamwork, leadership, and perseverance. This accomplishment furthers empower scholarship recipients to serve others for many years beyond the completion of the trip. </p>
 
 							<p>In 2014, the second year B&B offered this scholarship, Bike & Build fully funded two young adults in our regional ride. Kamal Gatewood and Mindy Zhong, both from Philadelphia, had an incredible experience on Coastal Drift. </p>
 						</section>
-									
-							<figure class="scholarship-grantee">
-								<img src="img/content/scholarship/kamal.jpg" alt="Kamal Gatewood"/>
-								<blockquote>
-									I wish I could meet all of the people that donated to the scholarship and hug them. Bike & Build was the greatest thing that ever could have happened to me. 
-								</blockquote>
-								<figcaption>
-									<span class="author">Kamal Gatewood</span>
-								</figcaption>
-							</figure>
-					
-							<figure class="scholarship-grantee">
-								<img src="img/content/scholarship/mindy.jpg" alt="Mindy Zhong"/>
-								<blockquote>
-									The B&B scholarship gave me a wider perspective of the cause and an opportunity to make a difference in ways I would not have been able to do alone. For a person who has never been able to travel out of Philadelphia alone, it was an incredible eye-opener. 
-								</blockquote>
-								<figcaption><span class="author">Mindy Zhong</span> </figcaption>
-							</figure>
-				
+							
+						<figure class="scholarship-grantee">
+							<img src="img/content/scholarship/kamal.jpg" alt="Kamal Gatewood"/>
+							<blockquote>
+								I wish I could meet all of the people that donated to the scholarship and hug them. Bike & Build was the greatest thing that ever could have happened to me. 
+							</blockquote>
+							<figcaption>
+								<span class="author">Kamal Gatewood</span>
+							</figcaption>
+						</figure>
+			
+						<figure class="scholarship-grantee">
+							<img src="img/content/scholarship/mindy.jpg" alt="Mindy Zhong"/>
+							<blockquote>
+								The B&B scholarship gave me a wider perspective of the cause and an opportunity to make a difference in ways I would not have been able to do alone. For a person who has never been able to travel out of Philadelphia alone, it was an incredible eye-opener. 
+							</blockquote>
+							<figcaption><span class="author">Mindy Zhong</span> </figcaption>
+						</figure>
+		
 						<section>
 							<p>In 2015, Bike & Build will provide three scholarships, including our first ever cross-country support. If you’d like to donate, <a href="http://bikeandbuild.org/"target=_blank>visit our website</a>.</p>
 						</section>
 					</div>
-						
 				</div>
 			</section>
-			<div class="window" id="coastal-drift">
-				<span class="icon-cross close-window"> </span>	
-					<header class="hero" id="drift-hero">
-						<h6></h6>
-						<h1>Coastal Drift</h1>
-						<small> <span class="icon-camera"> </span> Andy Short, Coastal Drift, 2014</small>
-					</header>
-					<section>
-						<p>This year, Bike & Build unveiled Coastal Drift, a new regional route from Maine’s Acadia National Park to New York City. Over the course of 3 weeks and 830 miles, riders weaved in and out of island towns and major metropolises, traversing both urban and rural landscapes and experiencing the mutable affordable housing issue that parallels the varied terrain. Riders experienced the best of Bike & Build in a compact time frame: scenic roads, multiple build days, and the ability to observe and create change in the world around them. The trip was shorter, but the soul was the same- spurred by young adults with adventurous spirits and involved citizens with tremendous hearts.</p>
-						<p>Want to learn more? Visit <a href="http://coastaldrift.org" target=_blank>coastaldrift.org</a>.</p>
-					</section>
-					
-			</div>
-			
-
 		</article>
 		<article id="BB101">
 			<header class="sticky">
@@ -536,8 +532,11 @@
 					</ul>
 			</div>
 			<hr/>
-			<p>Bike & Build’s mission is to support the affordable housing cause by inspiring young adults to make a lifetime commitment to service. Many of our 2014 riders will be doing amazing things in their own communities. Here are just two samples of the impact our riders continue to make after their service with us.
-			</p>
+			<section>
+				<p>Bike & Build’s mission is to support the affordable housing cause by inspiring young adults to make a lifetime commitment to service. Many of our 2014 riders will be doing amazing things in their own communities. Here are just two samples of the impact our riders continue to make after their service with us.
+				</p>
+			</section>
+			<hr />
 			<header class="rider-portrait">
 				<img src="img/content/06riders/ClaireCollins.jpg" alt="Claire Collins" />
 			</header>
