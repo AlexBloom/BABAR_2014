@@ -4,7 +4,7 @@
 			
 			<section>
 				<div id="logo">
-					<img src="img/ui/BB_Logo_White.gif" alt="Bike and Build Logo"/>
+					<img src="img/ui/BB_Logo_White_Animated.gif" alt="Bike and Build Logo"/>
 					<h2>Bike & Build</h2>
 				</div>
 				<h1 id="title">
@@ -281,13 +281,10 @@
 				</div>
 				<div class="window noshow" id="scholarships">	
 					<span class="icon-cross close-window"> </span>					
-			
-					<header class="hero" >
-						<h1>Bike & Build Scholarships</h1>
-					</header>
 					<div class="content">
 			
 						<section>
+							<h2>Bike & Build Scholarships</h2>
 							<p>The Bike & Build Scholarship program engages young adults from at-risk backgrounds, ages 18-25, in a life-changing opportunity to be engaged in their community. Riders develop skills in teamwork, leadership, and perseverance. This accomplishment furthers empower scholarship recipients to serve others for many years beyond the completion of the trip. </p>
 
 							<p>In 2014, the second year B&B offered this scholarship, Bike & Build fully funded two young adults in our regional ride. Kamal Gatewood and Mindy Zhong, both from Philadelphia, had an incredible experience on Coastal Drift. </p>
@@ -354,11 +351,15 @@
 					</button>
 				</div>
 				
-				
-					<div class="window noshow" id="Grantee"> 
+			</section>
+			
+			<div class="window noshow" id="Grantee"> 
 						<span class="icon-cross close-window"> </span>
 				
-						<h6>Grantee Profiles</h6>
+						<section>
+							<h6>Grantee Profiles</h6>
+						</section>
+						
 				
 						<nav id="grantee-nav-wrap" class="swipe-nav-wrap">
 							<ul id="grantee-nav" class="swipe-nav">
@@ -491,14 +492,13 @@
 						</div>
 					</div>
 				
-				
-				
+			<section>
 				<p> <strong>Interested in applying for a Bike & Build Grant?</strong> </p>
 				<p> We fund projects that engage young adults in addressing a demonstrated need in affordable housing. 2015 applications will be available in April and due Friday, June 5. We accept requests from 501(c)(3) organizations between $500 and $10,000. Visit <a href="http://bikeandbuild.org/grants"target=_blank>bikeandbuild.org/grants</a> for application materials.</p>
-			
+			</section>	
 				
 
-			</section>
+			
 		</article>
 		<article id="Riders">
 			<header class="sticky">
@@ -517,7 +517,7 @@
 				</p>
 			</section>
 			
-			<hr />
+			
 			<header class="rider-portrait">
 				<img src="img/content/06riders/ClaireCollins.jpg" alt="Claire Collins" />
 			</header>
@@ -534,7 +534,7 @@
 				<p> Claire’s commitment to the affordable housing cause continues. After a brief stint as Program Manager for Rebuilding Together East Bay North in Berkeley, CA, Claire took the plunge and joined Bike & Build as our latest Program Director. </p>
 
 			</section>
-			<hr/>
+			
 			<header class="rider-portrait">
 				<img src="img/content/06riders/ChrisBenson.jpg" alt="Chris Benson" />
 			</header>
@@ -553,11 +553,12 @@
 				 <blockquote>“Bike & Build and AmeriCorps are showing me that service to others goes a long way because I may just be helping someone live up to their potential to do the same.” </blockquote>
 
 			</section>
-			<hr />
-			<div id="fundraisers">	
+			
+			 <div id="fundraisers">
 					<section>
 						<h3>Top 2014 Fundraisers</h3>
 					</section>
+					
 					
 					<ul>
 						<li><img src="img/content/fundraisers/gaurang.jpg" alt="Gaurang Garg"/>	
@@ -581,9 +582,10 @@
 							<strong class="number"> $7,080 </strong><br>
 						</li>
 					</ul>
+					
 			</div>
 			
-		
+			
 			
 			
 		</article>	
@@ -591,15 +593,17 @@
 			<header class="sticky">
 				<h6>Audited Financials</h6>
 				<nav>	
-					<a href="#Alumni" title="Alumni"><span class="icon-arrow-down"></span></a>
+					<a href="#Alumni" title="Alumni">
+						<span class="icon-arrow-down"></span>
+					</a>
 				</nav>
 			</header>
 			
-			<header class="hero">
+			 <header class="hero">
 				
-				<h1>Statement of Financials</h1>
+				 <h1>Statement of Financials</h1> 
 				
-			</header>	
+			 </header>	
 			
 			<div class="financials-intro">
 			 	<section> 	
@@ -629,7 +633,6 @@
 							<div class="ratio" id="aceg"> 	<span class="block-legend"> 6 </span> </div>
 							<div class="ratio" id="other"> 	<span class="block-legend"> 7 </span> </div>
 						</div>
-						<!-- <img src="img/content/financials/grants.gif" alt="Grants"> -->
 					
 						<figcaption>
 							<table class="t2">
@@ -691,54 +694,6 @@
 						
 						</figcaption>
 					</figure>
-				
-				
-				<!-- <table class="t2">
-					<thead>
-					<tr>
-						<th>Year</th>
-						<th>Value</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td>2006</td>
-						<td>$376,820</td>
-					</tr>
-					<tr>
-						<td>2007</td>
-						<td>$394,998</td>
-					</tr>
-					<tr>
-						<td>2008</td>
-						<td>$494,609</td>
-					</tr>
-					<tr>
-						<td>2009</td>
-						<td>$740,044</td>
-					</tr>
-					<tr>
-						<td>2010</td>
-						<td>$563,569</td>
-					</tr>
-					<tr>
-						<td>2011</td>
-						<td>$608,023</td>
-					</tr>
-					<tr>
-						<td>2012</td>
-						<td>$648,857</td>
-					</tr>
-					<tr>
-						<td>2013</td>
-						<td>$468,640</td>
-					</tr>
-					<tr>
-						<td>2014</td>
-						<td>$613,264</td>
-					</tr>
-					</tbody>
-				</table> -->
 			</div>
 			<section class="audited-financials">
 				<h3> Audited Financial Statements </h3>
@@ -808,6 +763,7 @@
 					</table>
 				</section>
 			</div>
+				
 		</article>	
 		<article id="Alumni">
 			<header class="sticky">

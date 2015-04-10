@@ -47,12 +47,12 @@
 						<span class="toc-name"> Intro </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="acc-link" href="#Accomplishments">
-						<span class="toc-name"> 2014 Accomplishments		</span>	
-					</a> 
-				</li>
 				<li> <a class="scrollnav-link" id="bb-link" href="#BB101"> 	
 						<span class="toc-name"> Bike and Build 101	</span>	
+					</a> 
+				</li>
+				<li> <a class="scrollnav-link" id="acc-link" href="#Accomplishments">
+						<span class="toc-name"> 2014 Accomplishments		</span>	
 					</a> 
 				</li>
 				<li> <a class="scrollnav-link" id="impact-link" href="#Impact"> 
@@ -63,12 +63,12 @@
 						<span class="toc-name"> Riders </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="alumni-link" href="#Alumni"> 	
-						<span class="toc-name"> Alumni </span>	
+				<li> <a class="scrollnav-link" id="financials-link" href="#Financials"> 
+						<span class="toc-name"> Statement of Financials </span>	
 					</a> 
 				</li>
-				<li> <a class="scrollnav-link" id="financials-link" href="#financials"> 
-						<span class="toc-name"> Statement of Financials </span>	
+				<li> <a class="scrollnav-link" id="alumni-link" href="#Alumni"> 	
+						<span class="toc-name"> Alumni </span>	
 					</a> 
 				</li>
 			</ol>

@@ -506,10 +506,11 @@ dl, dd, ol, ul, figure {
 		background:$red;
 	}	
 	#moreAcc{
-		color:$red;
+		h3{color:$red;}
 		padding-top:4em;
+		color:$blue-dark;
 		.pre-window{
-			color:$white;
+			h3{color:$white;}
 		}
 	}		
 	#coastal-drift{
@@ -522,8 +523,9 @@ dl, dd, ol, ul, figure {
 		}
 	}
 	#scholarships{
+		color:$blue-dark;
 		header.hero{
-			//background:linear-gradient(0deg, $red, $blue-dark);
+			background:linear-gradient(0deg, $red, $blue-light);
 			//background:$red;
 		}
 	}
@@ -690,6 +692,9 @@ dl, dd, ol, ul, figure {
 		overflow:hidden;
 		width:(em(250));
 		height:(em(250));
+		
+		
+		
 		img{
 			margin-left:-15%;
 			width:150%;
@@ -709,6 +714,7 @@ dl, dd, ol, ul, figure {
 			list-style-type:none;
 			text-align:center;
 			@extend %clearfix;
+			clear:both;
 			padding:0;
 			margin:2em auto;
 			//display:flex;
@@ -797,20 +803,25 @@ dl, dd, ol, ul, figure {
 	}
 }
 #Financials{
+	clear:both;
 	color:$blue-dark;
+	padding:0;
 	div{
 		@extend %clearfix;
-		padding:$spacing-unit *4 0;
 	}
 	header.hero{
-		margin-top:-5rem;
+		//margin-top:-5rem;
 		background-color:$red;
 		background:linear-gradient(0deg, $blue-dark, $red);
+		margin-bottom:0;
 	}
 	.financials-intro{
 		@extend %clearfix;
 		background-color:$blue-dark;
 		color:$white;
+		padding:$spacing-unit *4 0;
+		//float:left;
+		//width:100%;
 		#pie-cause{
 			img{
 				margin:$spacing-unit *4 auto;
@@ -828,6 +839,7 @@ dl, dd, ol, ul, figure {
 		}
 	}
 	.financials-grants{
+		padding:$spacing-unit *4 0;
 		background-color:$white;
 		color:$blue-dark;
 		figure{
@@ -981,10 +993,12 @@ dl, dd, ol, ul, figure {
 	}
 	.financials-by-year{
 		background-color:$blue-dark;
-		//background:linear-gradient(180deg, $blue-dark, $blue-light);
+		//background:linear-gradient(45deg, $blue-dark, $red);
+		padding:$spacing-unit *4 0;
 		color:$white;
 		//min-height:50vh;
 		h3{
+			color:$blue-light;
 			margin-bottom:4em;
 		}		
 		figure{
@@ -995,7 +1009,9 @@ dl, dd, ol, ul, figure {
 			figcaption{
 				margin-top:2em;
 			}
-			
+			tr.year-values{
+				color:$blue-light;
+			}
 			@media screen and (max-width:$tablet){
 				img{display:none;}
 				table#by-the-years{
@@ -1019,7 +1035,6 @@ dl, dd, ol, ul, figure {
 					}
 				}
 			}
-			
 			@media screen and (min-width:$tablet){
 				img{display:block;}
 				table#by-the-years{
@@ -1077,6 +1092,7 @@ dl, dd, ol, ul, figure {
 		}
 	}
 	.audited-financials{
+		padding:$spacing-unit *4 0;
 		h3{
 			//color:$blue-light;
 		}
@@ -1089,6 +1105,7 @@ dl, dd, ol, ul, figure {
 		
 	}
 	.expenses{
+		padding:$spacing-unit *4 0;
 		background:$red;
 		background:linear-gradient(45deg, $blue-dark, $red);
 		color:$white;
@@ -1213,6 +1230,10 @@ dl, dd, ol, ul, figure {
 		&:before, &:after{
 			display:none;
 		}
+	}
+	color:$blue-dark;
+	h2{
+		color:$red;
 	}
 	#partner-facts{
 		list-style:none;
