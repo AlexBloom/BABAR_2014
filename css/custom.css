@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Clearfix
  */
-article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments:after, #Accomplishments #accomplishments-numbers:after, #Accomplishments #accomplishments-numbers > div:after, #Accomplishments #accomplishments-grantee ul:after, #Riders #fundraisers ul:after, #financials div:after, #Closing .share:after, #Closing .links:after, #Partner .partner-logos:after, #Contact ul:after {
+article:after, article header:after, article section:after, article div:after, #BB101 #routelist:after, #Accomplishments:after, #Accomplishments #accomplishments-numbers:after, #Accomplishments #accomplishments-numbers > div:after, #Accomplishments #accomplishments-grantee ul:after, #Riders #fundraisers:after, #Riders #fundraisers ul:after, #Financials div:after, #Financials .financials-intro:after, #Financials .financials-grants figure div.ratio-blocks:after, #Closing .share:after, #Closing .links:after, #Partner .partner-logos:after, #Contact ul:after {
   content: "";
   display: table;
   clear: both; }
@@ -22,13 +22,13 @@ article:after, article header:after, article section:after, article div:after, #
   display: block;
   content: ' '; }
 
-.pre-window, .window .close-window, #Accomplishments .scholarship-grantee img, #Impact .grantee header, #Riders .rider-portrait, #Riders #fundraisers li img, #Alumni .alumni-portrait {
+.pre-window, .pre-window:before, .window.circle header, .window.circle header:before, .window .close-window, #Accomplishments .scholarship-grantee img, #Impact #GranteeProfiles.open .grantee header, #Impact #GranteeProfiles .grantee header, #Impact .grantee header, #Riders .rider-portrait, #Riders #fundraisers li img, #Alumni .alumni-portrait {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%; }
 
-#header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, article a, article header.sticky.fixed h6, .window, .window .close-window, .window .close-window:hover, #Impact #grantee-nav-wrap #grantee-nav li {
+article a, article header.sticky.fixed h6, .window, .window .close-window, .window .close-window:hover, .window header, #header #toggle, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc, #header #toc a, #Impact #grantee-nav-wrap #grantee-nav li {
   -webkit-transition-duration: .15s;
   -moz-transition-duration: .15s;
   -ms-transition-duration: .15s;
@@ -42,7 +42,7 @@ article:after, article header:after, article section:after, article div:after, #
   -o-transition-duration: .25s;
   transition-duration: .25s; }
 
-#header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc.open, #header #toc a, article a, .window, .window .close-window, .window .close-window:hover {
+article a, .window, .window .close-window, .window .close-window:hover, #header #toggle #icon-menu, #header #toggle #icon-cross, #header #toc.open, #header #toc a {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out; }
 
@@ -224,84 +224,6 @@ blockquote {
   .author:before {
     content: "– "; }
 
-#header {
-  font-size: 18px; }
-  #header #toggle {
-    background-color: white;
-    color: #e2231a;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 3rem;
-    height: 3rem;
-    border: none;
-    border-radius: 1.5rem;
-    z-index: 500;
-    outline: none;
-    -webkit-border: none;
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
-    #header #toggle #icon-menu, #header #toggle #icon-cross {
-      display: block;
-      position: absolute;
-      padding: 0;
-      bottom: .375em;
-      right: .35em; }
-    #header #toggle #icon-menu {
-      opacity: 1; }
-    #header #toggle #icon-cross {
-      opacity: 0;
-      -webkit-transform: rotate(-90deg) scale(0.5); }
-    #header #toggle.active #icon-menu {
-      opacity: 0;
-      -webkit-transform: rotate(90deg) scale(0.5); }
-    #header #toggle.active #icon-cross {
-      opacity: 1;
-      -webkit-transform: rotate(90deg) scale(1); }
-    #header #toggle:active {
-      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
-  #header #toc {
-    color: #031d40;
-    padding: 2rem 0;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background-color: white; }
-    #header #toc.fixed {
-      position: fixed;
-      top: 0;
-      right: -150%;
-      bottom: 0;
-      width: 80%;
-      max-width: 18.75em;
-      z-index: 3;
-      box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.25);
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box; }
-    #header #toc.open {
-      right: 0; }
-    #header #toc ol {
-      border-bottom: 1px solid #67b2e7; }
-      #header #toc ol li {
-        border-top: 1px solid #67b2e7;
-        margin: 0;
-        padding: 0; }
-    #header #toc .page-link {
-      text-transform: uppercase;
-      font-size: 0.875em;
-      letter-spacing: .1em;
-      font-weight: 400; }
-      #header #toc .page-link span {
-        font-size: 1rem; }
-    #header #toc a {
-      display: block;
-      padding: .25em 1em;
-      color: #031d40;
-      font-size: 1em;
-      text-decoration: none;
-      outline: none;
-      font-weight: 600; }
-      #header #toc a:active {
-        background-color: #51a7e4; }
-
 button, a.button {
   font-family: 'proxima-nova',helvetica,arial,sans-serif;
   color: white;
@@ -327,11 +249,14 @@ button, a.button {
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
   display: inline-block; }
-  button span, a.button span {
-    font-size: 1rem;
-    vertical-align: -.15em; }
   button:active, a.button:active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
+
+.button.action {
+  padding: 0 !important;
+  background-color: white !important;
+  color: #e2231a !important;
+  line-height: 1; }
 
 .action {
   display: block;
@@ -362,6 +287,7 @@ button, a.button {
 
 p.credit {
   position: absolute !important;
+  font-size: 0.875em !important;
   bottom: .5em;
   left: 0;
   right: 0;
@@ -380,6 +306,18 @@ p.credit {
     line-height: 1;
     content: "\e017"; }
 
+/*
+ *
+ * Images
+ *
+ */
+img {
+  display: block;
+  width: 100%;
+  max-width: 75em;
+  margin: 0 auto;
+  vertical-align: middle; }
+
 article {
   padding: 0 0 2rem 0; }
   article a {
@@ -394,13 +332,10 @@ article {
     article a:active {
       color: #031d40;
       box-shadow: 0 3px 0 0 #031d40; }
-    article a:visited {
-      color: #828282;
-      box-shadow: 0 1px 0 0 #828282; }
   article header.sticky {
     border-top: 2px solid #031d40;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0.05em 0 0 rgba(0, 0, 0, 0.15); }
     article header.sticky nav {
       float: right;
@@ -414,20 +349,19 @@ article {
         padding: 0.5rem 1rem;
         box-shadow: none;
         color: #e2231a;
-        border-left: 1px solid rgba(0, 0, 0, 0.15); }
+        border-left: 1px solid rgba(0, 0, 0, 0.1); }
         article header.sticky nav a:hover {
           outline: none;
-          box-shadow: inset 0 -3px 0 #e2231a; }
+          box-shadow: inset 0 -3px 0 #e2231a;
+          background-color: white; }
         article header.sticky nav a:active {
           outline: none;
           color: white;
           background-color: #e2231a; }
-        article header.sticky nav a:visited {
-          color: #828282; }
-          article header.sticky nav a:visited:hover {
-            color: #e2231a; }
-          article header.sticky nav a:visited:active {
-            color: white; }
+        article header.sticky nav a:visited:hover {
+          color: #e2231a; }
+        article header.sticky nav a:visited:active {
+          color: white; }
         article header.sticky nav a span {
           font-size: 1em !important;
           vertical-align: middle !important;
@@ -449,7 +383,8 @@ article {
     text-align: center;
     color: white;
     margin-bottom: 5rem;
-    padding: 2rem 0;
+    margin-top: -3em;
+    padding: 4rem 0 2rem;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat; }
@@ -460,7 +395,6 @@ article {
       top: 0;
       bottom: 0;
       width: 100%;
-      background: #67b2e7;
       opacity: .65;
       z-index: 0; }
     article header.hero * {
@@ -479,7 +413,7 @@ article {
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: .1em;
-    margin: 10rem 0; }
+    margin: 12.5rem 0; }
     @media screen and (min-width: 43.75em) {
       article h1 {
         font-size: 3em; } }
@@ -501,6 +435,11 @@ article {
         font-size: 1.5em; } }
   article > article {
     padding: 1rem; }
+
+@media screen and (min-width: 62.5em) {
+  figure.half {
+    width: 50%;
+    float: left; } }
 
 .full-screen {
   background-size: cover;
@@ -565,7 +504,7 @@ article {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1; }
+  z-index: 3; }
 
 .sticky.fixed.absolute {
   position: absolute; }
@@ -597,8 +536,6 @@ article {
     overflow: hidden;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
     transform: scale(1.05); }
-    .pre-window:hover:before {
-      background: #031d40; }
   .pre-window:before {
     content: ' ';
     display: block;
@@ -606,8 +543,7 @@ article {
     top: 0;
     bottom: 0;
     width: 100%;
-    background: #031d40;
-    border-radius: 50%;
+    background: #e2231a;
     opacity: .75;
     z-index: 0; }
   .pre-window * {
@@ -623,66 +559,41 @@ article {
     width: 100% !important;
     z-index: 2;
     top: 0;
-    left: 0em;
-    right: 0em;
+    left: 0;
+    right: 0;
     bottom: 0;
     margin: 0;
     padding: 0;
     overflow-y: scroll;
     border-radius: 0; }
 
+.window-placeholder {
+  position: relative; }
+  .window-placeholder.half {
+    width: 45%;
+    margin: 4rem 2.5%; }
+  .window-placeholder.left {
+    float: left;
+    width: 45%; }
+  .window-placeholder.right {
+    float: right;
+    width: 45%; }
+  .window-placeholder:after {
+    padding-top: 100%; }
+
 .window.noshow {
   position: fixed;
   z-index: 0;
   opacity: 0;
   top: 100%; }
-  .window.noshow.open {
-    left: 0;
-    right: 0; }
-
-.window.circle header {
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-  display: flex; }
-  .window.circle header h1 {
-    display: block;
-    margin: auto;
-    padding: 0;
-    font-size: 1.5em; }
-  .window.circle header:before, .window.circle header:after {
-    display: block;
-    border-radius: 50%;
-    padding-top: 75%; }
-
-.window.half {
-  width: 45%;
-  margin: 4rem 2.5%; }
-  .window.half.left {
-    float: left; }
-    .window.half.left.open {
-      left: 0; }
-  .window.half.right {
-    float: right; }
-    .window.half.right.open {
-      right: 0; }
-
-.window-placeholder {
-  position: absolute; }
-  .window-placeholder:after {
-    padding-top: 75%; }
-  .window-placeholder.left.activated {
-    position: static;
-    float: left;
-    width: 45%; }
-  .window-placeholder.right.activated {
-    position: static;
-    float: right;
-    width: 45%; }
 
 .window {
-  overflow-y: hidden;
-  overflow-x: hidden; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; }
   .window .content, .window .credit, .window .close-window {
     display: none; }
   .window .close-window {
@@ -700,37 +611,60 @@ article {
       color: #e7372e; }
     .window .close-window:active {
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
-  .window.open {
-    position: fixed;
-    bottom: 0;
-    top: 0;
-    background-color: white;
-    text-align: left;
-    z-index: 1000;
-    opacity: 1;
-    overflow-y: scroll;
-    width: 100%;
-    margin: 0; }
-    .window.open .content, .window.open .credit, .window.open .close-window {
-      display: block; }
-    .window.open header {
-      border-radius: 0;
-      overflow: scroll; }
-      .window.open header:before, .window.open header:after {
-        border-radius: 0; }
   .window header {
+    overflow: hidden;
+    cursor: pointer;
     text-align: center;
     color: white;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat; }
-    .window header h6 {
-      color: white; }
+    .window header.hero {
+      margin-top: 0; }
     .window header h6 {
       text-align: center;
-      float: none; }
+      float: none;
+      color: white; }
+    .window header h1 {
+      display: block;
+      margin: auto;
+      padding: 0; }
     .window header small {
       color: white; }
+    .window header:after {
+      content: ' ';
+      display: block;
+      margin-top: 80%; }
+  .window.open {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    text-align: left;
+    z-index: 1000;
+    opacity: 1;
+    overflow-y: scroll;
+    margin: 0; }
+    .window.open .content, .window.open .credit, .window.open .close-window {
+      display: block; }
+    .window.open header {
+      border-radius: 0;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      overflow: scroll;
+      display: block; }
+      .window.open header:before {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0; }
+      .window.open header h1 {
+        margin: 10rem 0; }
+      .window.open header:after {
+        margin-top: 0%; }
 
 .swipe {
   overflow: hidden;
@@ -781,16 +715,106 @@ article {
         .swipe-nav-wrap .swipe-nav li.selected span.dot {
           background-color: #e2231a; }
 
-/**
- * Images
+/*
+ *
+ * Global Includes
+ *
  */
-img {
-  display: block;
-  width: 100%;
-  max-width: 75em;
-  margin: 0 auto;
-  vertical-align: middle; }
+#header {
+  font-size: 18px; }
+  #header #toggle {
+    background-color: white;
+    color: #e2231a;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1.5rem;
+    z-index: 501;
+    outline: none;
+    -webkit-border: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); }
+    #header #toggle #icon-menu, #header #toggle #icon-cross {
+      display: block;
+      position: absolute;
+      padding: 0;
+      bottom: .375em;
+      right: .35em; }
+    #header #toggle #icon-menu {
+      opacity: 1; }
+    #header #toggle #icon-cross {
+      opacity: 0;
+      -webkit-transform: rotate(-90deg) scale(0.5); }
+    #header #toggle.active #icon-menu {
+      opacity: 0;
+      -webkit-transform: rotate(90deg) scale(0.5); }
+    #header #toggle.active #icon-cross {
+      opacity: 1;
+      -webkit-transform: rotate(90deg) scale(1); }
+    #header #toggle:active {
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5); }
+  #header #toc {
+    color: #031d40;
+    padding: 2rem 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: white; }
+    #header #toc.fixed {
+      position: fixed;
+      top: 0;
+      right: -150%;
+      bottom: 0;
+      width: 80%;
+      max-width: 18.75em;
+      z-index: 500;
+      box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box; }
+    #header #toc.open {
+      right: 0; }
+    #header #toc ol {
+      border-bottom: 1px solid #67b2e7; }
+      #header #toc ol li {
+        border-top: 1px solid #67b2e7;
+        margin: 0;
+        padding: 0; }
+    #header #toc .page-link {
+      text-transform: uppercase;
+      font-size: 0.875em;
+      letter-spacing: .1em;
+      font-weight: 400; }
+      #header #toc .page-link span {
+        font-size: 1rem; }
+    #header #toc a {
+      display: block;
+      padding: .25em 1em;
+      color: #031d40;
+      font-size: 1em;
+      text-decoration: none;
+      outline: none;
+      font-weight: 600; }
+      #header #toc a:active {
+        background-color: #51a7e4; }
 
+#footer {
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-top: 1px solid #e8e8e8; }
+  #footer a {
+    color: #67b2e7; }
+    #footer a:hover {
+      color: #e2231a; }
+    #footer a:active {
+      color: #031d40; }
+
+/*
+ *
+ * Indexed Sections
+ *
+ */
 #Intro {
   position: relative;
   background-image: url(../img/content/01intro/2014_cover.jpg);
@@ -865,7 +889,7 @@ img {
       #Intro button a:hover, #Intro button a:active, #Intro a.button a:hover, #Intro a.button a:active {
         background-color: white;
         color: #67b2e7; }
-  #Intro p.credit {
+  #Intro #intro-credit {
     text-align: left;
     left: 2em; }
 
@@ -879,10 +903,17 @@ img {
 #BB101 {
   background-color: white;
   color: #e2231a; }
+  #BB101 header.hero {
+    background-image: url("../img/content/04about/about.jpg");
+    background-position: 50% 0; }
+    #BB101 header.hero:before {
+      background: linear-gradient(0deg, #e2231a, #031d40); }
   #BB101 #Routes {
-    background-color: #031d40;
-    color: white; }
+    color: #031d40; }
+    #BB101 #Routes h3 {
+      color: #e2231a; }
   #BB101 #routelist {
+    margin-top: 1rem;
     list-style-type: none; }
     #BB101 #routelist li {
       text-align: center;
@@ -898,12 +929,16 @@ img {
     #BB101 #routelist .label {
       display: inline-block;
       border: 2px solid black;
+      border-radius: 3em;
+      -webkit-border-radius: 3em;
+      -moz-border-radius: 3em;
+      -ms-border-radius: 3em;
       padding: .25em 1em;
       margin: 0.5rem auto;
       color: white;
       font-weight: 600;
       letter-spacing: .01em;
-      border: 1px solid white;
+      border: 1px solid #031d40;
       -webkit-text-rendering: antialiased; }
     #BB101 #routelist #CUS {
       background-color: #B21E44; }
@@ -933,13 +968,11 @@ img {
   background-color: rgba(255, 255, 255, 0.25); }
 #Accomplishments #accomplishments-nav li.selected span.dot {
   background-color: white; }
-#Accomplishments #accNumNext {
+#Accomplishments #accNumNext, #Accomplishments #skip-moreAcc {
   position: absolute;
   right: 1em;
   top: 46%;
   margin: 1em; }
-  #Accomplishments #accNumNext.rotate {
-    transform: rotate(90deg); }
 #Accomplishments #accomplishments-numbers {
   position: relative;
   margin-top: -50px; }
@@ -999,12 +1032,17 @@ img {
 #Accomplishments #build-hours {
   background: #e2231a; }
 #Accomplishments #moreAcc {
+  color: #e2231a;
   padding-top: 4em; }
-#Accomplishments #coastal-drift #drift-hero {
+  #Accomplishments #moreAcc .pre-window {
+    color: white; }
+#Accomplishments #coastal-drift header.hero {
   background-image: url(../img/content/03accomplishments/CoastalDrift_AndyShort.jpg);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat; }
+  #Accomplishments #coastal-drift header.hero:before {
+    background: linear-gradient(0deg, #031d40, #e2231a); }
 #Accomplishments .scholarship-grantee {
   float: left; }
   #Accomplishments .scholarship-grantee img {
@@ -1022,57 +1060,66 @@ img {
     width: 100%;
     margin: 0.5rem 0; }
 
-#Impact header.hero {
-  background-image: url(../img/content/05impact/impact.jpg); }
-#Impact .grantee header {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 15.625em;
-  height: 15.625em; }
-  @media screen and (min-width: 43.75em) {
-    #Impact .grantee header {
-      width: 25em;
-      height: 25em; } }
-#Impact #grantee-nav-wrap {
-  text-align: center; }
-  @media screen and (min-width: 62.5em) {
-    #Impact #grantee-nav-wrap #grantee-nav {
-      width: 90%;
-      margin: 1em 5%; } }
-  #Impact #grantee-nav-wrap #grantee-nav li {
-    margin: 0; }
-    #Impact #grantee-nav-wrap #grantee-nav li span.dot {
-      display: block; }
-    #Impact #grantee-nav-wrap #grantee-nav li span.text {
-      display: none; }
+#Impact {
+  color: #031d40; }
+  #Impact header.hero {
+    background-image: url(../img/content/05impact/impact.jpg); }
+    #Impact header.hero:before {
+      background: linear-gradient(0deg, #031d40, #67b2e7); }
+  #Impact .grantee header {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15.625em;
+    height: 15.625em; }
+    @media screen and (min-width: 43.75em) {
+      #Impact .grantee header {
+        width: 25em;
+        height: 25em; } }
+  #Impact #grantee-nav-wrap {
+    text-align: center; }
     @media screen and (min-width: 62.5em) {
-      #Impact #grantee-nav-wrap #grantee-nav li {
-        line-height: 1.5;
-        width: 16%;
-        position: relative;
-        padding: 1em 2%;
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
-        #Impact #grantee-nav-wrap #grantee-nav li span.dot {
-          display: none; }
-        #Impact #grantee-nav-wrap #grantee-nav li span.text {
-          display: inline; } }
-#Impact #Idaho header {
-  background-image: url(../img/content/05impact/grantee_KTEC.jpg); }
-#Impact #YouthBuild header {
-  background-image: url(../img/content/05impact/grantee_YBPhilly.jpg); }
-#Impact #Stafford header {
-  background-image: url(../img/content/05impact/grantee_Stafford.jpg); }
-#Impact #Grid header {
-  background-image: url(../img/content/05impact/grantee_GRID.jpg); }
-#Impact #Purdue header {
-  background-image: url(../img/content/05impact/grantee_Purdue.jpg); }
+      #Impact #grantee-nav-wrap #grantee-nav {
+        width: 90%;
+        margin: 1em 5%; } }
+    #Impact #grantee-nav-wrap #grantee-nav li {
+      margin: 0; }
+      #Impact #grantee-nav-wrap #grantee-nav li span.dot {
+        display: block; }
+      #Impact #grantee-nav-wrap #grantee-nav li span.text {
+        display: none; }
+      @media screen and (min-width: 62.5em) {
+        #Impact #grantee-nav-wrap #grantee-nav li {
+          line-height: 1.5;
+          width: 16%;
+          position: relative;
+          padding: 1em 2%;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+          #Impact #grantee-nav-wrap #grantee-nav li span.dot {
+            display: none; }
+          #Impact #grantee-nav-wrap #grantee-nav li span.text {
+            display: inline; } }
+  #Impact #Idaho header {
+    background-image: url(../img/content/05impact/grantee_KTEC.jpg); }
+  #Impact #YouthBuild header {
+    background-image: url(../img/content/05impact/grantee_YBPhilly.jpg); }
+  #Impact #Stafford header {
+    background-image: url(../img/content/05impact/grantee_Stafford.jpg); }
+  #Impact #Grid header {
+    background-image: url(../img/content/05impact/grantee_GRID.jpg); }
+  #Impact #Purdue header {
+    background-image: url(../img/content/05impact/grantee_Purdue.jpg); }
 
 #Riders {
   color: #031d40; }
+  #Riders header.hero {
+    background-image: url(../img/content/06riders/riders-intro.jpg);
+    background-position: 50% 75%; }
+    #Riders header.hero:before {
+      background: linear-gradient(0deg, #e2231a, #031d40); }
   #Riders .rider-portrait {
     margin: 2.5rem auto;
     padding: 0;
@@ -1086,39 +1133,55 @@ img {
       #Riders .rider-portrait {
         width: 25em;
         height: 25em; } }
-  #Riders #fundraisers ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
-    margin: 2em auto;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 62.5em; }
-  #Riders #fundraisers li {
-    width: 14em;
-    padding: 1em;
-    margin: 0;
-    text-align: center;
-    color: #031d40; }
-    #Riders #fundraisers li h5 {
-      font-size: 1em;
-      margin: 0; }
-    #Riders #fundraisers li img {
-      width: 80%;
-      margin: 1em auto;
-      display: block; }
-    #Riders #fundraisers li .number {
-      font-size: 1em; }
+  #Riders #fundraisers {
+    clear: both; }
+    #Riders #fundraisers ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
+      margin: 2em auto;
+      max-width: 62.5em; }
+    #Riders #fundraisers li {
+      float: left;
+      width: 50%;
+      padding: 1em 0;
+      margin: 0;
+      text-align: center;
+      color: #031d40; }
+      #Riders #fundraisers li:nth-of-type(5) {
+        margin-left: 25%; }
+      @media screen and (min-width: 31.25em) {
+        #Riders #fundraisers li {
+          width: 33.3%; }
+          #Riders #fundraisers li:nth-of-type(4) {
+            margin-left: 16.65%; }
+          #Riders #fundraisers li:nth-of-type(5) {
+            margin-left: 0; } }
+      @media screen and (min-width: 62.5em) {
+        #Riders #fundraisers li {
+          width: 20%; }
+          #Riders #fundraisers li:nth-of-type(4) {
+            margin-left: 0; } }
+      #Riders #fundraisers li h5 {
+        font-size: 1em;
+        margin: 0; }
+      #Riders #fundraisers li img {
+        width: 80%;
+        margin: 1em auto;
+        display: block; }
+      #Riders #fundraisers li .number {
+        font-size: 1em; }
   #Riders h6 span {
     color: #e2231a; }
 
 #Alumni {
-  color: #67b2e7; }
+  color: #031d40; }
+  #Alumni span.icon-location {
+    color: #e2231a; }
   #Alumni header.hero {
     background-image: url(../img/content/07alumni/alumni.jpg); }
+    #Alumni header.hero:before {
+      background: #67b2e7; }
   #Alumni .alumni-portrait {
     width: 15.625em;
     height: 15.625em;
@@ -1131,150 +1194,294 @@ img {
     #Alumni .alumni-portrait img {
       margin-top: -3em; }
 
-#financials {
+#Financials {
   color: #031d40; }
-  #financials div {
-    padding: 2rem 0.5rem; }
-  #financials .financials-intro {
+  #Financials div {
+    padding: 2rem 0; }
+  #Financials header.hero {
+    margin-top: -5rem;
+    background-color: #e2231a;
+    background: linear-gradient(0deg, #031d40, #e2231a); }
+  #Financials .financials-intro {
     background-color: #031d40;
     color: white; }
-    #financials .financials-intro #pie-cause img {
+    #Financials .financials-intro #pie-cause img {
       margin: 2rem auto;
-      width: 15vw;
-      border: 0.5em solid rgba(255, 255, 255, 0.1);
-      border-radius: 50%; }
-    #financials .financials-intro #pie-cause figcaption {
-      color: rgba(255, 255, 255, 0.65); }
-      #financials .financials-intro #pie-cause figcaption span.highlight {
+      width: 15vw; }
+    #Financials .financials-intro #pie-cause figcaption {
+      color: rgba(255, 255, 255, 0.65);
+      color: #67b2e7; }
+      #Financials .financials-intro #pie-cause figcaption span.highlight {
         color: white; }
-  #financials .financials-grants {
+  #Financials .financials-grants {
     background-color: white;
-    color: #031d40;
-    min-height: 75vh; }
-    @media screen and (min-width: 43.75em) {
-      #financials .financials-grants figure img {
-        float: left;
-        width: 35%;
-        margin: 1em 2.5% 1em 5%; }
-      #financials .financials-grants figure figcaption {
-        float: left;
-        width: 50%;
-        margin: 1em 5% 1em 2.5%; } }
-  #financials .financials-by-year {
-    background-color: #e2231a;
-    color: white;
-    min-height: 50vh; }
-    #financials .financials-by-year h3 {
+    color: #031d40; }
+    #Financials .financials-grants figure div.ratio-blocks {
+      position: relative;
+      width: 90%;
+      margin: 1em 5%;
+      padding: 0;
+      float: left;
+      background-color: #67b2e7; }
+      #Financials .financials-grants figure div.ratio-blocks:before {
+        content: ' ';
+        display: block;
+        padding-top: 60%; }
+      #Financials .financials-grants figure div.ratio-blocks .ratio {
+        position: absolute;
+        padding: 0;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+        -moz-box-sizing: border-box;
+        /* Firefox 1 - 28 */
+        box-sizing: border-box;
+        border: 1px solid white; }
+        #Financials .financials-grants figure div.ratio-blocks .ratio .block-legend {
+          display: block;
+          padding: 0;
+          color: white;
+          line-height: 1.25;
+          height: 1.25em;
+          width: 1.25em;
+          padding: 0;
+          border-radius: 0 0 .5em 0;
+          -ms-border-radius: 0 0 .5em 0;
+          -moz-border-radius: 0 0 .5em 0;
+          -webkit-border-radius: 0 0 .5em 0; }
+      #Financials .financials-grants figure div.ratio-blocks #cgp {
+        height: 100%;
+        width: 61%;
+        left: 0;
+        top: 0;
+        background-color: #67b2e7; }
+        #Financials .financials-grants figure div.ratio-blocks #cgp .block-legend {
+          background-color: #67b2e7; }
+      #Financials .financials-grants figure div.ratio-blocks #r5d {
+        height: 40%;
+        width: 39%;
+        top: 0;
+        right: 0;
+        background-color: #67b2e7;
+        background-image: radial-gradient(#e2231a 22%, transparent 23%), radial-gradient(#e2231a 22%, transparent 23%);
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px; }
+        #Financials .financials-grants figure div.ratio-blocks #r5d .block-legend {
+          background-color: #67b2e7; }
+      #Financials .financials-grants figure div.ratio-blocks #papc {
+        height: 60%;
+        width: 19%;
+        right: 0;
+        bottom: 0;
+        background-color: #e2231a;
+        background-image: radial-gradient(#67b2e7 35%, transparent 40%), radial-gradient(#67b2e7 35%, transparent 40%);
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px; }
+        #Financials .financials-grants figure div.ratio-blocks #papc .block-legend {
+          background-color: #e2231a; }
+      #Financials .financials-grants figure div.ratio-blocks #otr {
+        height: 28%;
+        width: 20%;
+        right: 19%;
+        bottom: 0;
+        background-color: #e2231a; }
+        #Financials .financials-grants figure div.ratio-blocks #otr .block-legend {
+          background-color: #e2231a; }
+      #Financials .financials-grants figure div.ratio-blocks #cwmc {
+        height: 32%;
+        width: 16%;
+        bottom: 28%;
+        left: 61%;
+        background-color: #e2231a;
+        background-image: radial-gradient(#031d40 40%, transparent 42%), radial-gradient(#031d40 40%, transparent 42%);
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px; }
+        #Financials .financials-grants figure div.ratio-blocks #cwmc .block-legend {
+          background-color: #e2231a; }
+      #Financials .financials-grants figure div.ratio-blocks #aceg {
+        height: 27%;
+        width: 4%;
+        top: 40%;
+        right: 19%;
+        background-color: #031d40;
+        background-image: radial-gradient(#e2231a 15%, transparent 16%), radial-gradient(#e2231a 15%, transparent 16%);
+        background-size: 10px 10px;
+        background-position: 0 0, 5px 5px; }
+        #Financials .financials-grants figure div.ratio-blocks #aceg .block-legend {
+          background-color: #031d40; }
+      #Financials .financials-grants figure div.ratio-blocks #other {
+        height: 5%;
+        width: 4%;
+        bottom: 28%;
+        right: 19%;
+        background: linear-gradient(0deg, #67b2e7, #031d40);
+        background: #031d40; }
+    #Financials .financials-grants figure figcaption {
+      margin: 1em 5%; }
+  #Financials .financials-by-year {
+    background-color: #031d40;
+    color: white; }
+    #Financials .financials-by-year h3 {
       margin-bottom: 4em; }
-    #financials .financials-by-year figure {
+    #Financials .financials-by-year figure {
+      width: 90%;
+      margin: 1em auto;
       position: relative; }
-      #financials .financials-by-year figure img {
+      #Financials .financials-by-year figure img {
         width: 90%;
         margin: 1em auto; }
-      #financials .financials-by-year figure figcaption {
+      #Financials .financials-by-year figure figcaption {
         margin-top: 2em; }
-      #financials .financials-by-year figure table#by-the-years {
-        margin-top: 2em; }
-        #financials .financials-by-year figure table#by-the-years th, #financials .financials-by-year figure table#by-the-years td {
-          text-align: center; }
-        #financials .financials-by-year figure table#by-the-years td.donation-value {
-          position: absolute;
-          width: 10%; }
-          #financials .financials-by-year figure table#by-the-years td.donation-value:after {
-            position: absolute; }
-        #financials .financials-by-year figure table#by-the-years td.a {
-          bottom: 25%;
-          left: 0%; }
-        #financials .financials-by-year figure table#by-the-years td.b {
-          bottom: 35%;
-          left: 11.1%; }
-        #financials .financials-by-year figure table#by-the-years td.c {
-          bottom: 48%;
-          left: 22.2%; }
-        #financials .financials-by-year figure table#by-the-years td.d {
-          bottom: 100%;
-          left: 33.3%; }
-        #financials .financials-by-year figure table#by-the-years td.e {
-          bottom: 58%;
-          left: 44.4%; }
-        #financials .financials-by-year figure table#by-the-years td.f {
-          bottom: 62%;
-          left: 55.5%; }
-        #financials .financials-by-year figure table#by-the-years td.g {
-          bottom: 90%;
-          left: 66.6%; }
-        #financials .financials-by-year figure table#by-the-years td.h {
-          bottom: 45%;
-          left: 77.7%; }
-        #financials .financials-by-year figure table#by-the-years td.i {
-          bottom: 85%;
-          left: 88.8%; }
-        #financials .financials-by-year figure table#by-the-years tr.donation-values {
-          display: block;
-          margin: 4em 0;
-          border: none; }
-        #financials .financials-by-year figure table#by-the-years tr.year-values {
-          border-top: 1px dotted white;
-          border-top: 1px dotted rgba(255, 255, 255, 0.5); }
-        #financials .financials-by-year figure table#by-the-years td.year-value {
-          position: relative;
-          text-align: center; }
-          #financials .financials-by-year figure table#by-the-years td.year-value:before {
+      @media screen and (max-width: 43.75em) {
+        #Financials .financials-by-year figure img {
+          display: none; }
+        #Financials .financials-by-year figure table#by-the-years tr:nth-of-type(1) {
+          float: right;
+          text-align: left;
+          width: 48%;
+          margin: 0 2%; }
+          #Financials .financials-by-year figure table#by-the-years tr:nth-of-type(1) th, #Financials .financials-by-year figure table#by-the-years tr:nth-of-type(1) td {
+            text-align: left; }
+        #Financials .financials-by-year figure table#by-the-years tr:nth-of-type(2) {
+          float: left;
+          text-align: right;
+          width: 44%;
+          margin: 0 2%; }
+          #Financials .financials-by-year figure table#by-the-years tr:nth-of-type(2) th, #Financials .financials-by-year figure table#by-the-years tr:nth-of-type(2) td {
+            text-align: right; }
+        #Financials .financials-by-year figure table#by-the-years th, #Financials .financials-by-year figure table#by-the-years td {
+          width: 100%;
+          float: left; } }
+      @media screen and (min-width: 43.75em) {
+        #Financials .financials-by-year figure img {
+          display: block; }
+        #Financials .financials-by-year figure table#by-the-years {
+          margin-top: 2em; }
+          #Financials .financials-by-year figure table#by-the-years th, #Financials .financials-by-year figure table#by-the-years td {
+            text-align: center !important; }
+          #Financials .financials-by-year figure table#by-the-years td.donation-value {
             position: absolute;
+            width: 11.1%; }
+            #Financials .financials-by-year figure table#by-the-years td.donation-value:after {
+              position: absolute; }
+          #Financials .financials-by-year figure table#by-the-years td.a {
+            bottom: 34%;
+            left: 0%; }
+          #Financials .financials-by-year figure table#by-the-years td.b {
+            bottom: 37%;
+            left: 11.1%; }
+          #Financials .financials-by-year figure table#by-the-years td.c {
+            bottom: 48%;
+            left: 22.2%; }
+          #Financials .financials-by-year figure table#by-the-years td.d {
+            bottom: 100%;
+            left: 33.3%; }
+          #Financials .financials-by-year figure table#by-the-years td.e {
+            bottom: 58%;
+            left: 44.4%; }
+          #Financials .financials-by-year figure table#by-the-years td.f {
+            bottom: 62%;
+            left: 55.5%; }
+          #Financials .financials-by-year figure table#by-the-years td.g {
+            bottom: 90%;
+            left: 66.6%; }
+          #Financials .financials-by-year figure table#by-the-years td.h {
+            bottom: 45%;
+            left: 77.7%; }
+          #Financials .financials-by-year figure table#by-the-years td.i {
+            bottom: 85%;
+            left: 88.8%; }
+          #Financials .financials-by-year figure table#by-the-years tr.donation-values {
             display: block;
-            content: ' ';
-            margin: -.5em 48% 0;
-            width: 1px;
-            height: 10px;
-            background-color: white;
-            background-color: rgba(255, 255, 255, 0.5); }
-  #financials table {
+            margin: 4em 0;
+            border: none; }
+          #Financials .financials-by-year figure table#by-the-years tr.year-values {
+            border-top: 1px dotted #67b2e7; }
+          #Financials .financials-by-year figure table#by-the-years td.year-value {
+            position: relative;
+            text-align: center;
+            width: 11.1%; }
+            #Financials .financials-by-year figure table#by-the-years td.year-value:before {
+              position: absolute;
+              display: block;
+              content: ' ';
+              margin: -1em 0 0 49%;
+              width: 1px;
+              height: 1em;
+              background-color: #67b2e7; } }
+  #Financials .audited-financials thead {
+    color: #e2231a; }
+  #Financials .audited-financials table {
+    margin-top: 1em; }
+  #Financials .expenses {
+    background: #e2231a;
+    background: linear-gradient(45deg, #031d40, #e2231a);
+    color: white; }
+    #Financials .expenses h3 {
+      color: white; }
+  #Financials table {
     width: 100%;
     text-align: left; }
-    #financials table thead th:nth-of-type(2) {
+    #Financials table thead {
+      font-size: 1.25em; }
+      #Financials table thead th {
+        font-weight: 500; }
+      #Financials table thead th:nth-of-type(2) {
+        text-align: right; }
+      #Financials table thead th:last-child {
+        text-align: right; }
+    #Financials table tbody td:nth-of-type(2) {
       text-align: right; }
-    #financials table thead th:last-child {
+    #Financials table tbody td:last-child {
       text-align: right; }
-    #financials table tbody td:nth-of-type(2) {
-      text-align: right; }
-    #financials table tbody td:last-child {
-      text-align: right; }
+    #Financials table tr:last-child {
+      font-weight: bold; }
+  #Financials .financials-expenses tr:last-child {
+    font-weight: bold; }
 
-#Closing header.hero {
-  background-image: url(../img/content/08closing/closing.jpg); }
-#Closing .share, #Closing .links {
-  list-style: none;
-  text-align: center; }
-  #Closing .share a, #Closing .share a:visited, #Closing .links a, #Closing .links a:visited {
-    box-shadow: none; }
-    #Closing .share a:hover, #Closing .share a:visited:hover, #Closing .links a:hover, #Closing .links a:visited:hover {
-      box-shadow: none;
-      color: #e2231a !important; }
-    #Closing .share a:active, #Closing .share a:visited:active, #Closing .links a:active, #Closing .links a:visited:active {
-      color: #031d40 !important; }
-#Closing .share li {
-  float: left;
-  width: 100%;
-  text-align: left; }
-  #Closing .share li:last-child span {
-    vertical-align: -.2em; }
-  @media screen and (min-width: 43.75em) {
-    #Closing .share li {
-      width: 20.5%;
-      padding: 0 0 0 12.5%; }
-      #Closing .share li:last-child {
-        padding: 1em 0;
-        width: 100% !important;
-        text-align: center; } }
-#Closing .links a {
-  display: block; }
-#Closing .links li {
-  float: left;
-  width: 25%; }
-#Closing .links span {
-  display: block; }
+#Closing {
+  color: #031d40; }
+  #Closing header.hero {
+    background-image: url(../img/content/08closing/closing.jpg); }
+    #Closing header.hero:before {
+      background: #e2231a; }
+  #Closing .share, #Closing .links {
+    list-style: none;
+    text-align: center; }
+    #Closing .share a, #Closing .share a:visited, #Closing .links a, #Closing .links a:visited {
+      box-shadow: none; }
+      #Closing .share a:hover, #Closing .share a:visited:hover, #Closing .links a:hover, #Closing .links a:visited:hover {
+        box-shadow: none;
+        color: #e2231a !important; }
+      #Closing .share a:active, #Closing .share a:visited:active, #Closing .links a:active, #Closing .links a:visited:active {
+        color: #031d40 !important; }
+  #Closing .share li {
+    float: left;
+    width: 100%;
+    text-align: left; }
+    #Closing .share li:last-child span {
+      vertical-align: -.2em; }
+    @media screen and (min-width: 43.75em) {
+      #Closing .share li {
+        width: 20.5%;
+        padding: 0 0 0 12.5%; }
+        #Closing .share li:last-child {
+          padding: 1em 0;
+          width: 100% !important;
+          text-align: center; } }
+  #Closing .links a {
+    display: block; }
+  #Closing .links li {
+    float: left;
+    width: 25%; }
+  #Closing .links span {
+    display: block; }
 
-/* Separate Pages */
+/* 
+ *
+ * Separate Pages 
+ *
+ */
 #Partner header.hero {
   color: white;
   background: linear-gradient(0deg, #e2231a, #67b2e7); }
@@ -1329,29 +1536,11 @@ img {
       #Contact #alumni li:nth-of-type(odd) {
         clear: none; } }
 
-#footer {
-  text-align: center;
-  background-color: white;
-  padding: 2rem;
-  border-top: 1px solid #e8e8e8; }
-  #footer a {
-    color: #67b2e7; }
-    #footer a:hover {
-      color: #e2231a; }
-    #footer a:active {
-      color: #031d40; }
-
 #open-coastal-drift-window {
   background-image: url(../img/content/03accomplishments/drift.jpg); }
 
 #open-scholarships-window {
   background-image: url(../img/content/03accomplishments/scholarship.jpg); }
-
-#open-cause-window {
-  background-image: url(../img/content/04about/whyweride.jpg); }
-
-#open-routes-window {
-  background-image: url(../img/content/04about/whereweride.jpg); }
 
 #open-grantee-window {
   background-image: url(../img/content/05impact/grantees.jpg); }

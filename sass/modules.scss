@@ -1,143 +1,5 @@
 //Navgation / Menu / Buttons / Links
 
-#header{
-	font-size:18px;
-	#toggle{		
-		background-color:$white;
-		color:$red;
-		position:fixed;
-		bottom:$spacing-unit * 2;
-		right:$spacing-unit * 2;
-		width:$spacing-unit * 6;
-		height:$spacing-unit * 6;
-		border:none;
-		border-radius:$spacing-unit * 3;
-		z-index:500;
-		outline:none;
-		-webkit-border:none;
-		
-		box-shadow:0 0 0 3px rgba(0,0,0,.2);
-		@extend %t01s;
-		#icon-menu, #icon-cross{
-			display:block;
-			position:absolute;
-			padding: 0;
-			bottom:.375em;
-			right:.35em;
-			//line-height:1.65;
-			@extend %t01s;
-			@extend %teo;
-			@extend %tei;
-			
-		}
-		#icon-menu{
-			opacity:1;
-		}
-		#icon-cross{
-			opacity:0;
-			-webkit-transform:rotate(-90deg) scale(.5);
-		}
-		&.active{
-			//box-shadow:0 0 0 1px rgba(0,0,0,.75);
-			#icon-menu{
-				opacity:0;
-				-webkit-transform:rotate(90deg) scale(.5);
-			}
-			#icon-cross{
-				opacity:1;
-				-webkit-transform:rotate(90deg) scale(1);
-			}
-		}
-		&:hover{
-			//transform:scale(1.05);
-		}
-		&:active{
-			//background-color:darken($red,5%);
-			box-shadow:0 0 0 1px rgba(0,0,0,.5);
-			//transform:scale(.95);
-		}
-	}
-	#toc{
-		color:$blue-dark;
-		@extend %t01s;
-		
-		@extend %tei;	
-		padding:$spacing-unit * 4 0;
-		overflow-y:scroll;
-		overflow-x:hidden;
-		background-color:rgba(255,255,255,1);
-		&.fixed{
-			position:fixed;
-			top:0;
-			right:-150%;
-			//bottom:$spacing-unit *10;
-			bottom:0;
-			//left:$spacing-unit *10;
-			//right:$spacing-unit *10;
-			width:80%;
-			max-width:(em(300));
-			z-index:3;
-			box-shadow:0px 0px 0px 2px rgba(0,0,0,.25);
-			box-sizing:border-box;
-			-webkit-box-sizing:border-box;		
-		}		
-		&.open{
-			right:0;
-			@extend %teo;		
-		}
-		h3{
-			//background-color:rgba(255,255,255,1);
-		}
-		ol{
-			//background-color:rgba(255,255,255,1);
-			//padding:0 2em;
-			//list-style:decimal-leading-zero;
-			li{
-				//border-t:1px solid lighten($blue-dark, 5%);
-				border-top:1px solid $blue-light;
-				margin:0;
-				padding:0;
-			}
-			border-bottom:1px solid $blue-light;
-		}
-		ul{
-			li{
-				
-			}
-			
-		}
-		.page-link{
-			text-transform:uppercase;
-			font-size:$small-font-size;
-			letter-spacing:.1em;
-			font-weight:400;
-			span{
-				font-size:1rem;
-			}
-		}
-		a{
-			display:block;
-			padding:.25em 1em;
-			color:$blue-dark;
-			font-size:1em;
-			text-decoration:none;
-			outline:none;
-			font-weight:600;
-			@extend %t01s;
-			@extend %teo;
-			&:hover{
-				
-			}
-			&:active{
-				//color:$white;
-				background-color:darken($blue-light,5%);
-			}
-			&:visited{
-				//text-decoration:line-through!important;
-			}
-		}
-	}
-}
 button, a.button{
 	font-family:'proxima-nova',helvetica,arial,sans-serif;
 	//background: linear-gradient(0deg, $blue-dark, $red);
@@ -162,8 +24,8 @@ button, a.button{
 	text-decoration:none;
 	display:inline-block;
 	span{
-		font-size:1rem;
-		vertical-align: -.15em;
+		//font-size:1rem;
+		//vertical-align: -.15em;
 	}
 	&:hover{
 		//color:$blue-dark;
@@ -171,6 +33,12 @@ button, a.button{
 	&:active{
 		box-shadow:0 0 0 1px rgba(0,0,0,.5);
 	}
+}
+.button.action{
+	padding:0!important;
+	background-color:$white!important;
+	color:$red!important;
+	line-height:1;
 }
 .action{
 	display:block;
@@ -206,8 +74,8 @@ button, a.button{
 }
 
 p.credit{
-	
 	position:absolute!important;
+	font-size:$small-font-size!important;
 	bottom:.5em;
 	left:0;
 	right:0;
@@ -228,6 +96,21 @@ p.credit{
 	}
 	
 }
+
+
+/*
+ *
+ * Images
+ *
+ */
+img {
+	display:block;
+    width: 100%;
+	max-width:em(1200);
+	margin:0 auto;
+    vertical-align: middle;
+}
+
 
 // Articles / Text Layouts
 article{
@@ -251,8 +134,8 @@ article{
 			box-shadow:0 3px 0 0 $blue-dark;
 		}
 		&:visited{
-			color:$grey;
-			box-shadow:0 1px 0 0 $grey;
+			//color:$grey;
+			//box-shadow:0 1px 0 0 $grey;
 		}
 	}
 	header,section,div{
@@ -261,7 +144,7 @@ article{
 	header.sticky{	
 		border-top:2px solid $blue-dark;
 		padding:0;
-		background-color:rgba(255,255,255,0.95);	
+		background-color:rgba(255,255,255,0.9);	
 		box-shadow:0 .05em 0 0 rgba(0,0,0,.15);	
 		nav{
 			float:right;
@@ -275,10 +158,11 @@ article{
 				padding:$spacing-unit $spacing-unit *2;
 				box-shadow:none;
 				color:$red;
-				border-left:1px solid rgba(0,0,0,.15);
+				border-left:1px solid rgba(0,0,0,.1);
 				&:hover{
 					outline:none;
 					box-shadow:inset 0 -3px 0 $red;
+					background-color:$white;
 				}
 				&:active{
 					outline:none;
@@ -286,7 +170,7 @@ article{
 					background-color:$red;
 				}
 				&:visited{
-					color:$grey;
+					//color:$grey;
 					&:hover{
 						color:$red;
 					}
@@ -327,7 +211,8 @@ article{
 		text-align:center;
 		color:$white;
 		margin-bottom:$spacing-unit *10;
-		padding:$spacing-unit *4 0;
+		margin-top:-3em;
+		padding:$spacing-unit *8 0 $spacing-unit *4;
 		@include full-bleed-background;
 		&:before{
 			content:' ';
@@ -336,7 +221,7 @@ article{
 			top:0;
 			bottom:0;
 			width:100%;
-			background:$blue-light;
+			//background:$blue-light;
 			//background: linear-gradient(0deg, $red, $blue-light);
 			opacity:.65;
 			z-index:0;
@@ -364,7 +249,7 @@ article{
 		font-size:2em;
 		text-transform:uppercase;
 		letter-spacing:.1em;
-		margin:$spacing-unit *20 0;
+		margin:$spacing-unit *25 0;
 		@media screen and (min-width:$tablet){
 			font-size:3em;
 		}
@@ -396,8 +281,14 @@ article{
 	}
 	
 }
-
-
+figure.half{
+	
+	@media screen and (min-width:$laptop){
+		width:50%;
+		float:left;
+	}
+	
+}
 
 //Videos
 .full-screen{
@@ -482,7 +373,7 @@ article{
   left:0;
   right:0;
   //width: 98%;
-  z-index: 1;
+  z-index: 3;
 }
 .sticky.fixed.absolute {
   position: absolute;
@@ -538,7 +429,7 @@ article{
 		box-shadow:0 0 24px rgba(0,0,0,.25);
 		transform:scale(1.05);
 		&:before{
-			background:$blue-dark;
+			//background:$blue-dark;
 		}
 		h3{
 			
@@ -552,16 +443,14 @@ article{
 	}
 	&:before{
 		@extend %t025s;
-		//@extend %teo;
+		@extend %perfect-circle;
 		content:' ';
 		display:block;
 		position:absolute;
 		top:0;
 		bottom:0;
 		width:100%;
-		background:$blue-dark;
-		border-radius:50%;
-		//background: linear-gradient(0deg, $red, $blue-light);
+		background:$red;
 		opacity:.75;
 		z-index:0;
 	}
@@ -585,8 +474,8 @@ article{
 		width:100%!important;
 		z-index:2;
 		top:0;
-		left:0em;
-		right:0em;
+		left:0;
+		right:0;
 		bottom:0;
 		margin:0;
 		padding:0;
@@ -595,107 +484,56 @@ article{
 	}
 }
 
+//Sets Position when closed. Square, simple, floated.
+.window-placeholder{
+	position:relative;
+	&.half{
+	    width: 45%;
+	    margin: 4rem 2.5%;
+	}
+	&.left{
+		float:left;
+		width:45%;		
+	}
+	&.right{
+		float:right;
+		width:45%;
+	}
+	&:after{
+		@extend %pseudo-block;
+		padding-top:100%;
+	}	
+}
+
+
 .window.noshow{
 	//section{display:none;}
 	position:fixed;
 	z-index:0;
 	opacity:0;
 	top:100%;
-	&.open{
-		left:0;
-		right:0;
-	}
 }
 .window.circle{
 	header{
-		border-radius:50%;
-		overflow:hidden;
-		cursor:pointer;
-		display:flex;
-		h1{
-			display:block;
-			margin:auto;
-			padding:0;
-			font-size:1.5em;
-		}
-		&:before,&:after{
-			display:block;
-			border-radius:50%;
-			padding-top:75%;
-		}
-	}
-}
-.window.half{
-	&.left{
-		float: left;
-		&.open{
-			left:0;
-		}
-		
-	}
-	&.right{
-		float: right;
-		&.open{
-			right:0;
-		}
-	}
-   
-    width: 45%;
-    margin: 4rem 2.5%;
-	
-	
-}
-.window-placeholder{
-	position:absolute;
-	&:after{
-		@extend %pseudo-block;
-		padding-top:75%;
-	}
-	&.left{
-		&.activated{
-			position:static;
-			float:left;
-			width:45%;
-			
-		}
-	}
-	&.right{
-		&.activated{
-			position:static;
-			float:right;
-			width:45%;
-			
+		@extend %perfect-circle;
+		&:before{
+			@extend %perfect-circle;
 		}
 	}
 }
 
-
+//The whole enchilada. Absolute when closed, Fixed when open.
 .window{
-	overflow-y:hidden;
-	overflow-x:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;	
 	.content, .credit, .close-window {display:none;}
-	
-	//section{display:none;}
-	//z-index:0;
-	//opacity:0;
-	//top:100%;
-	&:after{
-		//font-family: 'bikeandbuild';
-		//speak: none;
-		//font-size:1.5em;
-		//line-height: 1;
-		//content:"\e117";
-		//display:block;
-		//background-color:$white;
-		//text-align:center;
-		//cursor:pointer;
-		//width:100%;
-		//color:$red;
-		//padding:1em;
-		//margin-bottom:-2em;
-	}
 	@extend %t01s;
-	@extend %teo;
+	@extend %teo;	
+	//Close Button Style
 	.close-window{
 		position:fixed;
 		top:.5em;
@@ -721,45 +559,80 @@ article{
 			box-shadow:0 0 0 1px rgba(0,0,0,.5);
 		}
 	}
-	&.open{
-		position:fixed;
+	// Header, Does clipping 
+	header{
+		&.hero{
+			margin-top:0;
+		}	
+		overflow:hidden;
+		cursor:pointer;
+		//display:flex;
+		@extend %t01s;
+		text-align:center;
+		color:$white;
+		@include full-bleed-background;
 		
+		h6{
+			text-align:center;
+			float:none;
+			color:$white;
+		}
+		h1{
+			display:block;
+			margin:auto;
+			padding:0;
+			//font-size:1.5em;
+		}
+		small{
+			color:$white;
+		}
+		&:after{
+
+			content:' ';
+			display:block;	
+			margin-top: 80%;
+		}
+		
+	}	
+	&.open{
+		position:fixed;	
 		bottom:0;
 		top:0;
+		left:0;
+		right:0;	
 		background-color:$white;
 		text-align:left;
 		z-index:1000;
 		opacity:1;
 		overflow-y:scroll;
-		width:100%;
+		//width:100%;
 		margin:0;
+
 		.content, .credit, .close-window {display:block;}
 		header{
 			border-radius:0;
+			-webkit-border-radius:0;
+			-moz-border-radius:0;
+			-ms-border-radius:0;
 			overflow:scroll;
-			//cursor:pointer;
-			&:before,&:after{
+			display:block;
+			
+			&:before{
 				border-radius:0;
+				-webkit-border-radius:0;
+				-moz-border-radius:0;
+				-ms-border-radius:0;
 			}
+			h1{
+				margin:$spacing-unit *20 0;
+			}
+			&:after{
+				margin-top: 0%;
+			}
+			
 		}
 		
 	}
-	
-	header{
-		text-align:center;
-		color:$white;
-		h6{
-			color:$white;
-		}
-		@include full-bleed-background;
-		h6{
-			text-align:center;
-			float:none;
-		}
-		small{
-			color:$white;
-		}
-	}	
 }
 
 //Swipe Classes

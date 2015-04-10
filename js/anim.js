@@ -197,7 +197,7 @@ var scene = new ScrollScene({triggerElement: "#accomplishments-grantee", duratio
 	/* EXPAND FULL SCREEN DOCS*/
 	
 	window.onload = function(){
-	 TweenLite.to("#scholarships", 10, {left:-100});
+	// TweenLite.to("#scholarships", 10, {left:-100});
 	}
 					
 	

@@ -14,21 +14,172 @@ dl, dd, ol, ul, figure {
 @import "typography";
 @import "modules";
 
-/**
- * Images
+/*
+ *
+ * Global Includes
+ *
  */
-img {
-	display:block;
-    width: 100%;
-	max-width:em(1200);
-	margin:0 auto;
-    vertical-align: middle;
+#header{
+	font-size:18px;
+	#toggle{		
+		background-color:$white;
+		color:$red;
+		position:fixed;
+		bottom:$spacing-unit * 2;
+		right:$spacing-unit * 2;
+		width:$spacing-unit * 6;
+		height:$spacing-unit * 6;
+		border:none;
+		border-radius:$spacing-unit * 3;
+		z-index:501;
+		outline:none;
+		-webkit-border:none;
+		
+		box-shadow:0 0 0 3px rgba(0,0,0,.2);
+		@extend %t01s;
+		#icon-menu, #icon-cross{
+			display:block;
+			position:absolute;
+			padding: 0;
+			bottom:.375em;
+			right:.35em;
+			//line-height:1.65;
+			@extend %t01s;
+			@extend %teo;
+			@extend %tei;
+			
+		}
+		#icon-menu{
+			opacity:1;
+		}
+		#icon-cross{
+			opacity:0;
+			-webkit-transform:rotate(-90deg) scale(.5);
+		}
+		&.active{
+			//box-shadow:0 0 0 1px rgba(0,0,0,.75);
+			#icon-menu{
+				opacity:0;
+				-webkit-transform:rotate(90deg) scale(.5);
+			}
+			#icon-cross{
+				opacity:1;
+				-webkit-transform:rotate(90deg) scale(1);
+			}
+		}
+		&:hover{
+			//transform:scale(1.05);
+		}
+		&:active{
+			//background-color:darken($red,5%);
+			box-shadow:0 0 0 1px rgba(0,0,0,.5);
+			//transform:scale(.95);
+		}
+	}
+	#toc{
+		color:$blue-dark;
+		@extend %t01s;
+		
+		@extend %tei;	
+		padding:$spacing-unit * 4 0;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		background-color:rgba(255,255,255,1);
+		&.fixed{
+			position:fixed;
+			top:0;
+			right:-150%;
+			//bottom:$spacing-unit *10;
+			bottom:0;
+			//left:$spacing-unit *10;
+			//right:$spacing-unit *10;
+			width:80%;
+			max-width:(em(300));
+			z-index:500;
+			box-shadow:0px 0px 0px 2px rgba(0,0,0,.25);
+			box-sizing:border-box;
+			-webkit-box-sizing:border-box;		
+		}		
+		&.open{
+			right:0;
+			@extend %teo;		
+		}
+		h3{
+			//background-color:rgba(255,255,255,1);
+		}
+		ol{
+			//background-color:rgba(255,255,255,1);
+			//padding:0 2em;
+			//list-style:decimal-leading-zero;
+			li{
+				//border-t:1px solid lighten($blue-dark, 5%);
+				border-top:1px solid $blue-light;
+				margin:0;
+				padding:0;
+			}
+			border-bottom:1px solid $blue-light;
+		}
+		ul{
+			li{
+				
+			}
+			
+		}
+		.page-link{
+			text-transform:uppercase;
+			font-size:$small-font-size;
+			letter-spacing:.1em;
+			font-weight:400;
+			span{
+				font-size:1rem;
+			}
+		}
+		a{
+			display:block;
+			padding:.25em 1em;
+			color:$blue-dark;
+			font-size:1em;
+			text-decoration:none;
+			outline:none;
+			font-weight:600;
+			@extend %t01s;
+			@extend %teo;
+			&:hover{
+				
+			}
+			&:active{
+				//color:$white;
+				background-color:darken($blue-light,5%);
+			}
+			&:visited{
+				//text-decoration:line-through!important;
+			}
+		}
+	}
 }
-#Intro{
+#footer{
+	text-align:center;
+	background-color:$white;
+	padding:$spacing-unit *4;
+	border-top:1px solid $grey-light;
 	
-	
-	
-	
+	a{
+		color:$blue-light;
+		&:hover{
+			color:$red;
+		}
+		&:active{
+			color:$blue-dark;
+		}
+	}
+}
+
+/*
+ *
+ * Indexed Sections
+ *
+ */
+#Intro{	
 	//background: linear-gradient(0deg, $blue-dark, $blue-light);
 	position:relative;
 	&:before{
@@ -52,18 +203,14 @@ img {
 	height:100vh;
 	section{
 		margin:auto;
-		z-index:5;
-		
+		z-index:5;		
 		img{
-			//width:30%;
 			max-width:$spacing-unit * 14;
 			width:14vh;
-			//height:$spacing-unit * 20;
 		}
 		h2{
 			font-size:4vh;
-		}
-		
+		}		
 		h1#title{
 			text-transform:uppercase;
 			font-weight:500;
@@ -101,9 +248,7 @@ img {
 				font-size:$base-font-size * 2;
 				font-size:4vh;
 			}
-		}
-		
-		
+		}		
 	}
 	//#open-letter-window
 	button, a.button{
@@ -127,10 +272,8 @@ img {
 		//bottom:0;
 		//left:$spacing-unit *3;
 		cursor:pointer;
-	}
-	
-	
-	p.credit{
+	}	
+	#intro-credit{
 		text-align:left;
 		left:2em;
 	}
@@ -166,16 +309,27 @@ img {
 #BB101{
 	background-color:$white;
 	color:$red;
+	header.hero {
+	   	background-image: url('../img/content/04about/about.jpg');
+		background-position: 50% 0;
+		&:before{
+			background:linear-gradient(0deg, $red, $blue-dark);
+		}
+	}
 	h2{//color:$blue-light;
 	}
 	#Cause{
 		//background-color:$black;
 	}
 	#Routes{
-		background-color:$blue-dark;
-		color:$white;
+		//background-color:$blue-dark;
+		color:$blue-dark;
+		h3{
+			color:$red;
+		} 
 	}
-	#routelist{
+	#routelist{	
+	margin-top:$spacing-unit *2;
 	list-style-type:none;
 	@extend %clearfix;
 		
@@ -197,12 +351,16 @@ img {
 		display:inline-block;
 		border:2px solid black;
 		@extend %round-corner;
+		border-radius:3em;
+		-webkit-border-radius:3em;
+		-moz-border-radius:3em;
+		-ms-border-radius:3em;
 		padding:.25em 1em;
 		margin:$spacing-unit auto;
 		color:$white;
 		font-weight:600;
 		letter-spacing:.01em;
-		border:1px solid $white;
+		border:1px solid $blue-dark;
 		-webkit-text-rendering:antialiased;
 		}
 		#CUS{background-color:#B21E44;}
@@ -245,18 +403,13 @@ img {
 			}
 		}
 	}
-	#accNumNext{
+	#accNumNext, #skip-moreAcc{
 		position:absolute;
 		right:1em;
 		top:46%;
 		margin:1em;
-		//padding:1em;
-		&.rotate{
-			transform:rotate(90deg);
-		}
 	}	
 	#accomplishments-numbers{
-		//display:none;
 		position:relative;
 		@extend %clearfix;
 		margin-top:-50px;
@@ -351,18 +504,31 @@ img {
 	}
 	#build-hours{
 		background:$red;
-	}
-	
+	}	
 	#moreAcc{
+		color:$red;
 		padding-top:4em;
+		.pre-window{
+			color:$white;
+		}
 	}		
 	#coastal-drift{
-		#drift-hero{
+		header.hero{
 			background-image: url(../img/content/03accomplishments/CoastalDrift_AndyShort.jpg);
 			@include full-bleed-background;
+			&:before{
+				background:linear-gradient(0deg, $blue-dark, $red);
+			}
+		}
+	}
+	#scholarships{
+		header.hero{
+			//background:linear-gradient(0deg, $red, $blue-dark);
+			//background:$red;
 		}
 	}
 	.scholarship-grantee{
+		
 		img{
 			width:60%;
 			padding:2em 0;
@@ -385,20 +551,39 @@ img {
 	   }	
 	}
 }
-
-
-
 #Impact{
+	color:$blue-dark;
+	&.open{
+		header{
+			//@extend %perfect-circle;
+		}
+	}
+	header{
+		//@extend %perfect-circle;
+	}
 	header.hero{
 		background-image:url(../img/content/05impact/impact.jpg);
+		&:before{
+			background:linear-gradient(0deg, $blue-dark, $blue-light);
+			//background:$blue-light;
+		}
 	}
 	#GrantPrograms{
 		dt{}
 		dd{}
 	}
 	#GranteeProfiles{
+		&.open{
+			.grantee{
+				header{
+					@extend %perfect-circle;
+				}
+			}
+		}
 		.grantee{
-		
+			header{
+				@extend %perfect-circle;
+			}
 		}
 	}
 	
@@ -490,6 +675,14 @@ img {
 }
 #Riders{
 	color:$blue-dark;
+	header.hero{
+		background-image:url(../img/content/06riders/riders-intro.jpg);
+		background-position:50% 75%;
+		&:before{
+			background:linear-gradient(0deg, $red, $blue-dark);
+		}
+		//background:linear-gradient(90deg, $red, $blue-light);
+	}
 	.rider-portrait{
 		@extend %perfect-circle;
 		margin:$spacing-unit *5 auto;
@@ -508,29 +701,48 @@ img {
 		}
 	}
 	#fundraisers{
+		@extend %clearfix;
+		clear:both;
+		//width:100%;
 		ul{
+			//clear:both;
 			list-style-type:none;
 			text-align:center;
 			@extend %clearfix;
 			padding:0;
 			margin:2em auto;
-			display:flex;
-			display:-webkit-flex;
-			flex-flow: row wrap;
-			justify-content:center;
-			align-items: flex-start;
+			//display:flex;
+			//display:-webkit-flex;
+			//flex-flow: row wrap;
+			//justify-content:center;
+			//align-items: flex-start;
 			max-width:(em(1000));
-			@media screen and (min-width:$laptop){
-				//width:15em;
-			}
 		}
 		li{
-			width:14em;
-			padding:1em;
+		    float:left;
+			width:50%;
+			padding:1em 0;
 			margin:0;
 			text-align:center;
 			color:$blue-dark;
-			
+			&:nth-of-type(5){
+				margin-left:25%;
+			}
+			@media screen and (min-width:$phablet){
+				width:33.3%;
+				&:nth-of-type(4){
+					margin-left:16.65%;
+				}
+				&:nth-of-type(5){
+					margin-left:0;
+				}
+			}
+			@media screen and (min-width:$laptop){
+				width:20%;
+				&:nth-of-type(4){
+					margin-left:0;
+				}
+			}
 			h5{
 				font-size:1em;
 				margin:0;
@@ -547,24 +759,27 @@ img {
 			}
 		}
 	}
-	h2{
-		
-	}
-	h3{
-		
-	}
 	h6{
 		span{
 			color:$red;
-			//opacity:.5;
 		}
 	}
 	
 }
 #Alumni{
-	color:$blue-light;
+	color:$blue-dark;
+	h2, h3, h6{
+		//color:$blue-light;
+	}
+	span.icon-location{
+		color:$red;
+	}
 	header.hero{
 		background-image:url(../img/content/07alumni/alumni.jpg);
+		&:before{
+			//background:linear-gradient(0deg, $blue-dark, $red);
+			background:$blue-light;
+		}
 	}
 	.alumni-portrait{
 		@extend %perfect-circle;
@@ -581,25 +796,31 @@ img {
 		}
 	}
 }
-#financials{
-	//background-color:$blue-dark;
+#Financials{
 	color:$blue-dark;
 	div{
 		@extend %clearfix;
-		padding:$spacing-unit *4 $spacing-unit;
+		padding:$spacing-unit *4 0;
+	}
+	header.hero{
+		margin-top:-5rem;
+		background-color:$red;
+		background:linear-gradient(0deg, $blue-dark, $red);
 	}
 	.financials-intro{
+		@extend %clearfix;
 		background-color:$blue-dark;
 		color:$white;
 		#pie-cause{
 			img{
 				margin:$spacing-unit *4 auto;
 				width:15vw;
-				border:.5em solid rgba(255,255,255,.1);
-				border-radius:50%;
+				//border:.5em solid rgba(255,255,255,.1);
+				//border-radius:50%;
 			}
 			figcaption{
 				color:rgba(255,255,255,.65);
+				color:$blue-light;
 				span.highlight{
 					color:$white;
 				}
@@ -609,98 +830,280 @@ img {
 	.financials-grants{
 		background-color:$white;
 		color:$blue-dark;
-		min-height:75vh;
 		figure{
+			//max-width:(em(800));
+			div.ratio-blocks{
+				position:relative;
+				width:90%;
+				margin:1em 5%;
+				padding:0;
+				@extend %clearfix;
+				float:left;
+				background-color:$blue-light;
+				&:before{
+					content:' ';
+					display:block;
+					padding-top:60%;
+				}
+				
+				.ratio{
+					position:absolute;
+					padding:0;
+					text-align:center;
+					//display:flex;
+					//display:-webkit-flex;
+				    -webkit-box-sizing: border-box; /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+				    -moz-box-sizing: border-box;    /* Firefox 1 - 28 */
+				    box-sizing: border-box;  
+					border:1px solid $white;
+					.block-legend{
+						display:block;
+						padding:0;
+						color:$white;
+						line-height:1.25;
+						height:1.25em; width:1.25em;
+						padding:0;
+						border-radius:0 0 .5em 0;
+						-ms-border-radius:0 0 .5em 0;
+						-moz-border-radius:0 0 .5em 0;
+						-webkit-border-radius:0 0 .5em 0;
+					}
+				}
+				//1
+				#cgp{
+					height:100%; width:61%; left:0; top:0;
+					background-color:$blue-light;
+					//background-image: 
+					//	radial-gradient($blue-light 15%, transparent 16%),
+					//	radial-gradient($blue-light 15%, transparent 16%);
+					//background-size:16px 16px;
+					//background-position: 0 0, 8px 8px;
+					.block-legend{
+						background-color:$blue-light;
+					}
+				}
+				//2
+				#r5d{
+					height: 40%; width: 39%; top:0; right:0;
+					background-color:$blue-light;
+					background-image: 
+						radial-gradient($red 22%, transparent 23%),
+						radial-gradient($red 22%, transparent 23%);
+					background-size:10px 10px;
+					background-position: 0 0, 5px 5px;
+					.block-legend{
+						background-color:$blue-light;
+					}
+				 }
+				 //3
+				#papc{ 
+					height: 60%; width: 19%; right:0; bottom:0;
+					//background-color: $blue-light; 
+					background-color:$red;
+					background-image: 
+						radial-gradient($blue-light 35%, transparent 40%),
+						radial-gradient($blue-light 35%, transparent 40%);
+					background-size:10px 10px;
+					background-position: 0 0, 5px 5px;
+					.block-legend{
+						background-color:$red;
+					}
+				}
+				//4
+				#otr{
+					height: 28%; width: 20%; right:19%; bottom:0;
+					background-color:$red;
+					.block-legend{
+						background-color:$red;
+					}
+				 }
+				 //5
+ 				#cwmc{
+ 					height: 32%; width: 16%; bottom:28%; left:61%;
+				   //background-color:$red;
+				   //background-image: linear-gradient(to bottom, $blue-dark 0, rgba(255, 255, 255, 0) 2px);
+				   //background-repeat: repeat;
+				   //background-size: 100% 5px;
+					
+					
+					background-color:$red;
+					background-image: 
+						radial-gradient($blue-dark 40%, transparent 42%),
+						radial-gradient($blue-dark 40%, transparent 42%);
+					background-size:10px 10px;
+					background-position: 0 0, 5px 5px;
+					
+					.block-legend{
+						background-color:$red;
+					}
+ 				 }
+				 //6
+				#aceg{
+					height: 27%; width: 4%; top:40%; right:19%;
+					background-color:$blue-dark;
+					background-image: 
+						radial-gradient($red 15%, transparent 16%),
+						radial-gradient($red 15%, transparent 16%);
+					background-size:10px 10px;
+					background-position: 0 0, 5px 5px;
+					.block-legend{
+						background-color:$blue-dark;
+					}
+				 }
+				 //7				
+				#other{
+					height: 5%; width: 4%; bottom:28%; right:19%;
+					background:linear-gradient(0deg, $blue-light, $blue-dark );
+					background:$blue-dark;
+					.block-legend{
+						//background-color:$blue-dark;
+					}
+				 }
+				
+			}
 			img{}
-			figcaption{}
-			@media screen and (min-width:$tablet){
-				img{
-					float:left;
-					width:35%;
-					margin:1em 2.5% 1em 5%;
-				}
-				figcaption{
-					float:left;
-					width:50%;
-					margin:1em 5% 1em 2.5%;
-				}
+			figcaption{
+				margin:1em 5%;
+			}
+			@media screen and (min-width:$laptop){
+				//div.ratio-blocks{
+				//	//float:left;
+				//	width:42.5%;
+				//	margin:1em 2.5% 1em 5%;
+				//}
+				//figcaption{
+				//	float:left;
+				//	width:42.5%;
+				//	margin:1em 5% 1em 2.5%;
+				//}
 			}
 		}
 	}
 	.financials-by-year{
-		background-color:$red;
+		background-color:$blue-dark;
+		//background:linear-gradient(180deg, $blue-dark, $blue-light);
 		color:$white;
-		min-height:50vh;
-		//display:flex;
-		//display:-webkit-flex;
+		//min-height:50vh;
 		h3{
 			margin-bottom:4em;
-		}
+		}		
 		figure{
-			//margin:auto 0!important;
+			width:90%;
+			margin:1em auto;
 			position:relative;
 			img{width:90%;margin:1em auto;}
 			figcaption{
 				margin-top:2em;
 			}
-			table#by-the-years{
-				margin-top:2em;
-				th,td{
-					text-align:center;
-				}
-				td.donation-value{
-					position:absolute;
-					width:10%;
-					&:after{
-						position:absolute;
-						
+			
+			@media screen and (max-width:$tablet){
+				img{display:none;}
+				table#by-the-years{
+					tr:nth-of-type(1){
+						float:right;
+						text-align:left;
+						th,td{text-align:left;}
+						width:48%;
+						margin:0 2%;
 					}
-				}
-				td.a{bottom:25%;left:0%;}
-				td.b{bottom:35%;left:11.1%;}
-				td.c{bottom:48%;left:22.2%;}
-				td.d{bottom:100%;left:33.3%;}
-				td.e{bottom:58%;left:44.4%}
-				td.f{bottom:62%;left:55.5%;}
-				td.g{bottom:90%;left:66.6%;}
-				td.h{bottom:45%;left:77.7%;}
-				td.i{bottom:85%;left:88.8%;}
-		
-				tr.donation-values{
-					display:block;
-					margin:4em 0;
-					border:none;
-				}
-				
-				tr.year-values{
-					
-					border-top:1px dotted $white;
-					border-top:1px dotted rgba(255,255,255,.5);
-				}
-				
-				td.year-value{
-					position:relative;
-					text-align:center;
-					&:before{
-						position:absolute;
-						display:block;
-						content:' ';
-						margin:-.5em 48% 0;
-						width:1px;
-						height:10px;
-						background-color:$white;
-						background-color:rgba(255,255,255,.5);
+					tr:nth-of-type(2){
+						float:left;
+						text-align:right;
+						th,td{text-align:right;}
+						width:44%;
+						margin:0 2%;
+					}
+					th,td{
+						width:100%;
+						float:left;
 					}
 				}
 			}
 			
+			@media screen and (min-width:$tablet){
+				img{display:block;}
+				table#by-the-years{
+					margin-top:2em;
+					th,td{
+						text-align:center!important;
+					}
+					td.donation-value{
+						position:absolute;
+						width:11.1%;
+						&:after{
+							position:absolute;
+						
+						}
+					}
+					td.a{bottom:34%;left:0%;}
+					td.b{bottom:37%;left:11.1%;}
+					td.c{bottom:48%;left:22.2%;}
+					td.d{bottom:100%;left:33.3%;}
+					td.e{bottom:58%;left:44.4%}
+					td.f{bottom:62%;left:55.5%;}
+					td.g{bottom:90%;left:66.6%;}
+					td.h{bottom:45%;left:77.7%;}
+					td.i{bottom:85%;left:88.8%;}
+		
+					tr.donation-values{
+						display:block;
+						margin:4em 0;
+						border:none;
+					}
+				
+					tr.year-values{
+					
+						border-top:1px dotted $blue-light;
+						//border-top:1px dotted rgba(255,255,255,.5);
+					}
+				
+					td.year-value{
+						position:relative;
+						text-align:center;
+						width:11.1%;
+						&:before{
+							position:absolute;
+							display:block;
+							content:' ';
+							margin:-1em 0 0 49%;
+							width:1px;
+							height:1em;
+							background-color:$blue-light;
+							//background-color:rgba(0,0,0,.5);
+								}
+						}
+					}
+			}
 		}
 	}
-	
+	.audited-financials{
+		h3{
+			//color:$blue-light;
+		}
+		thead{
+			color:$red;						
+		}
+		table{
+			margin-top:1em;
+		}
+		
+	}
+	.expenses{
+		background:$red;
+		background:linear-gradient(45deg, $blue-dark, $red);
+		color:$white;
+		h3{
+			color:$white;
+		}
+	}
 	table{
 		width:100%;
 		text-align:left;
 		thead{
+			font-size:1.25em;
+			th{
+				font-weight:500;
+			}
 			th:nth-of-type(2){
 				text-align:right;
 			}
@@ -719,36 +1122,27 @@ img {
 				text-align:right;
 			}
 		}
-	}
-	table.t3{
-		
-	}
-	table.t2{
-		
-	}
-	@media screen and (min-width:$tablet){
-		//.financials-grants{
-		//	width:60%;
-		//	margin:1em 5% 1em 0;
-		//	float:left;
-		//}
-		//.financials-by-year{
-		//	width:30%;
-		//	margin:1em 0 1em 5%;
-		//	float:left;
-		//}
+		tr:last-child{
+			font-weight:bold;
+		}
 	}
 	
+	
 	.financials-expenses{
-		//width:35%;
-		//margin:1em 2.5%;
-		//float:left;
+		tr:last-child{
+			font-weight:bold;
+		}
 	}
 	
 }
 #Closing{
+	color:$blue-dark;
 	header.hero{
 		background-image:url(../img/content/08closing/closing.jpg);
+		&:before{
+			//background:linear-gradient(0deg, $red, $blue-light);
+			background:$red;
+		}
 	}
 	.share, .links{
 		list-style:none;
@@ -803,7 +1197,13 @@ img {
 		
 	}
 }
-/* Separate Pages */
+
+
+/* 
+ *
+ * Separate Pages 
+ *
+ */
 #Partner{
 	header.hero{
 		//background-image:url(../img/content//.jpg);
@@ -895,27 +1295,15 @@ img {
 	}
 	
 }
-#footer{
-	text-align:center;
-	background-color:$white;
-	padding:$spacing-unit *4;
-	border-top:1px solid $grey-light;
-	
-	a{
-		color:$blue-light;
-		&:hover{
-			color:$red;
-		}
-		&:active{
-			color:$blue-dark;
-		}
-	}
-}
+
 
 
 #open-coastal-drift-window{background-image:url(../img/content/03accomplishments/drift.jpg);}
 #open-scholarships-window{background-image:url(../img/content/03accomplishments/scholarship.jpg);}
-#open-cause-window{background-image:url(../img/content/04about/whyweride.jpg);}
-#open-routes-window{background-image:url(../img/content/04about/whereweride.jpg);}
+
+//#open-cause-window{background-image:url(../img/content/04about/whyweride.jpg);}
+//#open-routes-window{background-image:url(../img/content/04about/whereweride.jpg);}
+
 #open-grantee-window{background-image:url(../img/content/05impact/grantees.jpg);}
+
 #open-alumni-window{background-image:url(../img/content/07alumni/pre-alumni.jpg);}

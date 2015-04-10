@@ -708,19 +708,19 @@ if ( window.jQuery || window.Zepto ) {
 		
 		if (accNum.getPos() == 8) { 
 			//console.log(accNum.getPos()+2);
-			$("#accNumNext").addClass('rotate');
-			$("#accNumNext").attr("href", "#moreAcc");
+			$("#accNumNext").addClass('hidden');
+			$("#skip-moreAcc").removeClass('hidden');
 		}
 		else {
 			//console.log("nah brah")
-			$("#accNumNext").removeClass('rotate');
-			$("#accNumNext").attr("href", "#accomplishments-numbers");
+			$("#accNumNext").removeClass('hidden');
+			$("#skip-moreAcc").addClass('hidden');
 		}
     });
 	
 	
 	
-
+	$("#skip-moreAcc").addClass('hidden');
 	
     $('#accNumPrev').on('click', function () {
         accNum.prev();   
@@ -734,13 +734,15 @@ if ( window.jQuery || window.Zepto ) {
 		
 		if (accNum.getPos() == 8) { 
 			//console.log(accNum.getPos()+2);
-			$("#accNumNext").addClass('rotate');
-			$("#accNumNext").attr("href", "#moreAcc");
+			$("#accNumNext").addClass('hidden');
+			$("#skip-moreAcc").removeClass('hidden');
+			//$("#accNumNext").attr("href", "#moreAcc");
 		}
 		else {
 			//console.log("nah brah")
-			$("#accNumNext").removeClass('rotate');
-			$("#accNumNext").attr("href", "#accomplishments-numbers");
+			$("#accNumNext").removeClass('hidden');
+			$("#skip-moreAcc").addClass('hidden');
+			//$("#accNumNext").attr("href", "#accomplishments-numbers");
 		}
 		
     }); 
