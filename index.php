@@ -4,7 +4,9 @@
 			
 			<section>
 				<div id="logo">
-					<img src="img/ui/BB_Logo_White_Animated.gif" alt="Bike and Build Logo"/>
+					
+					<img src="img/ui/bb_logo_house.png" alt="Bike and Build Logo"/>
+					<div class="wheel"></div>
 					<h2>Bike & Build</h2>
 				</div>
 				<h1 id="title">
@@ -60,7 +62,7 @@
 				
 				<header class="hero">
 					<h1>What Is Bike &amp; Build?</h1>
-					<p class="credit">??????? Turner, ME2SB </p>
+					<p class="credit">Daniel Turner, ME2SB </p>
 				</header>
 				
 				<section>
@@ -510,7 +512,7 @@
 			</header>
 			<header class="hero">
 				<h1>Rider Spotlight</h1>
-				<p class="credit"> ???????? Allende, NUS</p>
+				<p class="credit"> Maria Allende, NUS</p>
 			</header>
 			<section>
 				<p>Bike & Build’s mission is to support the affordable housing cause by inspiring young adults to make a lifetime commitment to service. Many of our 2014 riders will be doing amazing things in their own communities. Here are just two samples of the impact our riders continue to make after their service with us.
@@ -529,9 +531,13 @@
 			
 				<p> So what’s unique about Claire’s experience with Bike & Build? In between her two B&B trips, her family and she built their own house, a 3-bedroom home just outside of Austin, TX. “I gained so much experience and emotional insight into building homes for other families that I wanted to share that building experience with mine,” Claire said. “It was not my idea of winter fun… it was a lot of hard work, a lot of early mornings on cold winter days. But we built memories as we built the house.”</p>
 
-				<blockquote>“It’s hard to describe the kind of pride you have when you do something like this and share it with family,” Claire reflected. “Bike & Build mirrors that… It’s full of incredibly passionate people.”</blockquote> 
+				<blockquote>It’s hard to describe the kind of pride you have when you do something like this and share it with family, Claire reflected. Bike & Build mirrors that… It’s full of incredibly passionate people.</blockquote> 
 
 				<p> Claire’s commitment to the affordable housing cause continues. After a brief stint as Program Manager for Rebuilding Together East Bay North in Berkeley, CA, Claire took the plunge and joined Bike & Build as our latest Program Director. </p>
+				
+				<blockquote>
+					Moving from rider to leader and now to staff has been and will continue to be a life changing experience. I'm really excited to be working with so many incredibly passionate people and continue to help the Affordable Housing cause.
+				</blockquote>
 
 			</section>
 			
@@ -749,7 +755,7 @@
 							<tr> <th> Type 								</th> <th> Value 	  </th> </tr>
 						</thead>
 						<tbody> 
-							<tr> <td> Contributions	 	 	 			</td> <td> $613,264   </td> </tr>
+							<tr> <td> Grant Program Distributions	 	</td> <td> $613,264   </td> </tr>
 							<tr> <td> Trip Gear, Activities	 	 	 	</td> <td> $337,305   </td> </tr>
 							<tr> <td> Salaries, Benefits, Stipends	 	</td> <td> $178,836   </td> </tr>
 							<tr> <td> Auto	 	 	 					</td> <td> $74,972    </td> </tr>
@@ -853,7 +859,7 @@
 			<header class="sticky">
 				<h6>THANKS!</h6>
 				<nav>	
-					<a href="contact"target=_blank> <span class="icon-mail"></span> </a>
+					<a href="mailto:info@bikeandbuild.org"target=_blank> <span class="icon-mail"></span> </a>
 					<a href="#Intro"><span class="icon-arrow-up"></span></a>
 				</nav>
 			</header>
@@ -870,7 +876,6 @@
 				 See the <a href="http://www.bikeandbuild.org/cms/component/option,com_wrapper/Itemid,461/"target=_blank>2015 routes &amp; riders</a>. 
 				</h3>
 			</section>
-			
 			<section>
 				<h3> Share </h3>
 				<ul class="share">
@@ -897,8 +902,7 @@
 						</a>
 					</li>
 				</ul>
-			</section>	
-			
+			</section>				
 			<section>
 				<h3> Follow </h3>
 				<ul class="links">
@@ -921,11 +925,18 @@
 						</a>
 					</li>
 					<li>
-						<a href="http://mailchimp.com/"target=_blank> 
+						<a href="https://www.youtube.com/channel/UCVmvOTU5tIhKTZYRdIoTFzA"target=_blank>
+							<span class="icon-youtube"></span>
+							youtube
+						</a>
+					</li>
+					<li>
+						<a href="http://www.bikeandbuild.org/cms/content/view/9231/449/"target=_blank> 
 							<span class="icon-mail"></span> 
 							newsletter
 						</a>
 					</li>
+					
 				</ul>
 			</section>	
 			

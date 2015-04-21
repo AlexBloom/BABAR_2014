@@ -179,6 +179,52 @@ dl, dd, ol, ul, figure {
  * Indexed Sections
  *
  */
+
+div.wheel{
+	display:block;
+	content:' ';
+	position:absolute;
+  	top: 0;
+	left: 2.25rem;
+  	width: 4.5em;
+  	height: 4.5em;
+	background-image:url(../img/ui/bb_logo_wheel.png);					
+	@include full-bleed-background;
+	
+-webkit-animation: rotate 7s ease-in-out infinite;
+   -moz-animation: rotate 7s ease-in-out infinite;
+    -ms-animation: rotate 7s ease-in-out infinite;
+     -o-animation: rotate 7s ease-in-out infinite;
+  	    animation: rotate 7s ease-in-out infinite;
+		
+		
+		&:hover{
+			-webkit-animation: rotate 4s ease-in-out infinite;
+			   -moz-animation: rotate 4s ease-in-out infinite;
+			    -ms-animation: rotate 4s ease-in-out infinite;
+			     -o-animation: rotate 4s ease-in-out infinite;
+			  	    animation: rotate 4s ease-in-out infinite;
+		}
+}
+
+@-moz-keyframes rotate  {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes rotate  {
+  from {-ms-transform: rotate(0deg);}
+  to {-ms-transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate  {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+
 #Intro{	
 	//background: linear-gradient(0deg, $blue-dark, $blue-light);
 	position:relative;
@@ -201,6 +247,9 @@ dl, dd, ol, ul, figure {
 	display:-webkit-flex;
 	color:$white;
 	height:100vh;
+	
+
+	
 	section{
 		margin:auto;
 		z-index:5;		
@@ -237,6 +286,11 @@ dl, dd, ol, ul, figure {
 				top:2rem;
 				left:2rem;
 				width:9em;
+				z-index:1;
+				
+				
+				
+				
 				img{
 					width:4.5em!important;
 				}
@@ -1205,7 +1259,7 @@ dl, dd, ol, ul, figure {
 		}
 		li{
 			float:left;
-			width:25%;
+			width:20%;
 		}
 		
 		span{

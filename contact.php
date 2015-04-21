@@ -18,9 +18,9 @@
 					</li>
 				
 					<li> 
-					<p> <strong>Brendan Newman</strong><br>
+					<p> <strong>Claire Collins</strong><br>
 						Program Director<br>
-						<a href="mailto:brendan@bikeandbuild.org">brendan@bikeandbuild.org </a>
+						<a href="mailto:claire@bikeandbuild.org">claire@bikeandbuild.org </a>
 					</p>
 					</li>
 				
@@ -40,7 +40,7 @@
 					</p>
 					</li>			
 			</ul>
-			<h1>Board</h1>
+			<h1>Board of Directors</h1>
 			<h3>Voting Members</h3>
 			<ul id="board">
 				<li>
@@ -147,8 +147,7 @@
 					</p>
 				</li>
 			</ul>
-			<h1>Alumni Council</h1>
-			<h3>Non Voting Members</h3>
+			<h3>Alumni Council Co-Chairs</h3>
 			<ul id="alumni">
 				<li>
 					<p>
