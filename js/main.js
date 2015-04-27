@@ -31,9 +31,6 @@ $(document).ready(function(){
 		}
 	}
 	
-	// Fire LocalScroll
-	//$('body').localScroll();
-	
 	// Open Navigation with Toggle
 	$("#toggle").click(function(){
 		$("#toc").toggleClass('open');
@@ -44,30 +41,6 @@ $(document).ready(function(){
 		$("#toc").toggleClass('open');
 		$('#toggle').toggleClass('active');
 	});
-
-	// Size Full-Screen Videos, Images, & Slideshows to window height.
-	//$('.full-screen').css('min-height',$(window).height());
-	//$('.tab-content').css('height',$(window).height());
-	//$('.article-slider').css('min-height',$(window).height());
-	//$('#Intro').css('height',$(window).height());	
-	$(window).resize(function() {
-		
-		//$('.full-screen').css('min-height',$(window).height());
-		//$('.tab-content').css('height',$(window).height());
-		//$('.article-slider').css('min-height',$(window).height());
-		//$('#Intro').css('height',$(window).height());
-	});
-	
-    // Show and Play Full Screen Videos
-    //	$(".play-video").click(function(){
-    //		$('.video-overlay').css("display","block");
-    //		$('#header').css("display","none");
-    //	});
-    //
-    //	$(".close-video").click(function(){
-    //		$('.video-overlay').css("display","none");
-    //		$('#header').css("display","block");
-    //	});
 
 	// Open Overlay Window Content	
 	//Open Individual Windows By ID
@@ -107,58 +80,14 @@ $(document).ready(function(){
 		$('body').removeClass('overflow-hidden');
 		$('.window-placeholder').removeClass('activated');
 	});
-	
-	//Lazy Load Content in Overlay Windows
-	//$("img.lazy").lazyload({         
-	//    effect : "fadeIn",
-	//    container: $(".window")		
-	//});
-	
 
-	
-	//window.grantacc = $('#grantacc').Swipe().data('Swipe');
-	//window.highlightedgrantees = $('#highlighted-grantees').Swipe().data('Swipe');
-      
-
-
-
-		
-
-
-	// TABS Initiations	  
-		   $('#Accomplishments-Tabs a').click(function (e) {
-		     e.preventDefault()
-		     $(this).tab('show')
-		   })
-		   $('#rider-tabs a').click(function (e) {
-		     e.preventDefault()
-		     $(this).tab('show')
-		   })
-		   $('#alumni-tabs a').click(function (e) {
-		     e.preventDefault()
-		     $(this).tab('show')
-		   })
-		   // You can activate individual tabs in several ways:
-		   // 
-		   // $('#myTab a[href="#profile"]').tab('show') // Select tab by name
-		   // $('#myTab a:first').tab('show') // Select first tab
-		   // $('#myTab a:last').tab('show') // Select last tab
-		   // $('#myTab li:eq(2) a').tab('show') // Select third tab (0-indexed)
-
-
-	// Active Link Highlighting
+	// Active Link Highlighting	
 	 // Add Current Class to ScrollNav of Currently Depressed Item
 	  	$('.scrollnav-link').click(function() {
 	  		$('.scrollnav-link').removeClass('current');
 	  		$(this).addClass('current');
 	  	});	   
-	
-	
-	
-	
-	
 
-	
 	
 	// FitVids Video Containers.
     $("article").fitVids();
@@ -166,18 +95,46 @@ $(document).ready(function(){
 	//Initiate Sticky Headers
 		var newStickies = new stickyTitles(jQuery(".sticky"));
 		newStickies.load();
+		
+		$(window).resize(function(){			
+			$('#Intro').css('height',$(window).height());
+			newStickies.load();
+		});	
+		
 		$(window).on("scroll", function() {
 			newStickies.scroll();
 		});
+
+	// GSAP Animations
 		
-		$(window).resize(function(){
-			
-			$('#Intro').css('height',$(window).height());
-			
-			//newStickies.load();
-			//$(window).on("scroll", function() {
-			//	newStickies.scroll();
-			//});
-		});	
+		// init controller
+		var controller = new ScrollMagic();
+		var dur = ($(window).height()/3);
+		var durCountdown = ($(window).height()*8);
+
+	/*  
+	 * Scroll Window on Local Links
+	 */	
+		// change behaviour of controller to animate scroll instead of jump
+		controller.scrollTo(function (newpos) {
+			TweenMax.to(window, 0.5, {scrollTo: {y: newpos}});
+		});
+
+		//  bind scroll to anchor links
+		$(document).on("click", "a[href^=#]", function (e) {
+			var id = $(this).attr("href");
+			if ($(id).length > 0) {
+				e.preventDefault();
+
+				// trigger scroll
+				controller.scrollTo(id);
+
+					// if supported by the browser we can even update the URL.
+				if (window.history && window.history.pushState) {
+					history.pushState("", document.title, id);
+				}
+			}
+		});
+
 
   }); // Close Doc Ready Function

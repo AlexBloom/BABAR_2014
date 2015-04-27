@@ -4,8 +4,6 @@ $(document).ready(function($) {
 	var dur = ($(window).height()/3);
 	var durCountdown = ($(window).height()*8);
 
-
-	
 /*  
  * Scroll Window on Local Links
  */	

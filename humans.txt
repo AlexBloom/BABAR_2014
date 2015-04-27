@@ -3,7 +3,8 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Alex Bloom -- Designer & Developer -- @alexbloom
+    Justin Villere -- Content -- justin@bikeandbuild.org
 
 # THANKS
 
@@ -12,4 +13,8 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    jQuery
+    Fonts: Proxima-Nova via Typekit
+    Fitvids.js
+    GSAP animation platform
+

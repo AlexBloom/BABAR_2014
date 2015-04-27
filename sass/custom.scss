@@ -79,20 +79,19 @@ dl, dd, ol, ul, figure {
 	#toc{
 		color:$blue-dark;
 		@extend %t01s;
-		
 		@extend %tei;	
 		padding:$spacing-unit * 4 0;
 		overflow-y:scroll;
 		overflow-x:hidden;
 		background-color:rgba(255,255,255,1);
+		position:fixed;
+		top:0;
+		right:-150%;
 		&.fixed{
 			position:fixed;
 			top:0;
 			right:-150%;
-			//bottom:$spacing-unit *10;
 			bottom:0;
-			//left:$spacing-unit *10;
-			//right:$spacing-unit *10;
 			width:80%;
 			max-width:(em(300));
 			z-index:500;
@@ -104,26 +103,13 @@ dl, dd, ol, ul, figure {
 			right:0;
 			@extend %teo;		
 		}
-		h3{
-			//background-color:rgba(255,255,255,1);
-		}
 		ol{
-			//background-color:rgba(255,255,255,1);
-			//padding:0 2em;
-			//list-style:decimal-leading-zero;
 			li{
-				//border-t:1px solid lighten($blue-dark, 5%);
 				border-top:1px solid $blue-light;
 				margin:0;
 				padding:0;
 			}
 			border-bottom:1px solid $blue-light;
-		}
-		ul{
-			li{
-				
-			}
-			
 		}
 		.page-link{
 			text-transform:uppercase;
@@ -148,7 +134,6 @@ dl, dd, ol, ul, figure {
 				
 			}
 			&:active{
-				//color:$white;
 				background-color:darken($blue-light,5%);
 			}
 			&:visited{
@@ -179,54 +164,19 @@ dl, dd, ol, ul, figure {
  * Indexed Sections
  *
  */
-
-div.wheel{
-	display:block;
-	content:' ';
-	position:absolute;
-  	top: 0;
-	left: 2.25rem;
-  	width: 4.5em;
-  	height: 4.5em;
-	background-image:url(../img/ui/bb_logo_wheel.png);					
-	@include full-bleed-background;
-	
--webkit-animation: rotate 7s ease-in-out infinite;
-   -moz-animation: rotate 7s ease-in-out infinite;
-    -ms-animation: rotate 7s ease-in-out infinite;
-     -o-animation: rotate 7s ease-in-out infinite;
-  	    animation: rotate 7s ease-in-out infinite;
-		
-		
-		&:hover{
-			-webkit-animation: rotate 4s ease-in-out infinite;
-			   -moz-animation: rotate 4s ease-in-out infinite;
-			    -ms-animation: rotate 4s ease-in-out infinite;
-			     -o-animation: rotate 4s ease-in-out infinite;
-			  	    animation: rotate 4s ease-in-out infinite;
-		}
-}
-
-@-moz-keyframes rotate  {
-  from {-moz-transform: rotate(0deg);}
-  to {-moz-transform: rotate(360deg);}
-}
-@-ms-keyframes rotate  {
-  from {-ms-transform: rotate(0deg);}
-  to {-ms-transform: rotate(360deg);}
-}
 @-webkit-keyframes rotate  {
-  from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(360deg);}
+  0% {-webkit-transform: rotate(0deg);}
+  15% {-webkit-transform: rotate(360deg);}
+  100% {-webkit-transform: rotate(360deg);}
 }
 @keyframes rotate {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+  0% {transform: rotate(0deg);}
+  15% {transform: rotate(360deg);}  
+  100% {transform: rotate(360deg);}
+  
 }
 
-
 #Intro{	
-	//background: linear-gradient(0deg, $blue-dark, $blue-light);
 	position:relative;
 	&:before{
 		display:block;
@@ -247,15 +197,42 @@ div.wheel{
 	display:-webkit-flex;
 	color:$white;
 	height:100vh;
-	
-
-	
 	section{
 		margin:auto;
 		z-index:5;		
-		img{
-			max-width:$spacing-unit * 14;
-			width:14vh;
+		#logo{
+			.wheel-wrap{
+				position:relative;
+				max-width:$spacing-unit * 14;
+				width:14vh;
+				margin:0 auto;
+			}
+			img{
+				width:100%;
+			}
+			div.wheel{
+				display:block;
+				position:absolute;
+				top:0;
+				bottom:0;
+				width:100%;
+				background-image:url(../img/ui/bb_logo_wheel.png);					
+				@include full-bleed-background;
+		
+			-webkit-animation: rotate 10s cubic-bezier(0.775, 0.005, 0.430, 1) infinite; /* older webkit */
+			-webkit-animation: rotate 10s cubic-bezier(0.775, 0.005, 0.430, 1.250) infinite; 
+			   -moz-animation: rotate 10s cubic-bezier(0.775, 0.005, 0.430, 1.250) infinite; 
+			     -o-animation: rotate 10s cubic-bezier(0.775, 0.005, 0.430, 1.250) infinite; 
+			        animation: rotate 10s cubic-bezier(0.775, 0.005, 0.430, 1.250) infinite; /* custom */
+
+			-webkit-transition-timing-function: cubic-bezier(0.775, 0.005, 0.430, 1); /* older webkit */
+			-webkit-transition-timing-function: cubic-bezier(0.775, 0.005, 0.430, 1.250); 
+			   -moz-transition-timing-function: cubic-bezier(0.775, 0.005, 0.430, 1.250); 
+			     -o-transition-timing-function: cubic-bezier(0.775, 0.005, 0.430, 1.250); 
+			        transition-timing-function: cubic-bezier(0.775, 0.005, 0.430, 1.250); /* custom */
+		
+		
+			}
 		}
 		h2{
 			font-size:4vh;
@@ -287,12 +264,19 @@ div.wheel{
 				left:2rem;
 				width:9em;
 				z-index:1;
-				
-				
-				
-				
+				.wheel-wrap{
+					max-width:100%;
+					width:100%;
+				}
 				img{
 					width:4.5em!important;
+				}
+				div.wheel{
+					position:absolute;
+				  	top: 0;
+					left: 2.25rem;
+				  	width: 4.5em;
+				  	height: 4.5em;
 				}
 				h2{
 					font-size:1.5em;
@@ -304,7 +288,6 @@ div.wheel{
 			}
 		}		
 	}
-	//#open-letter-window
 	button, a.button{
 		border:2px solid $white;
 		background-color:transparent;
@@ -897,7 +880,6 @@ div.wheel{
 		background-color:$white;
 		color:$blue-dark;
 		figure{
-			//max-width:(em(800));
 			div.ratio-blocks{
 				position:relative;
 				width:90%;
@@ -1027,21 +1009,31 @@ div.wheel{
 				 }
 				
 			}
-			img{}
+			img, svg{
+				display:block;
+				width:90%;
+				margin:1em auto;
+				padding:0;
+				max-width:(em(400));
+			}
 			figcaption{
 				margin:1em 5%;
 			}
-			@media screen and (min-width:$laptop){
-				//div.ratio-blocks{
-				//	//float:left;
-				//	width:42.5%;
-				//	margin:1em 2.5% 1em 5%;
-				//}
-				//figcaption{
-				//	float:left;
-				//	width:42.5%;
-				//	margin:1em 5% 1em 2.5%;
-				//}
+			@media screen and (min-width:$tablet){
+				img, figcaption{
+					float:left;
+				}
+				img{
+					width:40%;
+					margin:2em 2.5% 0 0;
+					padding:0;
+				}
+				figcaption{
+					width:55%;
+					margin:1em 0 0 2.5%;
+					padding:0;
+				}
+				
 			}
 		}
 	}
@@ -1146,7 +1138,7 @@ div.wheel{
 		}
 	}
 	.audited-financials{
-		padding:$spacing-unit *4 0;
+		padding:$spacing-unit *4;
 		h3{
 			//color:$blue-light;
 		}
@@ -1269,7 +1261,6 @@ div.wheel{
 	}
 }
 
-
 /* 
  *
  * Separate Pages 
@@ -1371,14 +1362,7 @@ div.wheel{
 	
 }
 
-
-
 #open-coastal-drift-window{background-image:url(../img/content/03accomplishments/drift.jpg);}
 #open-scholarships-window{background-image:url(../img/content/03accomplishments/scholarship.jpg);}
-
-//#open-cause-window{background-image:url(../img/content/04about/whyweride.jpg);}
-//#open-routes-window{background-image:url(../img/content/04about/whereweride.jpg);}
-
 #open-grantee-window{background-image:url(../img/content/05impact/grantees.jpg);}
-
 #open-alumni-window{background-image:url(../img/content/07alumni/pre-alumni.jpg);}

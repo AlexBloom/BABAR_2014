@@ -20,7 +20,6 @@
         }
     }
 }());
-
 /*
  * FitVids 1.1
  */
@@ -96,8 +95,6 @@
   };
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
-
-
 /*
  * Swipe 2.0
  */
@@ -646,7 +643,6 @@ function Swipe(container, options) {
  }
 
 }
-
 if ( window.jQuery || window.Zepto ) {
   (function($) {
     $.fn.Swipe = function(params) {

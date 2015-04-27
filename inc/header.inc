@@ -11,18 +11,13 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="viewport" content="width = device-width, initial-scale=1, maximum-scale=1, user-scalable = no">
 
-
-
-		
-
-
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/custom.css">
 	   
 	    <script type="text/javascript" src="//use.typekit.net/fkv4vwx.js"></script>
 	    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
             <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>

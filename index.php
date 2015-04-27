@@ -4,9 +4,10 @@
 			
 			<section>
 				<div id="logo">
-					
-					<img src="img/ui/bb_logo_house.png" alt="Bike and Build Logo"/>
-					<div class="wheel"></div>
+					<div class="wheel-wrap">
+						<img class="house" src="img/ui/bb_logo_house.png" alt="Bike and Build Logo"/>
+						<div class="wheel"></div>
+					</div>
 					<h2>Bike & Build</h2>
 				</div>
 				<h1 id="title">
@@ -60,7 +61,7 @@
 				</nav>
 			</header>
 				
-				<header class="hero">
+				<header class="hero" id="BB101Header">
 					<h1>What Is Bike &amp; Build?</h1>
 					<p class="credit">Daniel Turner, ME2SB </p>
 				</header>
@@ -630,15 +631,9 @@
 				
 				<section>
 					<figure>
-						<div class="ratio-blocks">
-							<div class="ratio" id="cgp"> 	<span class="block-legend"> 1 </span> </div>
-							<div class="ratio" id="r5d"> 	<span class="block-legend"> 2 </span> </div>
-							<div class="ratio" id="papc"> 	<span class="block-legend"> 3 </span>  </div>
-							<div class="ratio" id="otr"> 	<span class="block-legend"> 4 </span> </div>
-							<div class="ratio" id="cwmc">	<span class="block-legend"> 5 </span>  </div>
-							<div class="ratio" id="aceg"> 	<span class="block-legend"> 6 </span> </div>
-							<div class="ratio" id="other"> 	<span class="block-legend"> 7 </span> </div>
-						</div>
+						
+						<img src="img/content/financials/grants_pie_chart.png"  alt="Grants Pie Chart">
+						
 					
 						<figcaption>
 							<table class="t2">
@@ -658,8 +653,10 @@
 								</tbody>
 							</table>
 						</figcaption>
+						
 					</figure>
 				</section>
+
 				
 			</div>
 			<div class="financials-by-year">
@@ -889,15 +886,13 @@
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 					</li>
 					<li>
-					<!-- Place this tag in your head or just before your close body tag. -->
-					<script src="https://apis.google.com/js/platform.js" async defer></script>
 
 					<!-- Place this tag where you want the share button to render. -->
 					<div class="g-plus" data-action="share" data-annotation="bubble"></div>
 					</li>
 					<li>
 					
-						<a href="mailto:?subject=Bike And Build 2014 Annual Report&body=Check out Bike And Build's 2014 Annual Report.">
+						<a href="mailto:?subject=Bike And Build 2014 Annual Report&body=Check out Bike And Build's 2014 Annual Report! http://bikeandbuild.org/2014annualreport">
 							<span class="icon-mail"> </span> Email 
 						</a>
 					</li>
